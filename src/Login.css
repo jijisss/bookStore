@@ -1,0 +1,50 @@
+.Login_Container {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login_input {
+  height: 45px;
+  margin-bottom: 13px;
+}
+
+.login_btn {
+  height: 55px;
+  font-size: 1.3rem;
+}
+
+.id_save_box {
+  margin-top: 10px;
+  display: flex;
+}
+
+.id_save_checkBox {
+  width: 20px;
+}
+
+.id_save {
+  font-size: 0.9rem;
+}
+
+.user_searching {
+  width: 50%;
+  float: left;
+  display: flex;
+  font-size: 0.97rem;
+}
+
+.find_id {
+  margin-right: 0.4rem;
+}
+
+.join {
+  width: 50%;
+  float: left;
+  text-align: right;
+}
