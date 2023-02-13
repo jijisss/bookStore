@@ -4,7 +4,7 @@ import Login from "./Login";
 function App() {
   return (
     <>
-      <p>App</p>
+      <p>App입니다.</p>
       <Login />
     </>
   );
