@@ -1,0 +1,40 @@
+#JoinMembership {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.JoinMembershipWrap {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.kakaoLogin {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.kakaoLogin_btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 60px;
+  background: #fee500;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.memberJoin {
+  position: relative;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.memberJoin::after {
+  content: "또는";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 30px;
+}
