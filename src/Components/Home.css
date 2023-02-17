@@ -3,7 +3,21 @@ h2,
 h3 {
   letter-spacing: -0.01em;
 }
+body {
+  background: #444;
+  overflow-x: hidden;
+  font-family: "Gowun Batang";
+}
 
+.en {
+  font-family: "Merriweather";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
 .observer-ready {
   opacity: 0;
   transform: translateY(10%);

@@ -1,14 +1,9 @@
+import "./Home.css";
+import "./BookView.css";
 import React from "react";
 import { cm } from "./cm.js";
 import { BookView } from "./BookView.js";
-import "./Home.css";
-import "./BookView.css";
-// import book1 from "../images/book1.jpg";
-// import book1t from "../images/book1_t.jpg";
-// import book2 from "../images/book2.jpg";
-// import book2t from "../images/book2_t.jpg";
-// import book3 from "../images/book3.jpg";
-// import book3t from "../images/book3_t.jpg";
+
 import bookImage from "../images/book-image.jpg";
 
 let loaderElem;
@@ -21,12 +16,9 @@ let modalCoverElem;
 let bookView;
 
 function Home() {
-  const book1 = { backgroundImage: "url(../images/book1_t.jpg)" };
-
   return (
     <>
-      <h1>home</h1>
-      <div className="before-load">
+      <div id="before-load" className="before-load">
         {/* loader */}
         <div className="loader-wrapper">
           <div className="loader"></div>
@@ -36,29 +28,30 @@ function Home() {
         <div className="header">
           <div className="header-inner width-setter">
             <h2 className="site-title observer-ready">
-              <div className="site-title-inner">Coloso Design Bookstore</div>
+              <div className="site-title-inner en">
+                Jieun's Design Bookstore
+              </div>
             </h2>
             <p className="header-description observer-ready">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
+              <span className="en">Jieun's Design Bookstore</span> 온라인
+              북스토어에 오신것을 환영합니다. 여러분에게 좋은 책을
+              추천해드릴게요.
             </p>
           </div>
 
           {/* shelf */}
           <div className="shelf">
             <h3 className="shelf-title">
-              <div className="width-setter">New Arrivals</div>
+              <div className="width-setter en">New Arrivals</div>
             </h3>
             <div className="book-list">
               {/* data-id="0" */}
               <div className="book-item" data-id="0">
                 <div className="book book-dark">
                   <div className="book-front">
-                    <div className="book-cover" style={book1}></div>
+                    <div className="book-cover" style={{}}></div>
                   </div>
-                  <div className="book-side" style={book1}>
+                  <div className="book-side" style={{}}>
                     <h2 className="book-side-title">Grid Systems</h2>
                   </div>
                 </div>
@@ -115,12 +108,12 @@ function Home() {
         <div className="home-reading-section">
           <div className="width-setter">
             <div>
-              <h2>Featured Book of the Month</h2>
+              <h2 className="bookOfMonth en">Featured Book of the Month</h2>
               <div className="header-media">
                 <p className="content-image observer-ready">
                   <img src={bookImage} alt="book-image" />
                 </p>
-                <p className="content-para observer-ready">
+                <p className="content-para observer-ready en">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Fugit architecto possimus reiciendis veritatis ipsum
                   perferendis necessitatibus dicta, numquam labore ea a rem
@@ -136,7 +129,7 @@ function Home() {
               </div>
             </div>
             <div>
-              <p className="content-para observer-ready">
+              <p className="content-para observer-ready en">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Exercitationem nobis, animi optio molestiae perspiciatis velit
                 amet harum itaque voluptatum nemo cumque dicta ipsum cupiditate
@@ -181,7 +174,7 @@ function Home() {
         </div>
 
         {/* modal-cover */}
-        <div class="modal-cover"></div>
+        <div className="modal-cover"></div>
       </div>
     </>
   );
@@ -209,7 +202,7 @@ window.addEventListener("load", () => {
   loaderElem.addEventListener("transitionend", () => {
     loaderElem.remove();
   });
-  document.body.classList.remove("before-load");
+  document.getElementById("before-load").classList.remove("before-load");
 
   // 각 .book-item들 위치 세팅
   bookItemElems.forEach((book, i) => {

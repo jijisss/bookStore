@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Merriweather";
+  font-weight: normal;
+  src: url("../PlayfairDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-weight: bold;
+  src: url("../PlayfairDisplay-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gowun Batang";
+  font-weight: normal;
+  src: url("../GowunBatang-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gowun Batang";
+  font-weight: bold;
+  src: url("../GowunBatang-Bold.woff") format("woff");
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Login.css";
-import googleLogo from "../image/google_logo_symbol.png";
-import facebookLogo from "../image/facebook_logo_symbol.png";
-import kakaoLogo from "../image/kakao_logo_symbol.jpg";
-import naverLogo from "../image/naver_logo_symbol.png";
+import googleLogo from "../images/google_logo_symbol.png";
+import facebookLogo from "../images/facebook_logo_symbol.png";
+import kakaoLogo from "../images/kakao_logo_symbol.jpg";
+import naverLogo from "../images/naver_logo_symbol.png";
 
 function Login() {
   return (
