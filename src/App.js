@@ -1,16 +1,16 @@
-import React from "react";
 import "./Components/reset.css";
-import Login from "./Components/Login";
-import JoinMembership from "./Components/JoinMembership";
 import Home from "./Components/Home";
+import Header from "./Components/Header.js";
+// import Login from "./Components/Login";
+// import JoinMembership from "./Components/JoinMembership";
 
 function App() {
   return (
     <>
-      {/* <p>App입니다.</p> */}
+      <Header />
+      <Home />
       {/* <Login /> */}
       {/* <JoinMembership /> */}
-      <Home />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import "./Home.css";
 import "./BookView.css";
-import React from "react";
 import { cm } from "./cm.js";
 import { BookView } from "./BookView.js";
 
@@ -28,21 +27,19 @@ function Home() {
         <div className="header">
           <div className="header-inner width-setter">
             <h2 className="site-title observer-ready">
-              <div className="site-title-inner en">
-                Jieun's Design Bookstore
-              </div>
+              <div className="site-title-inner en">LifeBooks Bookstore</div>
             </h2>
             <p className="header-description observer-ready">
-              <span className="en">Jieun's Design Bookstore</span> 온라인
-              북스토어에 오신것을 환영합니다. 여러분에게 좋은 책을
-              추천해드릴게요.
+              <span className="en">LifeBooks</span> 온라인 북스토어에 오신것을
+              환영합니다. 여러분에게 읽기 좋은 책을 추천해드릴게요.
             </p>
           </div>
-
           {/* shelf */}
           <div className="shelf">
             <h3 className="shelf-title">
-              <div className="width-setter en">New Arrivals</div>
+              <div className="width-setter">
+                <span className="en">New Arrivals</span> 신작 도서
+              </div>
             </h3>
             <div className="book-list">
               {/* data-id="0" */}
@@ -103,73 +100,51 @@ function Home() {
             </div>
           </div>
         </div>
-
+        {/* category */}
+        <div className="category">
+          <ul className="category_list">
+            <li className="category_list_item">전체</li>
+            <li className="category_list_item">문학</li>
+            <li className="category_list_item">시/에세이</li>
+            <li className="category_list_item">소설</li>
+            <li className="category_list_item">사회과학</li>
+            <li className="category_list_item">예술문화</li>
+            <li className="category_list_item">역사</li>
+            <li className="category_list_item">인문학</li>
+            <li className="category_list_item">건강</li>
+            <li className="category_list_item">자기계발</li>
+          </ul>
+        </div>
         {/* home-reading-section */}
         <div className="home-reading-section">
           <div className="width-setter">
             <div>
-              <h2 className="bookOfMonth en">Featured Book of the Month</h2>
+              <h2 className="bookOfMonth">이달의 당신에게 추천하는 책</h2>
               <div className="header-media">
                 <p className="content-image observer-ready">
                   <img src={bookImage} alt="book-image" />
                 </p>
-                <p className="content-para observer-ready en">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Fugit architecto possimus reiciendis veritatis ipsum
-                  perferendis necessitatibus dicta, numquam labore ea a rem
-                  eligendi amet commodi pariatur quia molestiae vel magni facere
-                  quidem assumenda fuga nisi voluptates eum. Harum error odio
-                  voluptates alias, quibusdam laboriosam cupiditate esse, magnam
-                  voluptate architecto quaerat ullam, repellendus vel dicta
-                  accusantium laudantium non! Pariatur voluptatibus earum sed
-                  nostrum similique placeat! Quo dolore earum sapiente ipsa
-                  accusamus consectetur ullam aut beatae fugiat, vitae optio
-                  quaerat deleniti qui.
+                <p className="content-para observer-ready">
+                  !책에 대해서 간단히 소개하는 내용! Lorem ipsum dolor sit amet
+                  consectetur, adipisicing elit. Fugit architecto possimus
+                  reiciendis veritatis ipsum perferendis necessitatibus dicta,
+                  numquam labore ea a rem eligendi amet commodi pariatur quia
+                  molestiae vel magni facere quidem assumenda fuga nisi
+                  voluptates eum. Harum error odio voluptates alias, quibusdam
+                  laboriosam cupiditate esse, magnam voluptate architecto
+                  quaerat ullam, repellendus vel dicta accusantium laudantium
+                  non! Pariatur voluptatibus earum sed nostrum similique
+                  placeat! Quo dolore earum sapiente ipsa accusamus consectetur
+                  ullam aut beatae fugiat, vitae optio quaerat deleniti qui.
                 </p>
               </div>
             </div>
-            <div>
-              <p className="content-para observer-ready en">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem nobis, animi optio molestiae perspiciatis velit
-                amet harum itaque voluptatum nemo cumque dicta ipsum cupiditate
-                assumenda provident voluptatem error at ea officiis dolorem
-                quisquam quasi odio id repudiandae? Soluta amet, ab iusto a
-                animi et qui sint possimus, aperiam, ducimus reprehenderit?
-                Culpa deleniti libero, quo assumenda dolore, voluptate doloribus
-                pariatur adipisci error aperiam quod sequi illum beatae, quasi
-                fugit provident neque sit numquam.
-              </p>
-              <p className="content-para observer-ready">
-                Consequuntur quia perspiciatis ex error maiores, soluta
-                praesentium incidunt neque voluptatem reprehenderit aut quas, ea
-                similique sit deleniti, accusantium nesciunt consectetur ipsum
-                optio eum. Omnis, nemo unde amet aliquam repellat repudiandae
-                dolores ex. Similique est facere iure soluta nulla, distinctio
-                repellendus suscipit voluptate numquam, labore maiores quibusdam
-                dolore beatae maxime reprehenderit. Corrupti laborum vel eveniet
-                libero. Facere magni accusamus autem! Blanditiis similique earum
-                accusamus temporibus iste vel! Minima illum dicta alias
-                blanditiis recusandae suscipit facilis porro nobis omnis sit
-                doloribus officia rem ex, similique sunt quia provident id
-                accusantium quaerat qui aut odio! Repellendus dignissimos, culpa
-                accusamus magnam modi totam ut dicta ex mollitia illo sunt
-                praesentium natus aliquam quasi harum omnis, eaque ipsum maxime
-                obcaecati asperiores. Maiores perferendis totam commodi omnis
-                debitis rerum eveniet eligendi sapiente?
-              </p>
-              <p className="content-para observer-ready">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Exercitationem nobis, animi optio molestiae perspiciatis velit
-                amet harum itaque voluptatum nemo cumque dicta ipsum cupiditate
-                assumenda provident voluptatem error at ea officiis dolorem
-                quisquam quasi odio id repudiandae? Soluta amet, ab iusto a
-                animi et qui sint possimus, aperiam, ducimus reprehenderit?
-                Culpa deleniti libero, quo assumenda dolore, voluptate doloribus
-                pariatur adipisci error aperiam quod sequi illum beatae, quasi
-                fugit provident neque sit numquam.
-              </p>
+            <div className="center-content">
+              <p className="content-para observer-ready"></p>
+              <p className="content-para observer-ready"></p>
+              <p className="content-para observer-ready"></p>
             </div>
+            <div></div>
           </div>
         </div>
 

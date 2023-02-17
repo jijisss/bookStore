@@ -1,4 +1,3 @@
-import React from "react";
 import "./Login.css";
 import googleLogo from "../images/google_logo_symbol.png";
 import facebookLogo from "../images/facebook_logo_symbol.png";

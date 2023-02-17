@@ -4,7 +4,7 @@ h3 {
   letter-spacing: -0.01em;
 }
 body {
-  background: #444;
+  background: #ffffff;
   overflow-x: hidden;
   font-family: "Gowun Batang";
 }
@@ -31,6 +31,9 @@ img {
   width: 980px;
   margin: 0 auto;
 }
+.bookOfMonth {
+  font-weight: bold;
+}
 .header {
   position: relative;
   z-index: 10;
@@ -42,6 +45,19 @@ img {
     rgba(255, 255, 255, 1) 91%,
     #444 92%
   );
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/bookPhoto.jpg");
+  background-position: 10% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.93;
 }
 .site-title {
   padding: 60px 0 20px;
@@ -297,9 +313,36 @@ img {
   animation: loader-ani 1s infinite linear;
 }
 
+.category {
+  width: 100%;
+  height: 80px;
+  line-height: 85px;
+  font-size: 1.04rem;
+  border-bottom: 1px solid #444;
+}
+
+.category_list {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+}
+
+.category_list_item {
+  transition: 0.3s;
+}
+
+.category_list_item:hover {
+  transform: scale(1.08);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 .home-reading-section {
   padding: 5rem 0;
-  color: #ddd;
+  color: #212121;
 }
 .home-reading-section h2 {
   margin-bottom: 1.2em;
