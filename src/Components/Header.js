@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
-import React from "react";
 import { IoIosSearch } from "react-icons/io";
 
 function Header() {
@@ -15,17 +15,33 @@ function Header() {
             {/* loginBar */}
             <div className="loginMenu">
               <ul className="loginMenu_list">
-                <li className="loginMenu_list_item menu_list_item">로그인</li>
-                <li className="loginMenu_list_item menu_list_item">회원가입</li>
+                <Link
+                  to=""
+                  className="loginMenu_list_item menu_list_item"
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  로그인
+                </Link>
+                <Link
+                  to=""
+                  className="loginMenu_list_item menu_list_item"
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  회원가입
+                </Link>
               </ul>
             </div>
           </div>
           <div className="Header_bot">
             {/* logo */}
-            <h1 className="logo HeaderLogo en">
+            <Link to="/" className="logo HeaderLogo en">
               <span className="logoIcon"></span>
               LifeBooks
-            </h1>
+            </Link>
             {/* searchBar */}
             <div className="searchBar">
               <input
@@ -40,8 +56,24 @@ function Header() {
             {/* menu */}
             <div className="menu Header_menu">
               <ul className="menu_list">
-                <li className="myMenu_list_item menu_list_item">장바구니</li>
-                <li className="myMenu_list_item menu_list_item">마이페이지</li>
+                <Link
+                  to=""
+                  className="myMenu_list_item menu_list_item"
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  장바구니
+                </Link>
+                <Link
+                  to=""
+                  className="myMenu_list_item menu_list_item"
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  마이페이지
+                </Link>
               </ul>
             </div>
           </div>

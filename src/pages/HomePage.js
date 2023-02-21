@@ -1,8 +1,15 @@
-import "./Home.css";
-import "./BookView.css";
-import { cm } from "./cm.js";
-import { BookView } from "./BookView.js";
+import { Link } from "react-router-dom";
+import "../components/HomePage.css";
+import "../components/BookView.css";
+import { cm } from "../components/cm.js";
+import { BookView } from "../components/BookView.js";
 
+// image
+import newArrivalBook1_t from "../images/newArrivalBook1_t.jpg";
+import newArrivalBook2_t from "../images/newArrivalBook2_t.jpg";
+import newArrivalBook3_t from "../images/newArrivalBook3_t.jpg";
+import newArrivalBook4_t from "../images/newArrivalBook4_t.jpg";
+import newArrivalBook5_t from "../images/newArrivalBook5_t.jpg";
 import bookOfMonthImage from "../images/bookOfMonth.jpg";
 import bookOfWeekImage1 from "../images/bookOfWeek1.jpg";
 import bookOfWeekImage2 from "../images/bookOfWeek2.jpg";
@@ -59,12 +66,22 @@ function Home() {
             <div className="book-list">
               {/* data-id="0" */}
               <div className="book-item" data-id="0">
-                <div className="book book-dark">
+                <div className="book">
                   <div className="book-front">
-                    <div className="book-cover" style={{}}></div>
+                    <div
+                      className="book-cover"
+                      style={{
+                        backgroundImage: `url(${newArrivalBook1_t})`,
+                      }}
+                    ></div>
                   </div>
-                  <div className="book-side" style={{}}>
-                    <h2 className="book-side-title">Grid Systems</h2>
+                  <div
+                    className="book-side"
+                    style={{
+                      backgroundImage: `url(${newArrivalBook1_t})`,
+                    }}
+                  >
+                    <h2 className="book-side-title">나의 아름다운 날들</h2>
                   </div>
                 </div>
               </div>
@@ -72,21 +89,33 @@ function Home() {
               <div className="book-item" data-id="1">
                 <div className="book">
                   <div className="book-front">
-                    <div className="book-cover" style={{}}></div>
+                    <div
+                      className="book-cover"
+                      style={{ backgroundImage: `url(${newArrivalBook2_t})` }}
+                    ></div>
                   </div>
-                  <div className="book-side" style={{}}>
-                    <h2 className="book-side-title">How to Design</h2>
+                  <div
+                    className="book-side"
+                    style={{ backgroundImage: `url(${newArrivalBook2_t})` }}
+                  >
+                    <h2 className="book-side-title">날씨와 얼굴</h2>
                   </div>
                 </div>
               </div>
               {/* data-id="2" */}
               <div className="book-item" data-id="2">
-                <div className="book book-dark">
+                <div className="book">
                   <div className="book-front">
-                    <div className="book-cover" style={{}}></div>
+                    <div
+                      className="book-cover"
+                      style={{ backgroundImage: `url(${newArrivalBook3_t})` }}
+                    ></div>
                   </div>
-                  <div className="book-side" style={{}}>
-                    <h2 className="book-side-title">LOGO DESIGN LOVE</h2>
+                  <div
+                    className="book-side"
+                    style={{ backgroundImage: `url(${newArrivalBook3_t})` }}
+                  >
+                    <h2 className="book-side-title">집 떠나 사는 즐거움</h2>
                   </div>
                 </div>
               </div>
@@ -94,10 +123,16 @@ function Home() {
               <div className="book-item" data-id="3">
                 <div className="book">
                   <div className="book-front">
-                    <div className="book-cover" style={{}}></div>
+                    <div
+                      className="book-cover"
+                      style={{ backgroundImage: `url(${newArrivalBook4_t})` }}
+                    ></div>
                   </div>
-                  <div className="book-side" style={{}}>
-                    <h2 className="book-side-title">Coloso Design</h2>
+                  <div
+                    className="book-side"
+                    style={{ backgroundImage: `url(${newArrivalBook4_t})` }}
+                  >
+                    <h2 className="book-side-title">다이다이 서점에서</h2>
                   </div>
                 </div>
               </div>
@@ -105,10 +140,18 @@ function Home() {
               <div className="book-item" data-id="4">
                 <div className="book book-dark">
                   <div className="book-front">
-                    <div className="book-cover" style={{}}></div>
+                    <div
+                      className="book-cover"
+                      style={{ backgroundImage: `url(${newArrivalBook5_t})` }}
+                    ></div>
                   </div>
-                  <div className="book-side" style={{}}>
-                    <h2 className="book-side-title">Grid Systems</h2>
+                  <div
+                    className="book-side"
+                    style={{ backgroundImage: `url(${newArrivalBook5_t})` }}
+                  >
+                    <h2 className="book-side-title">
+                      엉엉 우는 법을 잊은 나에게
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -118,16 +161,36 @@ function Home() {
         {/* category */}
         <div className="category">
           <ul className="category-list">
-            <li className="category-list-item">전체</li>
-            <li className="category-list-item">문학</li>
-            <li className="category-list-item">시/에세이</li>
-            <li className="category-list-item">소설</li>
-            <li className="category-list-item">사회과학</li>
-            <li className="category-list-item">예술문화</li>
-            <li className="category-list-item">역사</li>
-            <li className="category-list-item">인문학</li>
-            <li className="category-list-item">건강</li>
-            <li className="category-list-item">자기계발</li>
+            <Link to="" className="category-list-item">
+              전체
+            </Link>
+            <Link to="" className="category-list-item">
+              문학
+            </Link>
+            <Link to="" className="category-list-item">
+              시/에세이
+            </Link>
+            <Link to="" className="category-list-item">
+              소설
+            </Link>
+            <Link to="" className="category-list-item">
+              사회과학
+            </Link>
+            <Link to="" className="category-list-item">
+              예술문화
+            </Link>
+            <Link to="" className="category-list-item">
+              역사
+            </Link>
+            <Link to="" className="category-list-item">
+              인문학
+            </Link>
+            <Link to="" className="category-list-item">
+              건강
+            </Link>
+            <Link to="" className="category-list-item">
+              자기계발
+            </Link>
           </ul>
         </div>
         {/* home-reading-section */}
@@ -139,7 +202,9 @@ function Home() {
               </h2>
               <div className="header-media">
                 <p className="content-image observer-ready">
-                  <img src={bookOfMonthImage} alt="book-image" />
+                  <Link to="">
+                    <img src={bookOfMonthImage} alt="book-image" />
+                  </Link>
                 </p>
                 <p className="content-para observer-ready">
                   30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된
@@ -175,113 +240,143 @@ function Home() {
                 <div className="book-of-week-content">
                   <ul className="book-of-week-content-list">
                     <li className="book-of-week-content-item">
-                      <img src={bookOfWeekImage1} />
-                      <p className="book-title">세이노의 가르침</p>
-                      <p className="author">세이노</p>
+                      <Link to="">
+                        <img src={bookOfWeekImage1} />
+                        <p className="book-title">세이노의 가르침</p>
+                        <p className="author">세이노</p>
+                      </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <img src={bookOfWeekImage2} />
-                      <p className="book-title">백조와 박쥐</p>
-                      <p className="author">히가시노 게이고</p>
+                      <Link to="">
+                        <img src={bookOfWeekImage2} />
+                        <p className="book-title">백조와 박쥐</p>
+                        <p className="author">히가시노 게이고</p>
+                      </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <img src={bookOfWeekImage3} />
-                      <p className="book-title">마지막 섬</p>
-                      <p className="author">쥴퓌 리바넬리</p>
+                      <Link to="">
+                        <img src={bookOfWeekImage3} />
+                        <p className="book-title">마지막 섬</p>
+                        <p className="author">쥴퓌 리바넬리</p>
+                      </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <img src={bookOfWeekImage4} />
-                      <p className="book-title">방자</p>
-                      <p className="author">유키 하루오</p>
+                      <Link to="">
+                        <img src={bookOfWeekImage4} />
+                        <p className="book-title">방자</p>
+                        <p className="author">유키 하루오</p>
+                      </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <img src={bookOfWeekImage5} />
-                      <p className="book-title">심연</p>
-                      <p className="author">앨마 카츠</p>
+                      <Link to="">
+                        <img src={bookOfWeekImage5} />
+                        <p className="book-title">심연</p>
+                        <p className="author">앨마 카츠</p>
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </p>
             </div>
-            <div className="center-content">
+            {/* <div className="center-content">
               <p className="content-para observer-ready">
                 <h2>인기 급상승 도서</h2>
                 <div className="surge-popularity-book-content"></div>
               </p>
-            </div>
+            </div> */}
             <div className="center-content">
               <p className="content-para observer-ready">
                 <h2>베스트 셀러</h2>
                 <div className="bestSeller-book-content">
                   <ul className="bestSeller-book-content-list">
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage1} />
-                      <p className="bestSeller-ranking en">1</p>
-                      <p className="book-title">김미경의 마흔 수업</p>
-                      <p className="author">김미경</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage1} />
+                        <p className="bestSeller-ranking en">1</p>
+                        <p className="book-title">김미경의 마흔 수업</p>
+                        <p className="author">김미경</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage2} />
-                      <p className="bestSeller-ranking en">2</p>
-                      <p className="book-title">1퍼센트 부자의 법칙</p>
-                      <p className="author">사이토 히토리</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage2} />
+                        <p className="bestSeller-ranking en">2</p>
+                        <p className="book-title">1퍼센트 부자의 법칙</p>
+                        <p className="author">사이토 히토리</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage3} />
-                      <p className="bestSeller-ranking en">3</p>
-                      <p className="book-title">세이노의 가르침</p>
-                      <p className="author">세이노</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage3} />
+                        <p className="bestSeller-ranking en">3</p>
+                        <p className="book-title">세이노의 가르침</p>
+                        <p className="author">세이노</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage4} />
-                      <p className="bestSeller-ranking en">4</p>
-                      <p className="book-title">주식 시세의 비밀</p>
-                      <p className="author">정재호</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage4} />
+                        <p className="bestSeller-ranking en">4</p>
+                        <p className="book-title">주식 시세의 비밀</p>
+                        <p className="author">정재호</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage5} />
-                      <p className="bestSeller-ranking en">5</p>
-                      <p className="book-title">
-                        슬램덩크 리소스(THE FIRST SLAM DUNK re:SOURCE)
-                      </p>
-                      <p className="author">이노우에 타케히코</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage5} />
+                        <p className="bestSeller-ranking en">5</p>
+                        <p className="book-title">
+                          슬램덩크 리소스(THE FIRST SLAM DUNK re:SOURCE)
+                        </p>
+                        <p className="author">이노우에 타케히코</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage6} />
-                      <p className="bestSeller-ranking en">6</p>
-                      <p className="book-title">K 배터리 레볼루션</p>
-                      <p className="author">박순혁</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage6} />
+                        <p className="bestSeller-ranking en">6</p>
+                        <p className="book-title">K 배터리 레볼루션</p>
+                        <p className="author">박순혁</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage7} />
-                      <p className="bestSeller-ranking en">7</p>
-                      <p className="book-title">
-                        원씽(The One Thing)(리커버 특별판)
-                      </p>
-                      <p className="author">게리 켈러 , 제이 파파산</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage7} />
+                        <p className="bestSeller-ranking en">7</p>
+                        <p className="book-title">
+                          원씽(The One Thing)(리커버 특별판)
+                        </p>
+                        <p className="author">게리 켈러 , 제이 파파산</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage8} />
-                      <p className="bestSeller-ranking en">8</p>
-                      <p className="book-title">
-                        만일 내가 인생을 다시 산다면(10만 부 돌파기념 스페셜
-                        에디션)
-                      </p>
-                      <p className="author">김혜남</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage8} />
+                        <p className="bestSeller-ranking en">8</p>
+                        <p className="book-title">
+                          만일 내가 인생을 다시 산다면(10만 부 돌파기념 스페셜
+                          에디션)
+                        </p>
+                        <p className="author">김혜남</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage9} />
-                      <p className="bestSeller-ranking en">9</p>
-                      <p className="book-title">정세현의 통찰</p>
-                      <p className="author">정세현</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage9} />
+                        <p className="bestSeller-ranking en">9</p>
+                        <p className="book-title">정세현의 통찰</p>
+                        <p className="author">정세현</p>
+                      </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <img src={bestSellerBookImage10} />
-                      <p className="bestSeller-ranking en">10</p>
-                      <p className="book-title">
-                        불편한 편의점(40만부 기념 벚꽃 에디션)
-                      </p>
-                      <p className="author">김호연</p>
+                      <Link to="">
+                        <img src={bestSellerBookImage10} />
+                        <p className="bestSeller-ranking en">10</p>
+                        <p className="book-title">
+                          불편한 편의점(40만부 기념 벚꽃 에디션)
+                        </p>
+                        <p className="author">김호연</p>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -291,14 +386,18 @@ function Home() {
               <p className="content-para observer-ready">
                 <h2>이벤트</h2>
                 <div className="event-content">
-                  <p className="event-title">
-                    우리의 책과 삶을 사랑하는 마음을 담아.
-                  </p>
-                  <p className="event-text">
-                    이번달 책 속에서 독자 여러분의 마음을 울린 위로가 되는
-                    문구가 있었나요?
-                    <br></br>그 문구를 LifeBooks에게 공유해주세요.
-                  </p>
+                  <Link to="">
+                    <div className="event-banner">
+                      <p className="event-title">
+                        우리의 책과 삶을 사랑하는 마음을 담아.
+                      </p>
+                      <p className="event-text">
+                        이번달 책 속에서 독자 여러분의 마음을 울린 위로가 되는
+                        문구가 있었나요?
+                        <br></br>그 문구를 LifeBooks에게 공유해주세요.
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </p>
             </div>

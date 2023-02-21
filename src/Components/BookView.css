@@ -105,3 +105,8 @@
   font-size: 48px;
   line-height: 1;
 }
+.btn-add-to-cart {
+  background: #000;
+  border-radius: 15px;
+  font-family: "Merriweather";
+}

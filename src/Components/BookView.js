@@ -54,7 +54,7 @@ export class BookView {
 				</div>
 			</div>
 			<div class="order-form">
-				<button class="btn btn-add-to-cart">Add to Cart</button>
+				<button class="btn btn-add-to-cart">장바구니에 담기</button>
 			</div>
 		`;
 

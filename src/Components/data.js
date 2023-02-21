@@ -1,81 +1,81 @@
 const data = [
   {
     index: 0,
-    title: "Grid Systems",
+    title: "나의 아름다운 날들",
     thumbnail: "../images/book1_t.jpg",
     frontCover: "../images/book1.jpg",
-    backCover: "../images/book1.jpg",
+    backCover: "../images/newArrivalBook1_t.jpg",
     preview1: `
-			<p>Grid Systems ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis alias amet ab asperiores, tempora id nihil nam molestiae fugiat magnam commodi. Laboriosam sequi facilis tenetur temporibus deleniti enim ipsum, amet ipsa accusantium eum numquam iste laudantium maxime. Rerum facere eius blanditiis perspiciatis officia voluptates provident. Est velit aliquam vero iusto vel atque, ratione, reiciendis assumenda asperiores harum blanditiis inventore quidem nam non sint natus ipsam voluptate tenetur.</p>
+			<p>나의 아름다운 날들</p>
 		`,
     preview2: `
 			<figure>
 				<img src="../images/book1.jpg" alt="book1">
-				<figcaption>Grid Systems</figcaption>
+				<figcaption>나의 아름다운 날들</figcaption>
 			</figure>
 		`,
   },
   {
     index: 1,
-    title: "How to Design",
+    title: "날씨와 얼굴",
     thumbnail: "../images/book2_t.jpg",
     frontCover: "../images/book2.jpg",
     backCover: "../images/book2.jpg",
     preview1: `
-			<p>How to Design  ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis alias amet ab asperiores, tempora id nihil nam molestiae fugiat magnam commodi. Laboriosam sequi facilis tenetur temporibus deleniti enim ipsum, amet ipsa accusantium eum numquam iste laudantium maxime. Rerum facere eius blanditiis perspiciatis officia voluptates provident. Est velit aliquam vero iusto vel atque, ratione, reiciendis assumenda asperiores harum blanditiis inventore quidem nam non sint natus ipsam voluptate tenetur.</p>
+			<p>날씨와 얼굴</p>
 		`,
     preview2: `
 			<figure>
 				<img src="../images/book2.jpg" alt="book2">
-				<figcaption>How to Design</figcaption>
+				<figcaption>날씨와 얼굴</figcaption>
 			</figure>
 		`,
   },
   {
     index: 2,
-    title: "LOGO DESIGN LOVE",
+    title: "집 떠나 사는 즐거움",
     thumbnail: "../images/book3_t.jpg",
     frontCover: "../images/book3.jpg",
     backCover: "../images/book3.jpg",
     preview1: `
-			<p>LOGO DESIGN LOVE  ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis alias amet ab asperiores, tempora id nihil nam molestiae fugiat magnam commodi. Laboriosam sequi facilis tenetur temporibus deleniti enim ipsum, amet ipsa accusantium eum numquam iste laudantium maxime. Rerum facere eius blanditiis perspiciatis officia voluptates provident. Est velit aliquam vero iusto vel atque, ratione, reiciendis assumenda asperiores harum blanditiis inventore quidem nam non sint natus ipsam voluptate tenetur.</p>
+			<p>집 떠나 사는 즐거움.</p>
 		`,
     preview2: `
 			<figure>
 				<img src="../images/book3.jpg" alt="book3">
-				<figcaption>LOGO DESIGN LOVE</figcaption>
+				<figcaption>집 떠나 사는 즐거움</figcaption>
 			</figure>
 		`,
   },
   {
     index: 3,
-    title: "Coloso Design",
+    title: "다이다이 서점에서",
     thumbnail: "../images/book4_t.jpg",
     frontCover: "../images/book4.jpg",
     backCover: "../images/book4.jpg",
     preview1: `
-			<p>Coloso Design  ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis alias amet ab asperiores, tempora id nihil nam molestiae fugiat magnam commodi. Laboriosam sequi facilis tenetur temporibus deleniti enim ipsum, amet ipsa accusantium eum numquam iste laudantium maxime. Rerum facere eius blanditiis perspiciatis officia voluptates provident. Est velit aliquam vero iusto vel atque, ratione, reiciendis assumenda asperiores harum blanditiis inventore quidem nam non sint natus ipsam voluptate tenetur.</p>
+			<p>다이다이 서점에서</p>
 		`,
     preview2: `
 			<figure>
 				<img src="../images/book4.jpg" alt="book4">
-				<figcaption>Coloso Design</figcaption>
+				<figcaption>다이다이 서점에서</figcaption>
 			</figure>
 		`,
   },
   {
     index: 4,
-    title: "Grid Systems",
+    title: "엉엉 우는 법을 잊은 나에게",
     thumbnail: "../images/book1_t.jpg",
     frontCover: "../images/book1.jpg",
     backCover: "../images/book1.jpg",
     preview1: `
-			<p>Grid Systems ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis alias amet ab asperiores, tempora id nihil nam molestiae fugiat magnam commodi. Laboriosam sequi facilis tenetur temporibus deleniti enim ipsum, amet ipsa accusantium eum numquam iste laudantium maxime. Rerum facere eius blanditiis perspiciatis officia voluptates provident. Est velit aliquam vero iusto vel atque, ratione, reiciendis assumenda asperiores harum blanditiis inventore quidem nam non sint natus ipsam voluptate tenetur.</p>
+			<p>엉엉 우는 법을 잊은 나에게</p>
 		`,
     preview2: `
 			<figure>
 				<img src="../images/book1.jpg" alt="book1">
-				<figcaption>Grid Systems</figcaption>
+				<figcaption>엉엉 우는 법을 잊은 나에게</figcaption>
 			</figure>
 		`,
   },

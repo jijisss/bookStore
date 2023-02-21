@@ -121,3 +121,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  background: #ffffff;
+  overflow-x: hidden;
+  font-family: "Gowun Batang";
+}
+:link {
+  text-decoration: none;
+  outline: none;
+}
