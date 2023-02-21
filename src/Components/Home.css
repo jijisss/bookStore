@@ -31,9 +31,7 @@ img {
   width: 980px;
   margin: 0 auto;
 }
-.bookOfMonth {
-  font-weight: bold;
-}
+
 .header {
   position: relative;
   z-index: 10;
@@ -59,6 +57,7 @@ img {
   background-size: cover;
   opacity: 0.93;
 }
+
 .site-title {
   padding: 60px 0 20px;
   font-size: 60px;
@@ -321,7 +320,7 @@ img {
   border-bottom: 1px solid #444;
 }
 
-.category_list {
+.category-list {
   width: 980px;
   height: 100%;
   margin: 0 auto;
@@ -330,11 +329,11 @@ img {
   justify-content: space-between;
 }
 
-.category_list_item {
+.category-list-item {
   transition: 0.3s;
 }
 
-.category_list_item:hover {
+.category-list-item:hover {
   transform: scale(1.08);
   font-weight: bold;
   transition: 0.3s;
@@ -346,8 +345,8 @@ img {
 }
 .home-reading-section h2 {
   margin-bottom: 1.2em;
-  /* font-family: 'Homemade Apple', cursive; */
   font-size: 2rem;
+  font-weight: bold;
 }
 .header-media {
   display: flex;
@@ -360,7 +359,87 @@ img {
   width: 300px;
   margin-right: 2rem;
 }
+
 .content-para {
   margin-bottom: 1em;
   line-height: 1.6;
+}
+
+.center-content {
+  margin-top: 3rem;
+}
+
+.book-of-week-content {
+  width: 100%;
+}
+
+.book-of-week-content-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-of-week-content-item {
+  width: 18%;
+}
+
+.book-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: #353535;
+}
+
+.book-of-week-content-item img {
+  height: 258.42px;
+}
+
+.bestSeller-book-content {
+  width: 100%;
+}
+
+.bestSeller-book-content-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bestSeller-book-content-item {
+  width: 18%;
+}
+
+.bestSeller-book-content-item img {
+  height: 259px;
+}
+
+.bestSeller-book-content-item:nth-child(5) {
+  margin-bottom: 1.5rem;
+}
+.bestSeller-ranking {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: -15px;
+}
+
+.event-content {
+  width: 100%;
+  height: 300px;
+  background: pink;
+  background-image: url(../images/event-banner-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+  text-align: right;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.event-title {
+  font-size: 2rem;
+}
+
+.event-text {
+  margin-top: 0.6rem;
 }

@@ -3,7 +3,22 @@ import "./BookView.css";
 import { cm } from "./cm.js";
 import { BookView } from "./BookView.js";
 
-import bookImage from "../images/book-image.jpg";
+import bookOfMonthImage from "../images/bookOfMonth.jpg";
+import bookOfWeekImage1 from "../images/bookOfWeek1.jpg";
+import bookOfWeekImage2 from "../images/bookOfWeek2.jpg";
+import bookOfWeekImage3 from "../images/bookOfWeek3.jpg";
+import bookOfWeekImage4 from "../images/bookOfWeek4.jpg";
+import bookOfWeekImage5 from "../images/bookOfWeek5.jpg";
+import bestSellerBookImage1 from "../images/bestSellerBook1.jpg";
+import bestSellerBookImage2 from "../images/bestSellerBook2.jpg";
+import bestSellerBookImage3 from "../images/bestSellerBook3.jpg";
+import bestSellerBookImage4 from "../images/bestSellerBook4.jpg";
+import bestSellerBookImage5 from "../images/bestSellerBook5.jpg";
+import bestSellerBookImage6 from "../images/bestSellerBook6.jpg";
+import bestSellerBookImage7 from "../images/bestSellerBook7.jpg";
+import bestSellerBookImage8 from "../images/bestSellerBook8.jpg";
+import bestSellerBookImage9 from "../images/bestSellerBook9.jpg";
+import bestSellerBookImage10 from "../images/bestSellerBook10.jpg";
 
 let loaderElem;
 let observerElems;
@@ -102,49 +117,191 @@ function Home() {
         </div>
         {/* category */}
         <div className="category">
-          <ul className="category_list">
-            <li className="category_list_item">전체</li>
-            <li className="category_list_item">문학</li>
-            <li className="category_list_item">시/에세이</li>
-            <li className="category_list_item">소설</li>
-            <li className="category_list_item">사회과학</li>
-            <li className="category_list_item">예술문화</li>
-            <li className="category_list_item">역사</li>
-            <li className="category_list_item">인문학</li>
-            <li className="category_list_item">건강</li>
-            <li className="category_list_item">자기계발</li>
+          <ul className="category-list">
+            <li className="category-list-item">전체</li>
+            <li className="category-list-item">문학</li>
+            <li className="category-list-item">시/에세이</li>
+            <li className="category-list-item">소설</li>
+            <li className="category-list-item">사회과학</li>
+            <li className="category-list-item">예술문화</li>
+            <li className="category-list-item">역사</li>
+            <li className="category-list-item">인문학</li>
+            <li className="category-list-item">건강</li>
+            <li className="category-list-item">자기계발</li>
           </ul>
         </div>
         {/* home-reading-section */}
         <div className="home-reading-section">
           <div className="width-setter">
             <div>
-              <h2 className="bookOfMonth">이달의 당신에게 추천하는 책</h2>
+              <h2 className="header-media-title">
+                이달의 당신에게 추천하는 책
+              </h2>
               <div className="header-media">
                 <p className="content-image observer-ready">
-                  <img src={bookImage} alt="book-image" />
+                  <img src={bookOfMonthImage} alt="book-image" />
                 </p>
                 <p className="content-para observer-ready">
-                  !책에 대해서 간단히 소개하는 내용! Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Fugit architecto possimus
-                  reiciendis veritatis ipsum perferendis necessitatibus dicta,
-                  numquam labore ea a rem eligendi amet commodi pariatur quia
-                  molestiae vel magni facere quidem assumenda fuga nisi
-                  voluptates eum. Harum error odio voluptates alias, quibusdam
-                  laboriosam cupiditate esse, magnam voluptate architecto
-                  quaerat ullam, repellendus vel dicta accusantium laudantium
-                  non! Pariatur voluptatibus earum sed nostrum similique
-                  placeat! Quo dolore earum sapiente ipsa accusamus consectetur
-                  ullam aut beatae fugiat, vitae optio quaerat deleniti qui.
+                  30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된
+                  당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏 살면서
+                  한 가지 후회하는 게 있다면 스스로를 너무 닦달하며 인생을
+                  숙제처럼 산 것이라고 말한다. 의사로, 엄마로, 아내로, 며느리로,
+                  딸로 살면서 늘 의무와 책임감에 치여 어떻게든 그 모든 역할을
+                  잘해 내려 애썼고 그러다 보니 정작 누려야 할 삶의 즐거움들을
+                  놓쳐 버렸다는 것이다. 그러다 22년 전 마흔세 살에 파킨슨병
+                  진단을 받으며 비로소 알게 되었다. 자신이 없으면 집안도 병원도
+                  제대로 안 굴러갈 것 같았는데 세상은 너무나 멀쩡히 잘 굴러갔다.
+                  그제야 그녀는 자신의 곁을 지켜 주는 사람들을 다시 보게 되었고,
+                  놓쳐서는 안 될 인생의 소중한 것들이 무엇인지를 돌아보게
+                  되었다. 그래서 벌써 마흔이 되어 버린, 후회 없는 인생을 살고
+                  싶은 사람들에게 말해 주고 싶은 것도 딱 한가지다. “하나의 문이
+                  닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고
+                  그냥 재미있게 살아라!” <br></br>
+                  <br></br>이 책은 2015년 ‘오늘 내가 사는 게 재미있는 이유’라는
+                  제목으로 출간, 독자들의 사랑을 받으며 10만 부 돌파
+                  베스트셀러가 된 것을 기념해 펴낸 스페셜 에디션으로 저자가
+                  30년간 정신분석 전문의로 일하며 깨달은 인생의 비밀과 22년간
+                  파킨슨병을 앓으면서도 유쾌하게 살 수 있는 이유를 전한다. 또한
+                  ‘완벽한 때는 결코 오지 않는 법이다’, ‘때론 버티는 것이
+                  답이다’, ‘제발 모든 것을 상처라고 말하지 말 것’, ‘가까운
+                  사람일수록 해서는 안 될 것들이 있다’ 등 환자들에게 미처 하지
+                  못했던 그러나 꼭 해 주고 싶은 이야기들을 담고 있다.
                 </p>
               </div>
             </div>
             <div className="center-content">
-              <p className="content-para observer-ready"></p>
-              <p className="content-para observer-ready"></p>
-              <p className="content-para observer-ready"></p>
+              <p className="content-para observer-ready">
+                <h2>이주의 책</h2>
+                <div className="book-of-week-content">
+                  <ul className="book-of-week-content-list">
+                    <li className="book-of-week-content-item">
+                      <img src={bookOfWeekImage1} />
+                      <p className="book-title">세이노의 가르침</p>
+                      <p className="author">세이노</p>
+                    </li>
+                    <li className="book-of-week-content-item">
+                      <img src={bookOfWeekImage2} />
+                      <p className="book-title">백조와 박쥐</p>
+                      <p className="author">히가시노 게이고</p>
+                    </li>
+                    <li className="book-of-week-content-item">
+                      <img src={bookOfWeekImage3} />
+                      <p className="book-title">마지막 섬</p>
+                      <p className="author">쥴퓌 리바넬리</p>
+                    </li>
+                    <li className="book-of-week-content-item">
+                      <img src={bookOfWeekImage4} />
+                      <p className="book-title">방자</p>
+                      <p className="author">유키 하루오</p>
+                    </li>
+                    <li className="book-of-week-content-item">
+                      <img src={bookOfWeekImage5} />
+                      <p className="book-title">심연</p>
+                      <p className="author">앨마 카츠</p>
+                    </li>
+                  </ul>
+                </div>
+              </p>
             </div>
-            <div></div>
+            <div className="center-content">
+              <p className="content-para observer-ready">
+                <h2>인기 급상승 도서</h2>
+                <div className="surge-popularity-book-content"></div>
+              </p>
+            </div>
+            <div className="center-content">
+              <p className="content-para observer-ready">
+                <h2>베스트 셀러</h2>
+                <div className="bestSeller-book-content">
+                  <ul className="bestSeller-book-content-list">
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage1} />
+                      <p className="bestSeller-ranking en">1</p>
+                      <p className="book-title">김미경의 마흔 수업</p>
+                      <p className="author">김미경</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage2} />
+                      <p className="bestSeller-ranking en">2</p>
+                      <p className="book-title">1퍼센트 부자의 법칙</p>
+                      <p className="author">사이토 히토리</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage3} />
+                      <p className="bestSeller-ranking en">3</p>
+                      <p className="book-title">세이노의 가르침</p>
+                      <p className="author">세이노</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage4} />
+                      <p className="bestSeller-ranking en">4</p>
+                      <p className="book-title">주식 시세의 비밀</p>
+                      <p className="author">정재호</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage5} />
+                      <p className="bestSeller-ranking en">5</p>
+                      <p className="book-title">
+                        슬램덩크 리소스(THE FIRST SLAM DUNK re:SOURCE)
+                      </p>
+                      <p className="author">이노우에 타케히코</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage6} />
+                      <p className="bestSeller-ranking en">6</p>
+                      <p className="book-title">K 배터리 레볼루션</p>
+                      <p className="author">박순혁</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage7} />
+                      <p className="bestSeller-ranking en">7</p>
+                      <p className="book-title">
+                        원씽(The One Thing)(리커버 특별판)
+                      </p>
+                      <p className="author">게리 켈러 , 제이 파파산</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage8} />
+                      <p className="bestSeller-ranking en">8</p>
+                      <p className="book-title">
+                        만일 내가 인생을 다시 산다면(10만 부 돌파기념 스페셜
+                        에디션)
+                      </p>
+                      <p className="author">김혜남</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage9} />
+                      <p className="bestSeller-ranking en">9</p>
+                      <p className="book-title">정세현의 통찰</p>
+                      <p className="author">정세현</p>
+                    </li>
+                    <li className="bestSeller-book-content-item">
+                      <img src={bestSellerBookImage10} />
+                      <p className="bestSeller-ranking en">10</p>
+                      <p className="book-title">
+                        불편한 편의점(40만부 기념 벚꽃 에디션)
+                      </p>
+                      <p className="author">김호연</p>
+                    </li>
+                  </ul>
+                </div>
+              </p>
+            </div>
+            <div className="center-content">
+              <p className="content-para observer-ready">
+                <h2>이벤트</h2>
+                <div className="event-content">
+                  <p className="event-title">
+                    우리의 책과 삶을 사랑하는 마음을 담아.
+                  </p>
+                  <p className="event-text">
+                    이번달 책 속에서 독자 여러분의 마음을 울린 위로가 되는
+                    문구가 있었나요?
+                    <br></br>그 문구를 LifeBooks에게 공유해주세요.
+                  </p>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
 
