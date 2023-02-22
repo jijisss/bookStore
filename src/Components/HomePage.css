@@ -4,18 +4,18 @@ h3 {
   letter-spacing: -0.01em;
 }
 body {
+  position: relative;
   background: #ffffff;
   overflow-x: hidden;
   font-family: "Gowun Batang";
 }
-.en {
-  font-family: "Merriweather";
-}
-
 img {
   max-width: 100%;
   height: auto;
   border: 0;
+}
+.en {
+  font-family: "Merriweather";
 }
 .observer-ready {
   opacity: 0;
@@ -30,7 +30,6 @@ img {
   width: 980px;
   margin: 0 auto;
 }
-
 .header {
   position: relative;
   z-index: 10;
@@ -50,13 +49,12 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../images/bookPhoto.jpg");
+  background-image: url("../assets/images/bookPhoto.jpg");
   background-position: 10% 10%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.93;
 }
-
 .site-title {
   padding: 60px 0 20px;
   font-size: 60px;
@@ -181,7 +179,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   transform-style: preserve-3d;
-  /* background-image: url(../images/newArrivalBook1_t.jpg); */
 }
 .book-cover::before {
   content: "";
@@ -211,7 +208,7 @@ img {
   transform: rotateY(-90deg);
   transform-origin: right;
   transform-style: preserve-3d;
-  background-image: url(../images/newArrivalBook1_t.jpg);
+  background-image: url(../assets/images/newArrivalBook1_t.jpg);
 }
 .book-side::before {
   content: "";
@@ -312,7 +309,6 @@ img {
   border-radius: 50%;
   animation: loader-ani 1s infinite linear;
 }
-
 .category {
   width: 100%;
   height: 80px;
@@ -320,7 +316,6 @@ img {
   font-size: 1.04rem;
   border-bottom: 1px solid #444;
 }
-
 .category-list {
   width: 980px;
   height: 100%;
@@ -329,18 +324,15 @@ img {
   flex: 1 0 auto;
   justify-content: space-between;
 }
-
 .category-list-item {
   transition: 0.3s;
   color: #000;
 }
-
 .category-list-item:hover {
   transform: scale(1.08);
   font-weight: bold;
   transition: 0.3s;
 }
-
 .home-reading-section {
   padding: 5rem 0;
   color: #212121;
@@ -356,77 +348,90 @@ img {
   padding-bottom: 2em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .header-media .content-image img {
   transition: 0.4s;
 }
-
 .header-media .content-image img:hover {
   transform: scale(1.05);
   transition: 0.4s;
 }
-
 .content-image {
   flex: 1 0 auto;
   width: 300px;
   margin-right: 2rem;
 }
-
 .content-para {
   margin-bottom: 1em;
   line-height: 1.6;
 }
-
 .center-content {
   margin-top: 4.5em;
 }
-
 .book-of-week-content {
   width: 100%;
 }
-
 .book-of-week-content-list {
   display: flex;
   justify-content: space-between;
 }
-
 .book-of-week-content-item {
   width: 18%;
 }
-
 .book-title {
   font-size: 0.9rem;
   font-weight: bold;
   color: #000;
 }
-
 .author {
   font-size: 0.9rem;
   color: #353535;
 }
-
 .book-of-week-content-item img {
   height: 258.42px;
+  transition: 0.4s;
 }
-
+.book-of-week-content-item img:hover {
+  transform: scale(1.048);
+  transition: 0.4s;
+}
+.popularity-book-content {
+  width: 100%;
+}
+.popularity-book-content-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.popularity-book-content-list-item {
+  width: 18%;
+}
+.popularity-book-content-list-item img {
+  height: 259px;
+  transition: 0.4s;
+}
+.popularity-book-content-list-item img:hover {
+  transform: scale(1.048);
+  transition: 0.4s;
+}
 .bestSeller-book-content {
   width: 100%;
 }
-
 .bestSeller-book-content-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .bestSeller-book-content-item {
   width: 18%;
 }
-
 .bestSeller-book-content-item img {
   height: 259px;
+  transition: 0.4s;
 }
-
+.bestSeller-book-content-item img:hover {
+  transform: scale(1.048);
+  transition: 0.4s;
+}
 .bestSeller-book-content-item:nth-child(5) {
   margin-bottom: 1.5rem;
 }
@@ -436,16 +441,14 @@ img {
   margin-top: -15px;
   color: #000;
 }
-
 .event-content {
   width: 100%;
   height: 300px;
 }
-
 .event-banner {
   width: 100%;
   height: 100%;
-  background-image: url(../images/event-banner-bg.jpg);
+  background-image: url(../assets/images/event-banner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% 40%;
@@ -454,11 +457,32 @@ img {
   box-sizing: border-box;
   color: #000;
 }
-
 .event-title {
   font-size: 2rem;
 }
-
 .event-text {
   margin-top: 0.6rem;
+}
+.top-btn {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 1;
+}
+#top {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 9px;
+  color: #171717;
+  background: none;
+  border: 1px solid #444;
+  border-radius: 0%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#top:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.3s;
 }

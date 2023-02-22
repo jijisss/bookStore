@@ -1,31 +1,47 @@
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../components/HomePage.css";
 import "../components/BookView.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
 
 // image
-import newArrivalBook1_t from "../images/newArrivalBook1_t.jpg";
-import newArrivalBook2_t from "../images/newArrivalBook2_t.jpg";
-import newArrivalBook3_t from "../images/newArrivalBook3_t.jpg";
-import newArrivalBook4_t from "../images/newArrivalBook4_t.jpg";
-import newArrivalBook5_t from "../images/newArrivalBook5_t.jpg";
-import bookOfMonthImage from "../images/bookOfMonth.jpg";
-import bookOfWeekImage1 from "../images/bookOfWeek1.jpg";
-import bookOfWeekImage2 from "../images/bookOfWeek2.jpg";
-import bookOfWeekImage3 from "../images/bookOfWeek3.jpg";
-import bookOfWeekImage4 from "../images/bookOfWeek4.jpg";
-import bookOfWeekImage5 from "../images/bookOfWeek5.jpg";
-import bestSellerBookImage1 from "../images/bestSellerBook1.jpg";
-import bestSellerBookImage2 from "../images/bestSellerBook2.jpg";
-import bestSellerBookImage3 from "../images/bestSellerBook3.jpg";
-import bestSellerBookImage4 from "../images/bestSellerBook4.jpg";
-import bestSellerBookImage5 from "../images/bestSellerBook5.jpg";
-import bestSellerBookImage6 from "../images/bestSellerBook6.jpg";
-import bestSellerBookImage7 from "../images/bestSellerBook7.jpg";
-import bestSellerBookImage8 from "../images/bestSellerBook8.jpg";
-import bestSellerBookImage9 from "../images/bestSellerBook9.jpg";
-import bestSellerBookImage10 from "../images/bestSellerBook10.jpg";
+// newArrival
+import newArrivalBook1_t from "../assets/images/newArrivalBook1_t.jpg";
+import newArrivalBook2_t from "../assets/images/newArrivalBook2_t.jpg";
+import newArrivalBook3_t from "../assets/images/newArrivalBook3_t.jpg";
+import newArrivalBook4_t from "../assets/images/newArrivalBook4_t.jpg";
+import newArrivalBook5_t from "../assets/images/newArrivalBook5_t.jpg";
+// bookOfMonth
+import bookOfMonthImage from "../assets/images/bookOfMonth.jpg";
+import bookOfWeekImage1 from "../assets/images/bookOfWeek1.jpg";
+import bookOfWeekImage2 from "../assets/images/bookOfWeek2.jpg";
+import bookOfWeekImage3 from "../assets/images/bookOfWeek3.jpg";
+import bookOfWeekImage4 from "../assets/images/bookOfWeek4.jpg";
+import bookOfWeekImage5 from "../assets/images/bookOfWeek5.jpg";
+// popularity
+import popularBookImage1 from "../assets/images/popularBook1.jpg";
+import popularBookImage2 from "../assets/images/popularBook2.jpg";
+import popularBookImage3 from "../assets/images/popularBook3.jpg";
+import popularBookImage4 from "../assets/images/popularBook4.jpg";
+import popularBookImage5 from "../assets/images/popularBook5.jpg";
+// import popularBookImage6 from "../assets/images/popularBook6.jpg";
+// import popularBookImage7 from "../assets/images/popularBook7.jpg";
+// import popularBookImage8 from "../assets/images/popularBook8.jpg";
+// import popularBookImage9 from "../assets/images/popularBook9.jpg";
+// import popularBookImage10 from "../assets/images/popularBook10.jpg";
+// bestSeller
+import bestSellerBookImage1 from "../assets/images/bestSellerBook1.jpg";
+import bestSellerBookImage2 from "../assets/images/bestSellerBook2.jpg";
+import bestSellerBookImage3 from "../assets/images/bestSellerBook3.jpg";
+import bestSellerBookImage4 from "../assets/images/bestSellerBook4.jpg";
+import bestSellerBookImage5 from "../assets/images/bestSellerBook5.jpg";
+import bestSellerBookImage6 from "../assets/images/bestSellerBook6.jpg";
+import bestSellerBookImage7 from "../assets/images/bestSellerBook7.jpg";
+import bestSellerBookImage8 from "../assets/images/bestSellerBook8.jpg";
+import bestSellerBookImage9 from "../assets/images/bestSellerBook9.jpg";
+import bestSellerBookImage10 from "../assets/images/bestSellerBook10.jpg";
 
 let loaderElem;
 let observerElems;
@@ -39,6 +55,7 @@ let bookView;
 function Home() {
   return (
     <>
+      <Header />
       <div id="before-load" className="before-load">
         {/* loader */}
         <div className="loader-wrapper">
@@ -60,7 +77,7 @@ function Home() {
           <div className="shelf">
             <h3 className="shelf-title">
               <div className="width-setter">
-                <span className="en">New Arrivals</span> 신작 도서
+                <span className="en">New Arrivals</span> 베스트 신작 도서
               </div>
             </h3>
             <div className="book-list">
@@ -149,9 +166,7 @@ function Home() {
                     className="book-side"
                     style={{ backgroundImage: `url(${newArrivalBook5_t})` }}
                   >
-                    <h2 className="book-side-title">
-                      엉엉 우는 법을 잊은 나에게
-                    </h2>
+                    <h2 className="book-side-title">희망의 끈</h2>
                   </div>
                 </div>
               </div>
@@ -198,15 +213,15 @@ function Home() {
           <div className="width-setter">
             <div>
               <h2 className="header-media-title">
-                이달의 당신에게 추천하는 책
+                당신에게 추천하는 이달의 책
               </h2>
               <div className="header-media">
-                <p className="content-image observer-ready">
+                <div className="content-image observer-ready">
                   <Link to="">
                     <img src={bookOfMonthImage} alt="book-image" />
                   </Link>
-                </p>
-                <p className="content-para observer-ready">
+                </div>
+                <div className="content-para observer-ready">
                   30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된
                   당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏 살면서
                   한 가지 후회하는 게 있다면 스스로를 너무 닦달하며 인생을
@@ -231,11 +246,11 @@ function Home() {
                   답이다’, ‘제발 모든 것을 상처라고 말하지 말 것’, ‘가까운
                   사람일수록 해서는 안 될 것들이 있다’ 등 환자들에게 미처 하지
                   못했던 그러나 꼭 해 주고 싶은 이야기들을 담고 있다.
-                </p>
+                </div>
               </div>
             </div>
             <div className="center-content">
-              <p className="content-para observer-ready">
+              <div className="content-para observer-ready">
                 <h2>이주의 책</h2>
                 <div className="book-of-week-content">
                   <ul className="book-of-week-content-list">
@@ -276,16 +291,93 @@ function Home() {
                     </li>
                   </ul>
                 </div>
-              </p>
+              </div>
             </div>
-            {/* <div className="center-content">
-              <p className="content-para observer-ready">
-                <h2>인기 급상승 도서</h2>
-                <div className="surge-popularity-book-content"></div>
-              </p>
-            </div> */}
             <div className="center-content">
-              <p className="content-para observer-ready">
+              <div className="content-para observer-ready">
+                <h2>인기 급상승 도서</h2>
+                <div className="popularity-book-content">
+                  <ul className="popularity-book-content-list">
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage1} />
+                        <p className="book-title">망그러진 만화</p>
+                        <p className="author">유랑</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage2} />
+                        <p className="book-title">우리는 조구만 존재야</p>
+                        <p className="author">조구만 스튜디오</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage3} />
+                        <p className="book-title">
+                          그대 늙어가는 것이 아니라 익어가는 것이다
+                        </p>
+                        <p className="author">오평선</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage4} />
+                        <p className="book-title">
+                          너의 말이 좋아서 밑줄을 그었다
+                        </p>
+                        <p className="author">림태주</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage5} />
+                        <p className="book-title">별빛 너머의 별</p>
+                        <p className="author">나태주</p>
+                      </Link>
+                    </li>
+                    {/* <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage6} />
+                        <p className="book-title">나에게 고맙다</p>
+                        <p className="author">전승환</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage7} />
+                        <p className="book-title">작은 별이지만 빛나고 있어</p>
+                        <p className="author">소윤</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage8} />
+                        <p className="book-title">결국 무엇이든 해내는 사람</p>
+                        <p className="author">김상현</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage9} />
+                        <p className="book-title">안녕, 소중한 사람</p>
+                        <p className="author">정한경</p>
+                      </Link>
+                    </li>
+                    <li className="popularity-book-content-list-item">
+                      <Link tp="">
+                        <img src={popularBookImage10} />
+                        <p className="book-title">불안</p>
+                        <p className="author">알랭 드 보통</p>
+                      </Link>
+                    </li> */}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="center-content">
+              <div className="content-para observer-ready">
                 <h2>베스트 셀러</h2>
                 <div className="bestSeller-book-content">
                   <ul className="bestSeller-book-content-list">
@@ -380,10 +472,10 @@ function Home() {
                     </li>
                   </ul>
                 </div>
-              </p>
+              </div>
             </div>
             <div className="center-content">
-              <p className="content-para observer-ready">
+              <div className="content-para observer-ready">
                 <h2>이벤트</h2>
                 <div className="event-content">
                   <Link to="">
@@ -392,24 +484,39 @@ function Home() {
                         우리의 책과 삶을 사랑하는 마음을 담아.
                       </p>
                       <p className="event-text">
-                        이번달 책 속에서 독자 여러분의 마음을 울린 위로가 되는
-                        문구가 있었나요?
+                        이번달 읽은 책 속에서 독자 여러분의 마음을 울린, 위로가
+                        되는 문구가 있었나요?
                         <br></br>그 문구를 LifeBooks에게 공유해주세요.
                       </p>
                     </div>
                   </Link>
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* modal-cover */}
         <div className="modal-cover"></div>
+
+        {/* top btn */}
+        <div className="top-btn">
+          <button id="top" onClick={scrollToTop} type="button">
+            TOP
+          </button>
+        </div>
       </div>
+      <Footer />
     </>
   );
 }
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 function setElems() {
   loaderElem = document.querySelector(".loader-wrapper");

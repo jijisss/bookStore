@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 function Header() {
   return (
     <>
-      <div className="Header">
+      <div id="Header">
         <div className="HeaderInner">
           <div className="Header_top">
             <p className="HeaderText">
@@ -15,23 +15,25 @@ function Header() {
             {/* loginBar */}
             <div className="loginMenu">
               <ul className="loginMenu_list">
-                <Link
-                  to=""
-                  className="loginMenu_list_item menu_list_item"
-                  style={{
-                    color: "#000",
-                  }}
-                >
-                  로그인
+                <Link to="/login">
+                  <li
+                    className="loginMenu_list_item menu_list_item"
+                    style={{
+                      color: "#000",
+                    }}
+                  >
+                    로그인
+                  </li>
                 </Link>
-                <Link
-                  to=""
-                  className="loginMenu_list_item menu_list_item"
-                  style={{
-                    color: "#000",
-                  }}
-                >
-                  회원가입
+                <Link to="/join">
+                  <li
+                    className="loginMenu_list_item menu_list_item"
+                    style={{
+                      color: "#000",
+                    }}
+                  >
+                    회원가입
+                  </li>
                 </Link>
               </ul>
             </div>

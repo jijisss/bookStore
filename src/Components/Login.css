@@ -3,12 +3,15 @@
   height: 100%;
   margin: 0 auto;
 }
-
 .LoginWrap {
   width: 600px;
-  margin: 0 auto;
+  margin: 6rem auto 6rem;
 }
-
+.login {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
 .loginForm {
   width: 100%;
   display: flex;
@@ -24,37 +27,37 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 }
-
 input:focus {
   outline: none;
 }
-
 .login_btn {
   height: 60px;
+  margin-top: 1rem;
   font-size: 1.3rem;
   font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  background: rgb(49, 49, 126);
+  border: 1px solid #444;
+  border-radius: 0px;
+  color: #000;
+  background: none;
+  transition: 0.4s;
+  cursor: pointer;
+  font-family: "Gowun Batang", serif;
 }
-
+.login_btn:hover {
+  background: #000;
+  color: #fff;
+  transition: 0.4s;
+}
 .id_save_box {
   margin: 1.3rem 0 1.3rem;
   display: flex;
 }
-
-/* input#id_save_check {
-  display: none;
-} */
-
 .findAccount {
   width: 50%;
   float: left;
   display: flex;
   font-size: 0.97rem;
 }
-
 .find_id {
   margin-right: 0.4rem;
 }
@@ -86,16 +89,16 @@ input:focus {
 }
 
 .socialAccount_list {
-  width: 55%;
-  margin: 0 auto;
+  width: 38%;
+  margin: 1.5rem auto 0;
   display: flex;
   justify-content: space-between;
 }
 
 .socialAccount {
   position: relative;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border: 1px solid #e0e0e0;
   border-radius: 50%;
   background: #fff;

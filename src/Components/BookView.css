@@ -72,7 +72,8 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  font-size: 10px;
+  font-size: 11px;
+  line-height: 1.35;
   background: white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,14 +100,25 @@
 .sample-content p {
   margin-bottom: 2em;
 }
-.sample-content p::first-letter {
+.sample-content p::first- ~ letter {
   float: left;
   margin-right: 5px;
   font-size: 48px;
   line-height: 1;
 }
 .btn-add-to-cart {
+  position: relative;
+  top: 50px;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 0px;
+  box-sizing: border-box;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.btn-add-to-cart:hover {
+  color: #fff;
   background: #000;
-  border-radius: 15px;
-  font-family: "Merriweather";
+  transition: 0.4s;
 }

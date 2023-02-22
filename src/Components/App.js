@@ -1,14 +1,12 @@
 import HomePage from "../pages/HomePage";
-import Header from "./Header.js";
-import Footer from "./Footer";
+import Login from "./Login";
 import "./default.css";
 
 function App() {
   return (
     <>
-      <Header />
-      <HomePage />
-      <Footer />
+      {/* <HomePage /> */}
+      <Login />
     </>
   );
 }

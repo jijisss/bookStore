@@ -126,7 +126,11 @@ body {
   overflow-x: hidden;
   font-family: "Gowun Batang";
 }
-:link {
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
   text-decoration: none;
+}
+a:-webkit-any-link:active {
   outline: none;
 }
