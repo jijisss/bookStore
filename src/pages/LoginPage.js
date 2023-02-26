@@ -1,16 +1,13 @@
-import "./Login.css";
+import "../components/LoginPage.css";
 import { Link } from "react-router-dom";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
-import googleLogo from "../assets/images/google_logo.png";
-import facebookLogo from "../assets/images/facebook_logo.png";
-import kakaoLogo from "../assets/images/kakao_logo.jpg";
-import naverLogo from "../assets/images/naver_logo.png";
+import googleLogo from "../images/google_logo.png";
+import facebookLogo from "../images/facebook_logo.png";
+import kakaoLogo from "../images/kakao_logo.jpg";
+import naverLogo from "../images/naver_logo.png";
 
 function Login() {
   return (
     <>
-      <Header />
       <div id="Login">
         <div className="LoginWrap">
           <h1 className="login">로그인</h1>
@@ -25,9 +22,7 @@ function Login() {
               className="login_input password_input"
               placeholder="비밀번호"
             ></input>
-            <button type="submit" className="login_btn">
-              로그인
-            </button>
+            <button className="login_btn">로그인</button>
             <div className="id_save_box">
               <input type="checkbox" name="id_save" id="id_save_check"></input>
               <label name="id_save" className="id_save">
@@ -43,7 +38,7 @@ function Login() {
               비밀번호 찾기
             </Link>
           </div>
-          <Link to="" className="createAccount">
+          <Link to="/join" className="createAccount">
             회원가입
           </Link>
           <div className="socialAccountWrap">
@@ -81,7 +76,6 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

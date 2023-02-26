@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import "../components/HomePage.css";
 import "../components/BookView.css";
 import { cm } from "../components/cm.js";
@@ -8,40 +6,40 @@ import { BookView } from "../components/BookView.js";
 
 // image
 // newArrival
-import newArrivalBook1_t from "../assets/images/newArrivalBook1_t.jpg";
-import newArrivalBook2_t from "../assets/images/newArrivalBook2_t.jpg";
-import newArrivalBook3_t from "../assets/images/newArrivalBook3_t.jpg";
-import newArrivalBook4_t from "../assets/images/newArrivalBook4_t.jpg";
-import newArrivalBook5_t from "../assets/images/newArrivalBook5_t.jpg";
+import newArrivalBook1_t from "../images/newArrivalBook1_t.jpg";
+import newArrivalBook2_t from "../images/newArrivalBook2_t.jpg";
+import newArrivalBook3_t from "../images/newArrivalBook3_t.jpg";
+import newArrivalBook4_t from "../images/newArrivalBook4_t.jpg";
+import newArrivalBook5_t from "../images/newArrivalBook5_t.jpg";
 // bookOfMonth
-import bookOfMonthImage from "../assets/images/bookOfMonth.jpg";
-import bookOfWeekImage1 from "../assets/images/bookOfWeek1.jpg";
-import bookOfWeekImage2 from "../assets/images/bookOfWeek2.jpg";
-import bookOfWeekImage3 from "../assets/images/bookOfWeek3.jpg";
-import bookOfWeekImage4 from "../assets/images/bookOfWeek4.jpg";
-import bookOfWeekImage5 from "../assets/images/bookOfWeek5.jpg";
+import bookOfMonthImage from "../images/bookOfMonth.jpg";
+import bookOfWeekImage1 from "../images/bookOfWeek1.jpg";
+import bookOfWeekImage2 from "../images/bookOfWeek2.jpg";
+import bookOfWeekImage3 from "../images/bookOfWeek3.jpg";
+import bookOfWeekImage4 from "../images/bookOfWeek4.jpg";
+import bookOfWeekImage5 from "../images/bookOfWeek5.jpg";
 // popularity
-import popularBookImage1 from "../assets/images/popularBook1.jpg";
-import popularBookImage2 from "../assets/images/popularBook2.jpg";
-import popularBookImage3 from "../assets/images/popularBook3.jpg";
-import popularBookImage4 from "../assets/images/popularBook4.jpg";
-import popularBookImage5 from "../assets/images/popularBook5.jpg";
-// import popularBookImage6 from "../assets/images/popularBook6.jpg";
-// import popularBookImage7 from "../assets/images/popularBook7.jpg";
-// import popularBookImage8 from "../assets/images/popularBook8.jpg";
-// import popularBookImage9 from "../assets/images/popularBook9.jpg";
-// import popularBookImage10 from "../assets/images/popularBook10.jpg";
+import popularBookImage1 from "../images/popularBook1.jpg";
+import popularBookImage2 from "../images/popularBook2.jpg";
+import popularBookImage3 from "../images/popularBook3.jpg";
+import popularBookImage4 from "../images/popularBook4.jpg";
+import popularBookImage5 from "../images/popularBook5.jpg";
+// import popularBookImage6 from "../images/popularBook6.jpg";
+// import popularBookImage7 from "../images/popularBook7.jpg";
+// import popularBookImage8 from "../images/popularBook8.jpg";
+// import popularBookImage9 from "../images/popularBook9.jpg";
+// import popularBookImage10 from "../images/popularBook10.jpg";
 // bestSeller
-import bestSellerBookImage1 from "../assets/images/bestSellerBook1.jpg";
-import bestSellerBookImage2 from "../assets/images/bestSellerBook2.jpg";
-import bestSellerBookImage3 from "../assets/images/bestSellerBook3.jpg";
-import bestSellerBookImage4 from "../assets/images/bestSellerBook4.jpg";
-import bestSellerBookImage5 from "../assets/images/bestSellerBook5.jpg";
-import bestSellerBookImage6 from "../assets/images/bestSellerBook6.jpg";
-import bestSellerBookImage7 from "../assets/images/bestSellerBook7.jpg";
-import bestSellerBookImage8 from "../assets/images/bestSellerBook8.jpg";
-import bestSellerBookImage9 from "../assets/images/bestSellerBook9.jpg";
-import bestSellerBookImage10 from "../assets/images/bestSellerBook10.jpg";
+import bestSellerBookImage1 from "../images/bestSellerBook1.jpg";
+import bestSellerBookImage2 from "../images/bestSellerBook2.jpg";
+import bestSellerBookImage3 from "../images/bestSellerBook3.jpg";
+import bestSellerBookImage4 from "../images/bestSellerBook4.jpg";
+import bestSellerBookImage5 from "../images/bestSellerBook5.jpg";
+import bestSellerBookImage6 from "../images/bestSellerBook6.jpg";
+import bestSellerBookImage7 from "../images/bestSellerBook7.jpg";
+import bestSellerBookImage8 from "../images/bestSellerBook8.jpg";
+import bestSellerBookImage9 from "../images/bestSellerBook9.jpg";
+import bestSellerBookImage10 from "../images/bestSellerBook10.jpg";
 
 let loaderElem;
 let observerElems;
@@ -55,7 +53,6 @@ let bookView;
 function Home() {
   return (
     <>
-      <Header />
       <div id="before-load" className="before-load">
         {/* loader */}
         <div className="loader-wrapper">
@@ -506,7 +503,6 @@ function Home() {
           </button>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

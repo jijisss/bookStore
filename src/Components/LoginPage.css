@@ -1,7 +1,6 @@
 #Login {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
 .LoginWrap {
   width: 600px;
@@ -61,25 +60,30 @@ input:focus {
 .find_id {
   margin-right: 0.4rem;
 }
-
+.find_id:hover {
+  font-weight: bold;
+}
+.find_password:hover {
+  font-weight: bold;
+}
 .createAccount {
   width: 50%;
   float: left;
   text-align: right;
 }
-
+.createAccount:hover {
+  font-weight: bold;
+}
 .socialAccountWrap {
   position: relative;
   width: 100%;
   height: 100%;
   margin-top: 6rem;
 }
-
 .another_account_login {
   text-align: center;
   padding-top: 1.5rem;
 }
-
 .socialAccountWrap::before {
   content: "";
   position: absolute;
@@ -87,14 +91,12 @@ input:focus {
   height: 1px;
   background: #e0e0e0;
 }
-
 .socialAccount_list {
   width: 38%;
   margin: 1.5rem auto 0;
   display: flex;
   justify-content: space-between;
 }
-
 .socialAccount {
   position: relative;
   width: 45px;
@@ -103,13 +105,11 @@ input:focus {
   border-radius: 50%;
   background: #fff;
 }
-
 .socialAccount img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-
 .account_google img {
   position: absolute;
   top: 50%;

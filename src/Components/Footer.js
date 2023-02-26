@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-import snsImg_faceBook from "../assets/images/facebook_logo.png";
-import snsImg_insta from "../assets/images/insta_logo.png";
-import snsImg_youtube from "../assets/images/youtube_logo.png";
+import snsImg_faceBook from "../images/facebook_logo.png";
+import snsImg_insta from "../images/insta_logo.png";
+import snsImg_youtube from "../images/youtube_logo.png";
 
 function Footer() {
   return (
     <div id="Footer">
       <div className="FooterInner">
         <h1 className="footer-logo en">
-          <Link to="">LifeBooks</Link>
+          <Link to="/">LifeBooks</Link>
         </h1>
         <div className="footer-menu">
           <ul className="footer-menu-list">

@@ -1,12 +1,13 @@
-import HomePage from "../pages/HomePage";
-import Login from "./Login";
-import "./default.css";
+import Header from "./Header";
+import Footer from "./Footer";
+import styles from "./default.css";
 
-function App() {
+function App({ children }) {
   return (
     <>
-      {/* <HomePage /> */}
-      <Login />
+      <Header />
+      <div className={styles.body}>{children}</div>
+      <Footer />
     </>
   );
 }
