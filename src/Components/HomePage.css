@@ -486,3 +486,7 @@ img {
   background: #000;
   transition: 0.3s;
 }
+.sample-content figure img {
+  width: 300px;
+  height: 350px;
+}

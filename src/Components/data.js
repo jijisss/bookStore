@@ -2,9 +2,9 @@ const data = [
   {
     index: 0,
     title: "나의 아름다운 날들",
-    thumbnail: "../assets/images/newArrivalBook1_t.jpg",
-    frontCover: "../assets/images/newArrivalBook1_t.jpg",
-    backCover: "../assets/images/newArrivalBook1_t.jpg",
+    thumbnail: "/images/newArrivalBook1.jpg",
+    frontCover: "/images/newArrivalBook1.jpg",
+    backCover: "/images/newArrivalBook1.jpg",
     preview1: `
       "왜 이래? 토벌대 벌벌 떨던 남도부 부대에서 마지막까지 살아남은 몸이야."<br>
       "흥, 그러니 삼류지. 오죽 못났으면 살아남았겠니?<br>
@@ -35,7 +35,7 @@ const data = [
 		`,
     preview2: `
 			<figure>
-				<img src="../assets/images/newArrivalBook1_t.jpg" alt="book1">
+				<img src="/images/newArrivalBook1.jpg" alt="book1">
 				<figcaption>나의 아름다운 날들</figcaption>
 			</figure>
 		`,
@@ -43,9 +43,9 @@ const data = [
   {
     index: 1,
     title: "날씨와 얼굴",
-    thumbnail: "../images/book2_t.jpg",
-    frontCover: "../images/book2.jpg",
-    backCover: "../images/book2.jpg",
+    thumbnail: "/images/newArrivalBook2.jpg",
+    frontCover: "/images/newArrivalBook2.jpg",
+    backCover: "/images/newArrivalBook2.jpg",
     preview1: `
 			<p>
       얼굴을 가릴수록 더욱더 얼굴을 말하고 싶다.<br>
@@ -71,7 +71,7 @@ const data = [
 		`,
     preview2: `
 			<figure>
-				<img src="../images/book2.jpg" alt="book2">
+				<img src="/images/newArrivalBook2.jpg" alt="book2">
 				<figcaption>날씨와 얼굴</figcaption>
 			</figure>
 		`,
@@ -79,9 +79,9 @@ const data = [
   {
     index: 2,
     title: "집 떠나 사는 즐거움",
-    thumbnail: "../images/book3_t.jpg",
-    frontCover: "../images/book3.jpg",
-    backCover: "../images/book3.jpg",
+    thumbnail: "/images/newArrivalBook3.jpg",
+    frontCover: "/images/newArrivalBook3.jpg",
+    backCover: "/images/newArrivalBook3.jpg",
     preview1: `
 			<p>
       배고픔보다 용돈이 간절했던 나는 급식비로 부족한 용돈을 메우<br>
@@ -103,7 +103,7 @@ const data = [
 		`,
     preview2: `
 			<figure>
-				<img src="../images/book3.jpg" alt="book3">
+				<img src="/images/newArrivalBook3.jpg" alt="book3">
 				<figcaption>집 떠나 사는 즐거움</figcaption>
 			</figure>
 		`,
@@ -111,9 +111,9 @@ const data = [
   {
     index: 3,
     title: "다이다이 서점에서",
-    thumbnail: "../images/book4_t.jpg",
-    frontCover: "../images/book4.jpg",
-    backCover: "../images/book4.jpg",
+    thumbnail: "/images/newArrivalBook4.jpg",
+    frontCover: "/images/newArrivalBook4.jpg",
+    backCover: "/images/newArrivalBook4.jpg",
     preview1: `
 			<p>
       슬슬 연필을 깎아주세요. 쓰기 시작하면 속도가 붙을 거라고 생각합니다. 『코르시아 서점의 친구들』(스가 아쓰코, 문학동네, 2017) 같은 책을 만들고 싶어요. 이 카운터석에 앉아 있는 것만으로도 단편소설을 읽고 있는 듯한 기분이 듭니다.
@@ -127,7 +127,7 @@ const data = [
 		`,
     preview2: `
 			<figure>
-				<img src="../images/book4.jpg" alt="book4">
+				<img src="/images/newArrivalBook4.jpg" alt="book4">
 				<figcaption>다이다이 서점에서</figcaption>
 			</figure>
 		`,
@@ -135,9 +135,9 @@ const data = [
   {
     index: 4,
     title: "희망의 끈",
-    thumbnail: "../images/book1_t.jpg",
-    frontCover: "../images/book1.jpg",
-    backCover: "../images/book1.jpg",
+    thumbnail: "/images/newArrivalBook5.jpg",
+    frontCover: "/images/newArrivalBook5.jpg",
+    backCover: "/images/newArrivalBook5.jpg",
     preview1: `
 			<p>지유가오카에 있는 카페에서 여주인 하나즈카 야요이가 등에 칼이 꽂힌 채 사체로 발견된다. 경찰은 현장 상황 등으로 미루어 원한 등에 의한 면식범의 소행이라고 보고 수사에 들어간다. 그러나 야요이의 주변 사람들은 하나같이 그녀가 남에게 원한을 살 만한 사람이 아니라고 증언한다.<br><br>
 
@@ -152,7 +152,7 @@ const data = [
 		`,
     preview2: `
 			<figure>
-				<img src="../images/book1.jpg" alt="book1">
+				<img src="/images/newArrivalBook5.jpg" alt="book1">
 				<figcaption>희망의 끈</figcaption>
 			</figure>
 		`,
