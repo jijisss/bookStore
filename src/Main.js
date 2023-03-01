@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage.js";
 import LoginPage from "./pages/LoginPage.js";
 import JoinPage from "./pages/JoinPage.js";
 import JoinDetailPage from "./pages/JoinDetailPage.js";
+import Find_id_password from "./pages/Find_id_passwordPage";
 
 function Main() {
   return (
@@ -12,6 +13,7 @@ function Main() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="find_id_password" element={<Find_id_password />} />
           <Route path="join" element={<JoinPage />} />
           <Route path="join-detail" element={<JoinDetailPage />} />
         </Routes>

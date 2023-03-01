@@ -131,3 +131,13 @@ a:-webkit-any-link {
 a:-webkit-any-link:active {
   outline: none;
 }
+input {
+  padding-left: 10px;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+  color: #272727;
+}
+select {
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+}

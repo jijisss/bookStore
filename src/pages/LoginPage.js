@@ -31,10 +31,10 @@ function Login() {
             </div>
           </form>
           <div className="findAccount">
-            <Link to="" className="find_id">
+            <Link to="/find_id_password" className="find_id">
               아이디 찾기
             </Link>
-            <Link to="" className="find_password">
+            <Link to="/find_id_password" className="find_password">
               비밀번호 찾기
             </Link>
           </div>
