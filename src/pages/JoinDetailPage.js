@@ -10,35 +10,38 @@ function JoinDetailPage() {
           <div className="essential-info">
             <ul className="enter-info-list">
               <li className="enter-info-item">
-                <p className="">아이디</p>
+                <p className="input-name">아이디</p>
                 <input
                   id="enter-id-input"
                   className="user-id-input info-form-input"
                   name="id-input"
                   type="text"
                   maxLength={8}
+                  required
                 />
               </li>
               <li className="enter-info-item">
-                <p className="">비밀번호</p>
+                <p className="input-name">비밀번호</p>
                 <input
                   id="enter-password-input"
                   className="user-password-input info-form-input"
                   name="password-input"
                   type="password"
+                  required
                 />
               </li>
               <li className="enter-info-item">
-                <p className="">비밀번호 확인</p>
+                <p className="input-name">비밀번호 확인</p>
                 <input
                   id="enter-password-confirm-input"
                   className="user-password-confirm-input info-form-input"
                   name="password-confirm-input"
                   type="password"
+                  required
                 />
               </li>
               <li className="enter-info-item">
-                <p className="">이름</p>
+                <p className="input-name">이름</p>
                 <input
                   id="enter-name-input"
                   className="user-name-input info-form-input"
@@ -46,16 +49,12 @@ function JoinDetailPage() {
                   type="text"
                 />
               </li>
-              <li className="enter-info-item">
-                <p className="">주소</p>
-                <input id="address-input1" name="address-input" />
-                <button className="postcode-btn">우편번호</button>
-                <input id="address-input2" name="address-input" />
-                <input id="address-input3" name="address-input" />
-              </li>
-              <li className="enter-info-item">
-                <p className="">휴대전화</p>
-                <select id="mobile-first-number" name="mobile-input">
+              <li className="enter-info-item mobile-info-item">
+                <p className="input-name">휴대전화</p>
+                <select
+                  className="info-form-input first-num-input"
+                  name="mobile-input"
+                >
                   <option>010</option>
                   <option>011</option>
                   <option>016</option>
@@ -63,11 +62,11 @@ function JoinDetailPage() {
                   <option>018</option>
                   <option>019</option>
                 </select>
-                <input id="mobile-second-number" name="mobile-input" />
-                <input id="mobile-last-number" name="mobile-input" />
+                <input className="info-form-input" name="mobile-input" />
+                <input className="info-form-input" name="mobile-input" />
               </li>
               <li className="enter-info-item">
-                <p className="">이메일</p>
+                <p className="input-name">이메일</p>
                 <input
                   className="user-email-input info-form-input"
                   name="email-input"
@@ -77,12 +76,131 @@ function JoinDetailPage() {
             </ul>
           </div>
           <div className="additory-info">
-            <p>생년월일</p>
-            <input type="checkbox"></input>
-            <label>양력</label>
-            <input type="checkbox"></input>
-            <label>음력</label>
-            <input type="date" />
+            <ul className="additory-info-list">
+              <li className="additory-info-item">
+                <p>생년월일</p>
+              </li>
+              <li className="additory-info-item">
+                <input type="checkbox" name="birth-check"></input>
+                <label name="birth-check" className="birth-check">
+                  양력
+                </label>
+                <input type="checkbox" name="birth-check"></input>
+                <label name="birth-check" className="birth-check">
+                  음력
+                </label>
+                <select className="year-check birth-check-sel">
+                  <option>1950년</option>
+                  <option>1951년</option>
+                  <option>1952년</option>
+                  <option>1953년</option>
+                  <option>1954년</option>
+                  <option>1955년</option>
+                  <option>1956년</option>
+                  <option>1957년</option>
+                  <option>1958년</option>
+                  <option>1959년</option>
+                  <option>1960년</option>
+                  <option>1961년</option>
+                  <option>1962년</option>
+                  <option>1963년</option>
+                  <option>1964년</option>
+                  <option>1965년</option>
+                  <option>1966년</option>
+                  <option>1967년</option>
+                  <option>1968년</option>
+                  <option>1969년</option>
+                  <option>1970년</option>
+                  <option>1971년</option>
+                  <option>1972년</option>
+                  <option>1973년</option>
+                  <option>1974년</option>
+                  <option>1975년</option>
+                  <option>1976년</option>
+                  <option>1977년</option>
+                  <option>1978년</option>
+                  <option>1979년</option>
+                  <option>1980년</option>
+                  <option>1981년</option>
+                  <option>1982년</option>
+                  <option>1983년</option>
+                  <option>1984년</option>
+                  <option>1985년</option>
+                  <option>1986년</option>
+                  <option>1987년</option>
+                  <option>1988년</option>
+                  <option>1989년</option>
+                  <option>1990년</option>
+                  <option>1991년</option>
+                  <option>1992년</option>
+                  <option>1993년</option>
+                  <option>1994년</option>
+                  <option>1995년</option>
+                  <option>1996년</option>
+                  <option>1997년</option>
+                  <option>1998년</option>
+                  <option>1999년</option>
+                  <option>2000년</option>
+                  <option>2001년</option>
+                  <option>2002년</option>
+                  <option>2003년</option>
+                  <option>2004년</option>
+                  <option>2005년</option>
+                  <option>2006년</option>
+                  <option>2007년</option>
+                  <option>2008년</option>
+                  <option>2009년</option>
+                  <option>2010년</option>
+                </select>
+                <select className="month-check birth-check-sel">
+                  <option>1월</option>
+                  <option>2월</option>
+                  <option>3월</option>
+                  <option>4월</option>
+                  <option>5월</option>
+                  <option>6월</option>
+                  <option>7월</option>
+                  <option>8월</option>
+                  <option>9월</option>
+                  <option>10월</option>
+                  <option>11월</option>
+                  <option>12월</option>
+                </select>
+                <select className="day-check birth-check-sel">
+                  <option>1일</option>
+                  <option>2일</option>
+                  <option>3일</option>
+                  <option>4일</option>
+                  <option>5일</option>
+                  <option>6일</option>
+                  <option>7일</option>
+                  <option>8일</option>
+                  <option>9일</option>
+                  <option>10일</option>
+                  <option>11일</option>
+                  <option>12일</option>
+                  <option>13일</option>
+                  <option>14일</option>
+                  <option>15일</option>
+                  <option>16일</option>
+                  <option>17일</option>
+                  <option>18일</option>
+                  <option>19일</option>
+                  <option>20일</option>
+                  <option>21일</option>
+                  <option>22일</option>
+                  <option>23일</option>
+                  <option>24일</option>
+                  <option>25일</option>
+                  <option>26일</option>
+                  <option>27일</option>
+                  <option>28일</option>
+                  <option>29일</option>
+                  <option>30일</option>
+                  <option>31일</option>
+                </select>
+              </li>
+            </ul>
           </div>
           <div className="temrs">
             <input type="checkbox" name="all-agree"></input>
