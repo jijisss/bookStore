@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import "../components/HomePage.css";
 import "../components/BookView.css";
 import { cm } from "../components/cm.js";
@@ -80,9 +80,9 @@ function Home() {
   useEffect(() => {
     setElems();
     // loaderElem.addEventListener("transitionend", () => {
-      // loaderElem.remove();
+    // loaderElem.remove();
     // });
-    if(document.getElementById("loader-wrapper")){
+    if (document.getElementById("loader-wrapper")) {
       document.getElementById("loader-wrapper").remove();
     }
 
@@ -295,7 +295,7 @@ function Home() {
               </h2>
               <div className="header-media">
                 <div className="content-image observer-ready">
-                  <Link to="">
+                  <Link to="/book_of_month">
                     <img src={bookOfMonthImage} alt="book-image" />
                   </Link>
                 </div>
@@ -587,6 +587,5 @@ function Home() {
     </>
   );
 }
-
 
 export default Home;
