@@ -21,7 +21,7 @@ export default function Tab() {
       ),
       tabCont: (
         <div className="tabContent">
-          <p className="using-phoneNumber">휴대폰 번호로 찾기</p>
+          <p className="using-phoneNumber">이메일로 찾기</p>
           <form className="find-id-form find-form">
             <ul>
               <li>
@@ -37,10 +37,10 @@ export default function Tab() {
                 <input placeholder="생년월일 8자리를 입력해주세요." />
               </li>
               <li>
-                <label className="input-title" name="user-phoneNumber">
-                  휴대폰 번호
+                <label className="input-title" name="user-email">
+                  이메일
                 </label>
-                <input placeholder="숫자만 입력해주세요." />
+                <input placeholder="이메일 주소를 입력해주세요." />
               </li>
               <button
                 className="confirm-btn"
@@ -67,7 +67,7 @@ export default function Tab() {
       ),
       tabCont: (
         <div className="tabContent">
-          <p className="using-phoneNumber">휴대폰 번호로 찾기</p>
+          <p className="using-phoneNumber">이메일로 찾기</p>
           <form className="find-password-form find-form">
             <ul>
               <li>
@@ -89,10 +89,10 @@ export default function Tab() {
                 <input placeholder="생년월일 8자리를 입력해주세요." />
               </li>
               <li>
-                <label className="input-title" name="user-phoneNumber">
-                  휴대폰 번호
+                <label className="input-title" name="user-email">
+                  이메일
                 </label>
-                <input placeholder="숫자만 입력해주세요." />
+                <input placeholder="이메일 주소를 입력해주세요." />
               </li>
               <button
                 className="confirm-btn"

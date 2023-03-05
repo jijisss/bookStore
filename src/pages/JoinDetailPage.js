@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from 'react-modal';
 import "../components/JoinDetailPage.css";
+import Address from "../components/Address.js";
 
-function JoinDetailPage() {
+function JoinDetailPage({  }) {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [addressData, setAddressData] = useState({});
+
+  const setAddressDatas = (text) => {
+    setAddressData(text);
+  }
+
   return (
     <div id="JoinDetail">
       <div className="JoinDetailWrap">
@@ -64,6 +75,19 @@ function JoinDetailPage() {
                 </select>
                 <input className="info-form-input" name="mobile-input" />
                 <input className="info-form-input" name="mobile-input" />
+              </li>
+              {/* 주소 입력창 */}
+              <li className="address-input">
+                <input type="text" id="sample4_postcode" name="zipCode" className="user-address-input info-form-input" defaultValue={addressData.zipCode} placeholder="우편번호" onClick={()=> setModalIsOpen(true)} />
+                <input type="button" name="searchZipCode" className="user-address-input info-form-input ads-btn" defaultValue={addressData.searchZipCode} value="우편번호 찾기" onClick={()=> setModalIsOpen(true)} /><br></br>
+                <input type="text" id="sample4_roadAddress" name="newAddress" className="user-address-input info-form-input" defaultValue={addressData.newAddress} placeholder="주소" onClick={()=> setModalIsOpen(true)} />
+                <span id="guide" style={{color:"#999", display:"none"}} onClick={()=> setModalIsOpen(true)}></span>
+                <input type="text" id="sample4_detailAddress" name="detailAddress" className="user-address-input info-form-input" placeholder="상세주소" />
+                <input type="text" id="sample4_extraAddress" name="reference" className="user-address-input info-form-input" placeholder="참고항목" />
+                <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} ariaHideApp={false}>
+                <button id="popup-close-btn" onClick={()=> setModalIsOpen(false)}>X</button>
+                  <Address value={addressData} setAddressDatas={setAddressDatas}/>
+                </Modal>
               </li>
               <li className="enter-info-item">
                 <p className="input-name">이메일</p>
@@ -243,5 +267,6 @@ function JoinDetailPage() {
     </div>
   );
 }
+
 
 export default JoinDetailPage;
