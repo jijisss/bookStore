@@ -1,4 +1,4 @@
-import "../components/BookOfMonth.css";
+import "../components/BookDetail.css";
 import { Link } from "react-router-dom";
 import bookOfMonthImage from "../images/bookOfMonth.jpg";
 import bookDetailImg from "../images/i9791190538510.jpg";
