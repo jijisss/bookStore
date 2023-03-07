@@ -12,6 +12,13 @@
   width: 980px;
   margin: 0 auto;
 }
+.prod-detail-contents {
+  width: 100%;
+  overflow: hidden;
+}
+.prod-detail-contents-inner {
+  width: 980px;
+}
 .prod-detail-title-wrap {
   margin-bottom: 5rem;
 }
@@ -112,6 +119,7 @@
 .val {
   font-size: 1.6rem;
   margin-right: 10px;
+  font-weight: bold;
 }
 .val-origin {
   font-size: 14px;
@@ -189,14 +197,14 @@
 .title-wrap.title-size-md {
   padding-bottom: 20px;
 }
-.title-wrap.title-size-md .title-heading {
+.title-size-md .title-heading {
   display: inline-block;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -0.01em;
   font-weight: bold;
 }
-.title-wrap.title-size-sm .title-heading {
+.title-size-sm .title-heading {
   display: inline-block;
   font-weight: bold;
   padding-bottom: 15px;
@@ -285,4 +293,174 @@
 .prod-detail-area.book-contents {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 70px;
+}
+.book-recommend {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 70px;
+}
+.book-inside {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 70px;
+}
+.title-wrap.title-size-sm {
+  min-height: 24px;
+  padding-bottom: 12px;
+}
+.title-wrap.title-size-sm .title-heading {
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+}
+.product-detail-area .info-text {
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+}
+.book-publish-review {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 70px;
+}
+.tbl-row-wrap {
+  display: block;
+  width: 100%;
+  padding: 18px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+.basic-info-list {
+  width: 100%;
+  font-size: 15px;
+}
+.basic-info-item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.info-item-title {
+  width: 150px;
+  font-weight: bold;
+}
+.info-item-text {
+  color: #444;
+}
+.claim-info-wrap {
+  margin-top: 5rem;
+}
+.product-detail-area.claim-info-wrap
+  .claim-info
+  .claim-info-list
+  .claim-info-item:first-child {
+  border-top: 1px solid #000;
+}
+.product-detail-area.claim-info-wrap
+  .claim-info
+  .claim-info-list
+  .claim-info-item {
+  padding: 30px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.product-detail-area.claim-info-wrap
+  .claim-info
+  .claim-info-list
+  .claim-info-item:last-child {
+  border-bottom: 0;
+}
+.info-text-box {
+  display: block;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+.info-text-box.size-lg {
+  padding: 24px;
+}
+.prod-detail-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 980px;
+  background-color: #fff;
+  z-index: 102;
+}
+.prod-detail-footer .prod-purchase-info-wrap {
+  height: 94px;
+  /* line-height: 94px; */
+  border-top: 1px solid #ccc;
+}
+.prod-detail-footer .footer-contents-inner {
+  width: 980px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+}
+.prod-detail-footer .prod-info-title {
+  display: inline-block;
+  margin: 7px 30px 0 0;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  vertical-align: top;
+}
+.prod-detail-footer .prod-info-price {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+}
+.prod-detail-footer .right-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.prod-detail-footer .footer-contents-inner .right-area {
+  margin-left: auto;
+}
+.prod-detail-footer .btn-wrap {
+  display: inline-block;
+  font-size: 0;
+}
+.prod-detail-footer .btn-wrap button {
+  cursor: pointer;
+  transition: 0.4s;
+}
+.prod-detail-footer .btn-wrap button:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.4s;
+}
+.btn-wish.size-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: 1px solid #444;
+  font-family: "Gowun Batang";
+  font-weight: bold;
+}
+.btn-wrap [class^="btn-"] + [class^="btn-"] {
+  margin-left: 6px;
+}
+.prod-detail-footer .btn-wrap {
+  margin-left: 6px;
+  display: inline-block;
+}
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border: 1px solid #444;
+  background: none;
+  font-family: "Gowun Batang";
+  font-weight: bold;
+}
+.btn-primary {
+  transition: 0.4s;
+}
+.btn-primary:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.4s;
 }
