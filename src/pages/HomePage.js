@@ -295,7 +295,7 @@ function Home() {
               </h2>
               <div className="header-media">
                 <div className="content-image observer-ready">
-                  <Link to="/book_of_month">
+                  <Link to="/book-of-month">
                     <img src={bookOfMonthImage} alt="book-image" />
                   </Link>
                 </div>
@@ -333,7 +333,7 @@ function Home() {
                 <div className="book-of-week-content">
                   <ul className="book-of-week-content-list">
                     <li className="book-of-week-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-saino">
                         <img src={bookOfWeekImage1} />
                         <p className="book-title">세이노의 가르침</p>
                         <p className="author">세이노</p>

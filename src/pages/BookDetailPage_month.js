@@ -1,6 +1,6 @@
 import "../components/BookDetail.css";
 import { Link } from "react-router-dom";
-import bookOfMonthImage from "../images/bookOfMonth.jpg";
+import bookPreviewImage from "../images/bookOfMonth.jpg";
 import bookDetailImg from "../images/i9791190538510.jpg";
 
 function BookOfMonth() {
@@ -19,51 +19,73 @@ function BookOfMonth() {
                 </div>
               </div>
               <div className="prod-detail-view-wrap">
-                <div className="prod-info-wrap">
-                  <div className="prod-author">
-                    <Link to="">김혜남 저자</Link>
-                  </div>
-                  <div className="prod-info-text publish-date">
-                    <Link to="" className="btn-publish-link">
-                      메이븐
-                    </Link>
-                    2022년 11월 11일
-                  </div>
-                  <div className="prod-best-box">
-                    주간베스트
-                    <span className="best-ranking">국내도서 19위 인문 2위</span>
-                  </div>
-                  <div className="prod-info-text">
-                    가장 최근에 출시된 개정판입니다.
-                    <Link to="" className="btn-xxs">
-                      구판보기
-                    </Link>
-                  </div>
-                </div>
-                <div className="portrait-img-box">
-                  <img src={bookOfMonthImage} />
-                </div>
-                <div className="prod-guide-box">
-                  <div className="pro-guide-row">
-                    <div className="prod-guide-title">배송안내</div>
-                    <div className="prod-guide-cont">
-                      <div className="delivery-guide-text">
-                        <span id="OrderDeliveryType">무료배송</span>
+                <div className="prod-detail-view-area">
+                  <div className="col-prod-info">
+                    <div className="prod-info-wrap">
+                      <div className="prod-author-box">
+                        <div className="author">
+                          <Link to="">김혜남 저자</Link>
+                        </div>
                       </div>
-                    </div>
-                    <div className="prod-guide-cont">
-                      <div className="delivery-guide-text">
-                        <span id="OrderEstimatedDate">
-                          <strong>3월 7일 출고예정</strong>
+                      <div className="prod-info-text publish-date">
+                        <Link to="" className="btn-publish-link">
+                          메이븐
+                        </Link>
+                        2022년 11월 11일
+                      </div>
+                      <div className="prod-best-box">
+                        주간베스트
+                        <span className="best-ranking">
+                          국내도서 19위 인문 2위
                         </span>
                       </div>
+                      <div className="prod-info-text">
+                        가장 최근에 출시된 개정판입니다.
+                        <Link to="" className="btn-xxs">
+                          구판보기
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="prod-price-wrap">
-                    <div className="prod-price">
-                      <span className="percent">10%</span>
-                      <span className="val">15,480</span>
-                      <s className="val-origin">17,200</s>
+                  <div className="col-prod-info thumb">
+                    <div className="portrait-img-box">
+                      <img src={bookPreviewImage} />
+                    </div>
+                  </div>
+                  <div className="col-prod-info">
+                    <div className="prod-price-wrap">
+                      <div className="prod-price">
+                        <span className="percent">10%</span>
+                        <span className="val">15,480</span>
+                        <s className="val-origin">17,200</s>
+                      </div>
+                    </div>
+                    <div className="prod-guide-wrap">
+                      <div className="prod-guide-box">
+                        <div className="prod-guide-row">
+                          <div className="prod-guide-title">적립/혜택</div>
+                          <div className="prod-guide-cont">
+                            <div className="point-text">360p</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="prod-guide-box">
+                        <div className="prod-guide-row">
+                          <div className="prod-guide-title">배송안내</div>
+                          <div className="prod-guide-cont">
+                            <div className="delivery-guide-text">
+                              <span id="OrderDeliveryType">무료배송</span>
+                            </div>
+                          </div>
+                          <div className="prod-guide-cont">
+                            <div className="delivery-guide-text">
+                              <span id="OrderEstimatedDate">
+                                <strong>3월 7일 출고예정</strong>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -219,7 +241,122 @@ function BookOfMonth() {
                     </li>
                   </ul>
                 </div>
-                <div className="prod-detail-area product-person"></div>
+                <div className="prod-detail-area product-person">
+                  <div class="title-wrap title-size-md">
+                    <h2 class="title-heading">작가정보</h2>
+                  </div>
+                  <div className="gray-box">
+                    <div class="title-wrap title-size-def">
+                      <h3 class="title-heading">
+                        <span class="title-prefix">저자(글)</span>
+                        <span class="text">김혜남</span>
+                      </h3>
+                    </div>
+                    <div class="writer-info-box">
+                      <div class="writer-profile">
+                        <img
+                          data-kbbfn="s3-image"
+                          loading="lazy"
+                          alt="김혜남"
+                          src="https://contents.kyobobook.co.kr/dtl/author/1000129201.jpg"
+                          data-src="https://contents.kyobobook.co.kr/dtl/author/1000129201.jpg"
+                        />
+                      </div>
+
+                      <div class="auto-overflow-wrap overflow">
+                        <div class="auto-overflow-contents">
+                          <div class="auto-overflow-inner">
+                            <p class="info-text">
+                              정신분석 전문의
+                              <br></br>
+                              1959년 서울에서 태어나 고려대학교 의과대학을
+                              졸업하고 국립 정신병원(현 국립정신건강센터)에서
+                              12년 동안 정신분석 전문의로 일했다. 경희대 의대,
+                              성균관대 의대, 인제대 의대 외래교수이자 서울대
+                              의대 초빙교수로 학생들을 가르쳤고, 김혜남
+                              신경정신과의원 원장으로 환자들을 돌보았다. 80만 부
+                              베스트셀러 《서른 살이 심리학에게 묻다》,
+                              《심리학이 서른 살에게 답하다》를 비롯해, 《나는
+                              정말 너를 사랑하는 걸까?》, 《당신과 나 사이》,
+                              《보이지 않는 것에 의미가 있다》 등 10여 권의 책을
+                              펴내 130만 독자의 공감을 얻었다. 또한 2006년
+                              한국정신분석학회 학술상을 받은 바 있다.
+                              <br></br>
+                              정신분석 전문의로, 두 아이의 엄마로, 시부모님을
+                              모시고 사는 며느리로 눈코 뜰 새 없이 바빴던 그녀는
+                              마흔 살까지만 해도 ‘내가 잘했으니까 지금의 내가
+                              있는 거지’라고 생각했다. 집이고 병원이고
+                              환자들이고 자신이 없으면 큰일이 난다고 생각한
+                              것이다. 곁에 있는 사람들에게 고맙다고 말하면서도
+                              속으로는 원망한 적이 더 많았다.
+                              <br></br>
+                              그런데 2001년 마흔세 살에 몸이 점점 굳어 가는
+                              파킨슨병 진단을 받고 나서 병마와 싸우며 비로소
+                              알게 되었다. 자신에게 주어진 모든 역할을 다 잘해
+                              내고 싶은 마음에 스스로를 닦달하며 인생을 숙제처럼
+                              살아오다 보니 정작 누려야 할 삶의 즐거움들을 너무
+                              많이 놓쳐 버렸다는 사실을 말이다. 그리고 더
+                              충격적인 것은 자신이 없는데도 세상이 너무나
+                              멀쩡하게 잘 돌아간다는 사실이었다.
+                              <br></br>
+                              그녀는 자신에게 들이닥친 불행을 도저히 받아들일 수
+                              없었다. 너무 억울하고, 사람들이 밉고, 세상이
+                              원망스러워 아무것도 못 한 채 한 달 동안 침대에
+                              누워 천장만 바라보았다. 그러던 어느 날 그녀는 문득
+                              깨달았다. 아직 자신은 죽은 게 아니며 누워 있는다고
+                              바뀌는 건 아무것도 없다는 사실을 말이다. 다행히
+                              병이 초기 단계라 아직 할 수 있는 일들도 많았다.
+                              그래서 일어났고, 하루를 살았고, 또 다음 날을
+                              살았다. 대신에 해야만 하는 일보다 하고 싶지만 계속
+                              미뤄 둔 일들을 먼저 하기 시작했다. 책을 쓰기
+                              시작한 것도 그때부터다. 그렇게 22년 동안 병마와
+                              싸우며 진료와 강의를 하고, 두 아이를 키우고, 열
+                              권의 책을 썼다.
+                              <br></br>
+                              사람들은 파킨슨병을 앓으면서 어떻게 그 일들을 다
+                              할 수 있었느냐고 신기해하지만 그녀는 담담히
+                              말한다. 더 이상 인생을 숙제처럼 살지 않겠다고,
+                              어차피 사는 거 재미있게 살겠다고 마음먹으니까
+                              세상에 새롭고, 신기하고, 감탄할 만한 일들이 참
+                              많았다고. 그래서 몸이 굳어 옆으로 돌아눕는 것조차
+                              남의 도움을 받아야 할 만큼 고통스러운 때도 있지만
+                              고통과 고통 사이에는 덜 아픈 시간이 있고, 그
+                              시간에 할 수 있는 일들을 하며 하루하루를 차곡차곡
+                              살아온 것뿐이라고. 2014년 1월 병이 악화되어 병원
+                              문을 닫고 나서는 더 이상 환자들을 진료할 수 없게
+                              되었고, 그 사이 크고 작은 수술을 다섯 차례 받으며
+                              죽을 고비도 넘겼지만 그녀는 여전히 하고 싶은
+                              일들이 많다고 말한다.
+                              <br></br>
+                              삶이 힘들고 어렵고 좀체 나아질 것 같지 않아 보여도
+                              어느 때나 즐길 거리는 분명히 있다. 그리고 즐길
+                              거리가 다양한 사람일수록 불가피한 불운과 불행 또한
+                              잘 버틸 수 있다. 그래서 그녀는 앞으로 병이 더
+                              악화되어 더 이상 몸을 움직일 수 없게 되더라도 그때
+                              할 수 있는 일들을 찾아 하면서 재미있게 살고 싶다고
+                              말한다. 벌써 마흔이 넘어 버린, 하루하루 잘 버텨
+                              내고 있지만 가끔은 힘들고 외로운 사람들에게 해
+                              주고 싶은 이야기도 딱 하나뿐이다.
+                              <br></br>
+                              “하나의 문이 닫히면 또 다른 문이 열린다. 그러니 더
+                              이상 고민하지 말고 그냥 재미있게 살았으면 좋겠다.”
+                            </p>
+                          </div>
+                        </div>
+                        <div class="auto-overflow-footer">
+                          <button
+                            type="button"
+                            class="btn-more-body"
+                            data-btn-toggle=""
+                          >
+                            <span class="text">펼치기</span>
+                            <span class="ico-arw"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="prod-detail-area book-contents">
                   <div className="title-wrap title-size-md">
                     <h2 className="title-heading">목차</h2>

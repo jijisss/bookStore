@@ -1,4 +1,5 @@
-.tabs {
+.find-tabs {
+  width: 100%;
   display: flex;
   margin-top: 3rem;
 }

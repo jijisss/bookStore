@@ -111,7 +111,7 @@ export default function Tab() {
 
   return (
     <div>
-      <ul className="tabs is-boxed">
+      <ul className="tabs is-boxed find-tabs">
         {tabContArr.map((section, index) => {
           return section.tabTitle;
         })}
