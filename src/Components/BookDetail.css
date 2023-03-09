@@ -55,7 +55,7 @@
   margin-bottom: 5px;
 }
 .prod-author-box .author {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: rgb(55, 55, 55);
   margin-bottom: 5px;
@@ -195,7 +195,7 @@
 }
 .prod-detail-area {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 .detail-img .inner {
   width: 100%;
@@ -300,6 +300,7 @@
   border-radius: 20px;
   background-color: #f7f7f7;
   box-sizing: border-box;
+  margin-bottom: 1.3rem;
 }
 .title-size-def {
   padding-bottom: 20px;
@@ -346,18 +347,22 @@
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 70px;
 }
+.book-recommend .recommend-item .title-heading {
+  color: rgb(64, 50, 145);
+}
 .book-inside {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 70px;
 }
 .title-wrap.title-size-sm {
   min-height: 24px;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
 }
 .title-wrap.title-size-sm .title-heading {
   font-size: 15px;
   line-height: 23px;
   letter-spacing: -0.01em;
+  margin-top: 1rem;
 }
 .product-detail-area .info-text {
   font-size: 15px;

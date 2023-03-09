@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import bookPreviewImage from "../images/bookOfMonth.jpg";
 import bookDetailImg from "../images/i9791190538510.jpg";
 
-function BookOfMonth() {
+function BookDetailPage_againLife() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -1229,4 +1229,4 @@ function BookOfMonth() {
   );
 }
 
-export default BookOfMonth;
+export default BookDetailPage_againLife;

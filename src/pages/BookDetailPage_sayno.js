@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import "../components/top-btn.css";
 import "../components/BookDetail.css";
 import bookPreviewImage from "../images/bookOfWeek1.jpg";
 
-function BookDetail_saino() {
+function BookDetail_sayno() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="container-wrapper">
@@ -33,7 +40,7 @@ function BookDetail_saino() {
                       <div className="prod-best-box">
                         주간베스트
                         <span className="best-ranking">
-                          국내도서 1위 자기계발 1위
+                          국내도서 1위 · 자기계발 1위
                         </span>
                       </div>
                     </div>
@@ -903,7 +910,7 @@ function BookDetail_saino() {
                   <div className="left-area">
                     <span className="prod-info-title">총 상품 금액</span>
                     <span className="prod-info-price">
-                      <span className="val">15,480</span>
+                      <span className="val">6,480</span>
                       <span className="unit">원</span>
                     </span>
                   </div>
@@ -938,9 +945,16 @@ function BookDetail_saino() {
             </div>
           </div>
         </div>
+
+        {/* top btn */}
+        <div className="top-btn">
+          <button id="top" onClick={scrollToTop} type="button">
+            TOP
+          </button>
+        </div>
       </div>
     </>
   );
 }
 
-export default BookDetail_saino;
+export default BookDetail_sayno;

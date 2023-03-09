@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import "../components/HomePage.css";
 import "../components/BookView.css";
+import "../components/top-btn.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
 
@@ -252,9 +253,9 @@ function Home() {
           </div>
         </div>
         {/* category */}
-        <div className="category">
-          <ul className="category-list">
-            <Link to="" className="category-list-item">
+        <div className="category home-category">
+          <ul className="category-list home-category-list">
+            <Link to="" className="category-list-item home-category-list-item">
               전체
             </Link>
             <Link to="" className="category-list-item">
@@ -333,35 +334,35 @@ function Home() {
                 <div className="book-of-week-content">
                   <ul className="book-of-week-content-list">
                     <li className="book-of-week-content-item">
-                      <Link to="/book-detail-saino">
+                      <Link to="/book-detail-sayno">
                         <img src={bookOfWeekImage1} />
                         <p className="book-title">세이노의 가르침</p>
                         <p className="author">세이노</p>
                       </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-swanBat">
                         <img src={bookOfWeekImage2} />
                         <p className="book-title">백조와 박쥐</p>
                         <p className="author">히가시노 게이고</p>
                       </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-lastIsland">
                         <img src={bookOfWeekImage3} />
                         <p className="book-title">마지막 섬</p>
                         <p className="author">쥴퓌 리바넬리</p>
                       </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-bangju">
                         <img src={bookOfWeekImage4} />
-                        <p className="book-title">방자</p>
+                        <p className="book-title">방주</p>
                         <p className="author">유키 하루오</p>
                       </Link>
                     </li>
                     <li className="book-of-week-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-abyss">
                         <img src={bookOfWeekImage5} />
                         <p className="book-title">심연</p>
                         <p className="author">앨마 카츠</p>
@@ -377,21 +378,21 @@ function Home() {
                 <div className="popularity-book-content">
                   <ul className="popularity-book-content-list">
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="/book-detail-mangeul">
                         <img src={popularBookImage1} />
                         <p className="book-title">망그러진 만화</p>
                         <p className="author">유랑</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="/book-detail-joguman">
                         <img src={popularBookImage2} />
                         <p className="book-title">우리는 조구만 존재야</p>
                         <p className="author">조구만 스튜디오</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="/book-detail-ripe">
                         <img src={popularBookImage3} />
                         <p className="book-title">
                           그대 늙어가는 것이 아니라 익어가는 것이다
@@ -400,7 +401,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="/book-detail-word">
                         <img src={popularBookImage4} />
                         <p className="book-title">
                           너의 말이 좋아서 밑줄을 그었다
@@ -409,42 +410,42 @@ function Home() {
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="/book-detail-star">
                         <img src={popularBookImage5} />
                         <p className="book-title">별빛 너머의 별</p>
                         <p className="author">나태주</p>
                       </Link>
                     </li>
                     {/* <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="">
                         <img src={popularBookImage6} />
                         <p className="book-title">나에게 고맙다</p>
                         <p className="author">전승환</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="">
                         <img src={popularBookImage7} />
                         <p className="book-title">작은 별이지만 빛나고 있어</p>
                         <p className="author">소윤</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="">
                         <img src={popularBookImage8} />
                         <p className="book-title">결국 무엇이든 해내는 사람</p>
                         <p className="author">김상현</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="">
                         <img src={popularBookImage9} />
                         <p className="book-title">안녕, 소중한 사람</p>
                         <p className="author">정한경</p>
                       </Link>
                     </li>
                     <li className="popularity-book-content-list-item">
-                      <Link tp="">
+                      <Link to="">
                         <img src={popularBookImage10} />
                         <p className="book-title">불안</p>
                         <p className="author">알랭 드 보통</p>
@@ -460,7 +461,7 @@ function Home() {
                 <div className="bestSeller-book-content">
                   <ul className="bestSeller-book-content-list">
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-40class">
                         <img src={bestSellerBookImage1} />
                         <p className="bestSeller-ranking en">1</p>
                         <p className="book-title">김미경의 마흔 수업</p>
@@ -468,7 +469,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-ruleOfRich">
                         <img src={bestSellerBookImage2} />
                         <p className="bestSeller-ranking en">2</p>
                         <p className="book-title">1퍼센트 부자의 법칙</p>
@@ -476,7 +477,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-sayno">
                         <img src={bestSellerBookImage3} />
                         <p className="bestSeller-ranking en">3</p>
                         <p className="book-title">세이노의 가르침</p>
@@ -484,7 +485,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-stocksecret">
                         <img src={bestSellerBookImage4} />
                         <p className="bestSeller-ranking en">4</p>
                         <p className="book-title">주식 시세의 비밀</p>
@@ -492,7 +493,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-slamdunk">
                         <img src={bestSellerBookImage5} />
                         <p className="bestSeller-ranking en">5</p>
                         <p className="book-title">
@@ -502,7 +503,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-battery">
                         <img src={bestSellerBookImage6} />
                         <p className="bestSeller-ranking en">6</p>
                         <p className="book-title">K 배터리 레볼루션</p>
@@ -510,7 +511,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-onething">
                         <img src={bestSellerBookImage7} />
                         <p className="bestSeller-ranking en">7</p>
                         <p className="book-title">
@@ -520,7 +521,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-againLife">
                         <img src={bestSellerBookImage8} />
                         <p className="bestSeller-ranking en">8</p>
                         <p className="book-title">
@@ -531,7 +532,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-insight">
                         <img src={bestSellerBookImage9} />
                         <p className="bestSeller-ranking en">9</p>
                         <p className="book-title">정세현의 통찰</p>
@@ -539,7 +540,7 @@ function Home() {
                       </Link>
                     </li>
                     <li className="bestSeller-book-content-item">
-                      <Link to="">
+                      <Link to="/book-detail-convenienceStore">
                         <img src={bestSellerBookImage10} />
                         <p className="bestSeller-ranking en">10</p>
                         <p className="book-title">
