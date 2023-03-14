@@ -68,7 +68,7 @@ function Header() {
                   장바구니
                 </Link>
                 <Link
-                  to=""
+                  to="/MyPage"
                   className="myMenu_list_item menu_list_item"
                   style={{
                     color: "#000",

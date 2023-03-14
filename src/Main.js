@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./components/App.js";
 import HomePage from "./pages/HomePage.js";
 import LoginPage from "./pages/LoginPage.js";
+import MyPage from "./pages/MyPage.js";
 import JoinPage from "./pages/JoinPage.js";
 import JoinDetailPage from "./pages/JoinDetailPage.js";
 import BookOfMonth from "./pages/BookDetailPage_month";
@@ -33,6 +34,7 @@ function Main() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="MyPage" element={<MyPage />} />
           <Route path="find-id-password" element={<Find_id_password />} />
           <Route path="join" element={<JoinPage />} />
           <Route path="join-detail" element={<JoinDetailPage />} />
@@ -40,59 +42,59 @@ function Main() {
           <Route path="/book-detail-sayno" element={<BookDetail_sayno />} />
           <Route path="/book-detail-swanBat" element={<BookDetail_swanBat />} />
           <Route
-            path="/book-detail-lastIsland"
+            path="book-detail-lastIsland"
             element={<BookDetail_lastIsland />}
           />
           <Route
-            path="/book-detail-bangju"
+            path="book-detail-bangju"
             element={<BookDetailPage_bangju />}
           />
-          <Route path="/book-detail-abyss" element={<BookDetailPage_abyss />} />
+          <Route path="book-detail-abyss" element={<BookDetailPage_abyss />} />
           <Route
-            path="/book-detail-mangeul"
+            path="book-detail-mangeul"
             element={<BookDetailPage_mangeul />}
           />
           <Route
-            path="/book-detail-joguman"
+            path="book-detail-joguman"
             element={<BookDetailPage_joguman />}
           />
-          <Route path="/book-detail-ripe" element={<BookDetailPage_ripe />} />
-          <Route path="/book-detail-word" element={<BookDetailPage_word />} />
-          <Route path="/book-detail-star" element={<BookDetailPage_star />} />
+          <Route path="book-detail-ripe" element={<BookDetailPage_ripe />} />
+          <Route path="book-detail-word" element={<BookDetailPage_word />} />
+          <Route path="book-detail-star" element={<BookDetailPage_star />} />
           <Route
-            path="/book-detail-40class"
+            path="book-detail-40class"
             element={<BookDetailPage_40class />}
           />
           <Route
-            path="/book-detail-ruleOfRich"
+            path="book-detail-ruleOfRich"
             element={<BookDetailPage_ruleOfRich />}
           />
           <Route
-            path="/book-detail-stocksecret"
+            path="book-detail-stocksecret"
             element={<BookDetailPage_stocksecret />}
           />
           <Route
-            path="/book-detail-slamdunk"
+            path="book-detail-slamdunk"
             element={<BookDetailPage_slamdunk />}
           />
           <Route
-            path="/book-detail-battery"
+            path="book-detail-battery"
             element={<BookDetailPage_battery />}
           />
           <Route
-            path="/book-detail-onething"
+            path="book-detail-onething"
             element={<BookDetailPage_onething />}
           />
           <Route
-            path="/book-detail-againLife"
+            path="book-detail-againLife"
             element={<BookDetailPage_againLife />}
           />
           <Route
-            path="/book-detail-insight"
+            path="book-detail-insight"
             element={<BookDetailPage_insight />}
           />
           <Route
-            path="/book-detail-convenienceStore"
+            path="book-detail-convenienceStore"
             element={<BookDetailPage_convenienceStore />}
           />
         </Routes>
