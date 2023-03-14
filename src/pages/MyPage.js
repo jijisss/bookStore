@@ -94,6 +94,28 @@ function MyPage() {
                 </div>
               </div>
             </aside>
+            <div id="VoucherStats" className="benefit-info-wrap">
+              <div className="benefit-group">
+                <div className="benefit-item coupon">
+                  <Link to="" className="benefit-link">
+                    <span className="benefit-title">쿠폰</span>
+                    <div className="benefit-val">
+                      <span className="val">2</span>
+                      <span className="unit">장</span>
+                    </div>
+                  </Link>
+                </div>
+                <div className="benefit-item point">
+                  <Link to="" className="benefit-link">
+                    <span className="benefit-title">통합포인트</span>
+                    <div className="benefit-val">
+                      <span className="val">0</span>
+                      <span className="unit">P</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
