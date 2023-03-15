@@ -3,6 +3,7 @@ import App from "./components/App.js";
 import HomePage from "./pages/HomePage.js";
 import LoginPage from "./pages/LoginPage.js";
 import MyPage from "./pages/MyPage.js";
+import CartPage from "./pages/CartPage.js";
 import JoinPage from "./pages/JoinPage.js";
 import JoinDetailPage from "./pages/JoinDetailPage.js";
 import BookOfMonth from "./pages/BookDetailPage_month";
@@ -35,6 +36,7 @@ function Main() {
           <Route path="/" element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="MyPage" element={<MyPage />} />
+          <Route path="CartPage" element={<CartPage />} />
           <Route path="find-id-password" element={<Find_id_password />} />
           <Route path="join" element={<JoinPage />} />
           <Route path="join-detail" element={<JoinDetailPage />} />
