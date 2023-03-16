@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import "../components/JoinDetailPage.css";
 import Address from "../components/Address.js";
 
-function JoinDetailPage({  }) {
-
+function JoinDetailPage({}) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [addressData, setAddressData] = useState({});
 
   const setAddressDatas = (text) => {
     setAddressData(text);
-  }
+  };
 
   return (
     <div id="JoinDetail">
@@ -78,15 +77,67 @@ function JoinDetailPage({  }) {
               </li>
               {/* 주소 입력창 */}
               <li className="address-input">
-                <input type="text" id="sample4_postcode" name="zipCode" className="user-address-input info-form-input" defaultValue={addressData.zipCode} placeholder="우편번호" onClick={()=> setModalIsOpen(true)} />
-                <input type="button" name="searchZipCode" className="user-address-input info-form-input ads-btn" defaultValue={addressData.searchZipCode} value="우편번호 찾기" onClick={()=> setModalIsOpen(true)} /><br></br>
-                <input type="text" id="sample4_roadAddress" name="newAddress" className="user-address-input info-form-input" defaultValue={addressData.newAddress} placeholder="주소" onClick={()=> setModalIsOpen(true)} />
-                <span id="guide" style={{color:"#999", display:"none"}} onClick={()=> setModalIsOpen(true)}></span>
-                <input type="text" id="sample4_detailAddress" name="detailAddress" className="user-address-input info-form-input" placeholder="상세주소" />
-                <input type="text" id="sample4_extraAddress" name="reference" className="user-address-input info-form-input" placeholder="참고항목" />
-                <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} ariaHideApp={false}>
-                <button id="popup-close-btn" onClick={()=> setModalIsOpen(false)}>X</button>
-                  <Address value={addressData} setAddressDatas={setAddressDatas}/>
+                <input
+                  type="text"
+                  id="sample4_postcode"
+                  name="zipCode"
+                  className="user-address-input info-form-input"
+                  defaultValue={addressData.zipCode}
+                  placeholder="우편번호"
+                  onClick={() => setModalIsOpen(true)}
+                />
+                <input
+                  type="button"
+                  name="searchZipCode"
+                  className="user-address-input info-form-input ads-btn"
+                  defaultValue={addressData.searchZipCode}
+                  value="우편번호 찾기"
+                  onClick={() => setModalIsOpen(true)}
+                />
+                <br></br>
+                <input
+                  type="text"
+                  id="sample4_roadAddress"
+                  name="newAddress"
+                  className="user-address-input info-form-input"
+                  defaultValue={addressData.newAddress}
+                  placeholder="주소"
+                  onClick={() => setModalIsOpen(true)}
+                />
+                <span
+                  id="guide"
+                  style={{ color: "#999", display: "none" }}
+                  onClick={() => setModalIsOpen(true)}
+                ></span>
+                <input
+                  type="text"
+                  id="sample4_detailAddress"
+                  name="detailAddress"
+                  className="user-address-input info-form-input"
+                  placeholder="상세주소"
+                />
+                <input
+                  type="text"
+                  id="sample4_extraAddress"
+                  name="reference"
+                  className="user-address-input info-form-input"
+                  placeholder="참고항목"
+                />
+                <Modal
+                  isOpen={modalIsOpen}
+                  onRequestClose={() => setModalIsOpen(false)}
+                  ariaHideApp={false}
+                >
+                  <button
+                    id="popup-close-btn"
+                    onClick={() => setModalIsOpen(false)}
+                  >
+                    X
+                  </button>
+                  <Address
+                    value={addressData}
+                    setAddressDatas={setAddressDatas}
+                  />
                 </Modal>
               </li>
               <li className="enter-info-item">
@@ -234,27 +285,48 @@ function JoinDetailPage({  }) {
             <div className="temrs-list-box">
               <ul className="temrs-list">
                 <li className="tems-list-item">
-                  <input type="checkbox" name="temrs-agree1"></input>
+                  <input
+                    type="checkbox"
+                    name="temrs-agree1"
+                    className="temrs-agree1"
+                  ></input>
                   <label name="temrs-agree1" className="temrs-agree1">
                     <Link to="">
-                      <span>이용약관</span> 동의
+                      <span className="useTerms terms-chk">이용약관</span> 동의
                     </Link>
                   </label>
                 </li>
                 <li className="tems-list-item">
-                  <input type="checkbox" name="terms-agree2"></input>
+                  <input
+                    type="checkbox"
+                    name="terms-agree2"
+                    className="terms-agree2"
+                  ></input>
                   <label name="terms-agree2" className="temrs-agree2">
-                    <Link to="">개인 정보 수집 및 이용 동의</Link>
+                    <Link to="">
+                      <span className="infoTerms terms-chk">
+                        개인 정보 수집 및 이용{" "}
+                      </span>
+                      동의
+                    </Link>
                   </label>
                 </li>
                 <li className="tems-list-item">
-                  <input type="checkbox" name="terms-agree3"></input>
+                  <input
+                    type="checkbox"
+                    name="terms-agree3"
+                    className="terms-agree3"
+                  ></input>
                   <label name="terms-agree3">
                     <Link to="">[선택] 만 14세 이상입니다.</Link>
                   </label>
                 </li>
                 <li className="tems-list-item">
-                  <input type="checkbox" name="terms-agree4"></input>
+                  <input
+                    type="checkbox"
+                    name="terms-agree4"
+                    className="terms-agree4"
+                  ></input>
                   <label name="terms-agree4">
                     <Link to="">[선택] 마케팅 활용 동의 및 광고 수신 동의</Link>
                   </label>
@@ -267,6 +339,5 @@ function JoinDetailPage({  }) {
     </div>
   );
 }
-
 
 export default JoinDetailPage;
