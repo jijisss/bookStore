@@ -41,6 +41,7 @@ img {
     rgba(255, 255, 255, 1) 91%,
     #444 92%
   );
+  overflow: hidden;
 }
 .header::before {
   content: "";
@@ -466,4 +467,330 @@ img {
 .sample-content figure img {
   width: 300px;
   height: 350px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1023px) {
+  .width-setter {
+    font-size: 13px;
+    width: 800px;
+  }
+  .header::before {
+    background-position: 0% 0%;
+  }
+  .header-description {
+    font-size: 16px;
+  }
+  .site-title-inner {
+    font-size: 2.5rem;
+  }
+  .book-list {
+    width: 800px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .book-list::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+  }
+  .book-list::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgb(255, 255, 255);
+    border: 1px solid #000;
+  }
+  .book-list::-webkit-scrollbar-track {
+    background: none;
+  }
+  .book-item {
+    width: 120px;
+  }
+  .home-category-list {
+    width: 800px;
+    font-size: 15px;
+  }
+  .home-reading-section h2 {
+    font-size: 1.5rem;
+  }
+  .content-image {
+    width: 200px;
+  }
+  .content-para {
+    font-size: 14px;
+  }
+  .book-of-week-content-item img {
+    height: 200px;
+  }
+  .popularity-book-content-list-item img {
+    height: 200px;
+  }
+  .bestSeller-book-content-item img {
+    height: 200px;
+  }
+  .event-content {
+    height: 230px;
+  }
+  .event-title {
+    font-size: 1.6rem;
+  }
+  .event-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header {
+    height: 240px;
+  }
+  .width-setter {
+    font-size: 13px;
+    width: 600px;
+  }
+  .header::before {
+    background-position: 0% 0%;
+  }
+  .header-description {
+    font-size: 14px;
+  }
+  .shelf {
+    display: none;
+  }
+  .site-title-inner {
+    font-size: 1.6rem;
+  }
+  .home-category {
+    height: 60px;
+    line-height: 60px;
+  }
+  .home-category-list {
+    width: 600px;
+    font-size: 14px;
+  }
+  .home-reading-section h2 {
+    font-size: 1.2rem;
+  }
+  .content-image {
+    width: 200px;
+  }
+  .header-media .content-para {
+    height: 300px;
+    font-size: 14px;
+    overflow-y: scroll;
+  }
+  .header-media .content-para::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+  }
+  .header-media .content-para::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 5px;
+  }
+  .book-title {
+    font-size: 0.8rem;
+  }
+  .author {
+    font-size: 0.75rem;
+  }
+  .book-of-week-content-item img {
+    height: 150px;
+  }
+  .popularity-book-content-list-item img {
+    height: 150px;
+  }
+  .bestSeller-book-content-item img {
+    height: 150px;
+  }
+  .bestSeller-ranking {
+    font-size: 1.5rem;
+  }
+  .event-content {
+    height: 200px;
+  }
+  .event-title {
+    font-size: 1.3rem;
+  }
+  .event-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 630px) {
+  .header {
+    height: 130px;
+  }
+  .width-setter {
+    font-size: 13px;
+    width: 350px;
+  }
+  .header::before {
+    background-position: 0% 0%;
+  }
+  .site-title {
+    padding: 40px 0 20px;
+  }
+  .header-description {
+    font-size: 11px;
+  }
+  .header-description .pc-description {
+    display: none;
+  }
+  .site-title-inner {
+    font-size: 1.2rem;
+  }
+  .home-category {
+    height: 35px;
+    line-height: 35px;
+  }
+  .home-category-list {
+    width: 350px;
+    font-size: 10px;
+  }
+  .header-media {
+    margin-bottom: 1em;
+  }
+  .home-reading-section {
+    padding: 2.5rem 0;
+  }
+  .home-reading-section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.6em;
+  }
+  .content-image {
+    width: 130px;
+  }
+  .header-media .content-para {
+    height: 200px;
+    font-size: 12px;
+    overflow-y: scroll;
+  }
+  .header-media .content-para::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+  .header-media .content-para::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 2px;
+  }
+  .book-title {
+    font-size: 0.7rem;
+  }
+  .author {
+    font-size: 0.68rem;
+  }
+  .book-of-week-content-item img {
+    height: 90px;
+  }
+  .popularity-book-content-list-item img {
+    height: 90px;
+  }
+  .bestSeller-book-content-item img {
+    height: 90px;
+  }
+  .bestSeller-ranking {
+    font-size: 1.5rem;
+  }
+  .center-content {
+    margin-top: 2em;
+  }
+  .event-content {
+    height: 130px;
+  }
+  .event-banner {
+    padding: 1.5rem;
+  }
+  .event-title {
+    font-size: 0.8rem;
+  }
+  .event-text {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header {
+    height: 100px;
+  }
+  .width-setter {
+    font-size: 13px;
+    width: 300px;
+  }
+  .header::before {
+    background-position: 0% 0%;
+  }
+  .site-title {
+    padding: 25px 0 20px;
+  }
+  .header-description {
+    font-size: 11px;
+  }
+  .header-description .pc-description {
+    display: none;
+  }
+  .site-title-inner {
+    font-size: 1.2rem;
+  }
+  .home-category {
+    height: 35px;
+    line-height: 35px;
+  }
+  .home-category-list {
+    width: 350px;
+    font-size: 10px;
+  }
+  .header-media {
+    margin-bottom: -1.5em;
+  }
+  .home-reading-section {
+    padding: 2.5rem 0;
+  }
+  .home-reading-section h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.6em;
+  }
+  .content-image {
+    width: 130px;
+  }
+  .header-media .content-para {
+    height: 200px;
+    font-size: 12px;
+    overflow-y: scroll;
+  }
+  .header-media .content-para::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+  .header-media .content-para::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 2px;
+  }
+  .book-title {
+    font-size: 0.7rem;
+  }
+  .author {
+    font-size: 0.68rem;
+  }
+  .book-of-week-content-item img {
+    height: 70px;
+  }
+  .popularity-book-content-list-item img {
+    height: 70px;
+  }
+  .bestSeller-book-content-item img {
+    height: 70px;
+  }
+  .bestSeller-ranking {
+    font-size: 1.5rem;
+  }
+  .center-content {
+    margin-top: 1em;
+  }
+  .event-content {
+    height: 100px;
+  }
+  .event-banner {
+    padding: 0.8rem;
+  }
+  .event-title {
+    font-size: 0.7rem;
+  }
+  .event-text {
+    font-size: 0.6rem;
+  }
 }

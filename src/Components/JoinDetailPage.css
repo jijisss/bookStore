@@ -87,8 +87,6 @@
     to(#e5e5e5)
   );
 }
-.post-code {
-}
 .additory-info ul {
   display: flex;
 }
@@ -118,8 +116,8 @@
 .tems-list-item {
   margin-top: 10px;
 }
-.tems-list-item:nth-child(1):hover,
-.tems-list-item:nth-child(2):hover {
+.tems-list-item:nth-child(1) span:hover,
+.tems-list-item:nth-child(2) span:hover {
   font-weight: bold;
 }
 .all-agree {
@@ -130,7 +128,4 @@
 }
 .temrs-agree2 span {
   border-bottom: 1px solid #444;
-}
-.useTerms.active {
-  background: blue;
 }

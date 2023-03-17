@@ -120,3 +120,126 @@
   font-weight: bold;
   transition: 0.3s;
 }
+
+/* 반응형 */
+
+@media screen and (max-width: 1023px) {
+  .HeaderInner {
+    width: 800px;
+  }
+  .HeaderText {
+    font-size: 14px;
+  }
+  .loginMenu {
+    font-size: 15px;
+  }
+  .HeaderLogo {
+    font-size: 1.9rem;
+  }
+  #HeaderSearchBar {
+    width: 300px;
+    height: 35px;
+    border-radius: 8px;
+    padding-left: 10px;
+  }
+  #HeaderSearchBtn {
+    width: 8px;
+    margin-left: -35px;
+  }
+  .Header_menu {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #Header {
+    height: 150px;
+  }
+  .HeaderInner {
+    width: 600px;
+  }
+  .Header_top {
+    height: 60px;
+    line-height: 60px;
+  }
+  .Header_bot {
+    height: 80px;
+    line-height: 80px;
+  }
+  .HeaderText {
+    width: 80%;
+    font-size: 13px;
+  }
+  .loginMenu {
+    font-size: 14px;
+  }
+  .loginMenu_list {
+    width: 45%;
+  }
+  .HeaderLogo {
+    font-size: 1.6rem;
+  }
+  #HeaderSearchBar {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 8px;
+  }
+  #HeaderSearchBtn {
+    width: 5px;
+    margin-left: -35px;
+  }
+  .Header_menu {
+    width: 40%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  #Header {
+    height: 90px;
+  }
+  .HeaderInner {
+    width: 350px;
+    line-height: 130px;
+  }
+  .Header_top {
+    height: 40px;
+    line-height: 40px;
+  }
+  .Header_bot {
+    height: 50px;
+    line-height: 50px;
+  }
+  .HeaderText {
+    display: none;
+  }
+  .loginMenu {
+    font-size: 12px;
+  }
+  .loginMenu_list {
+    width: 40%;
+  }
+  .HeaderLogo {
+    font-size: 1.2rem;
+  }
+  #HeaderSearchBar {
+    display: none;
+  }
+  #HeaderSearchBtn {
+    display: none;
+  }
+  .Header_menu {
+    width: 85%;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #Header {
+    height: 90px;
+  }
+  .HeaderInner {
+    width: 300px;
+    line-height: 130px;
+  }
+}

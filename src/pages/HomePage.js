@@ -148,8 +148,11 @@ function Home() {
               <div className="site-title-inner en">LifeBooks Bookstore</div>
             </h2>
             <p className="header-description observer-ready">
-              <span className="en">LifeBooks</span> 온라인 북스토어에 오신것을
-              환영합니다. 여러분에게 읽기 좋은 책을 추천해드릴게요.
+              <span className="pc-description">
+                <span className="en">LifeBooks</span> 온라인 북스토어에 오신것을
+                환영합니다. 여러분에게 읽기 좋은 책을 추천해드릴게요.
+              </span>
+              <p className="mb-description">온라인 서점 라이프 북스입니다.</p>
             </p>
           </div>
           {/* shelf */}

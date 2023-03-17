@@ -1,7 +1,6 @@
 #Footer {
   width: 100%;
   height: 300px;
-  overflow: hidden;
   border-top: 1px solid #444;
   margin-top: 6rem;
   color: rgb(74, 74, 74);
@@ -82,8 +81,141 @@
   width: 100%;
   border-top: 1px solid rgb(197, 197, 197);
   padding-top: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 .footer-copy-copyright {
   font-size: 15px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1023px) {
+  .FooterInner {
+    width: 800px;
+  }
+  .footer-logo {
+    font-size: 1.9rem;
+  }
+  .footer-menu {
+    width: 60%;
+  }
+  .footer-cp-info-list li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .footer-sns {
+    width: 65%;
+  }
+  .footer-copy {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+  .footer-copy-copyright {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #Footer {
+    margin-top: 2rem;
+  }
+  .FooterInner {
+    width: 600px;
+  }
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+  .footer-menu {
+    width: 67%;
+  }
+  .footer-menu-item {
+    font-size: 13px;
+  }
+  .footer-cp-info-list li {
+    margin: 5px 0;
+    font-size: 13px;
+  }
+  .footer-sns-list {
+    width: 25%;
+  }
+  .footer-copy {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+  .footer-copy-copyright {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 630px) {
+  #Footer {
+    margin-top: 1rem;
+  }
+  .FooterInner {
+    width: 350px;
+    padding-top: 1.5rem;
+  }
+  .footer-logo {
+    font-size: 1.2rem;
+  }
+  .footer-menu {
+    width: 112%;
+  }
+  .footer-menu-item {
+    font-size: 13px;
+  }
+  .footer-cp-info-list li {
+    margin: 5px 0;
+    font-size: 13px;
+  }
+  .footer-sns {
+    width: 113%;
+  }
+  .footer-copy {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+  .footer-copy-copyright {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #Footer {
+    margin-top: 1rem;
+  }
+  .FooterInner {
+    width: 300px;
+    padding-top: 1.5rem;
+  }
+  .footer-logo {
+    font-size: 1.2rem;
+  }
+  .footer-menu {
+    width: 100%;
+  }
+  .footer-menu-list {
+    width: 100%;
+  }
+  .footer-menu-item {
+    font-size: 13px;
+  }
+  .footer-cp-info-list li {
+    margin: 2px 0;
+    font-size: 10px;
+  }
+  .footer-sns {
+    width: 113%;
+  }
+  .footer-sns-list {
+    width: 23%;
+  }
+  .footer-sns-item {
+    width: 23px;
+    height: 23px;
+  }
+  .footer-copy {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .footer-copy-copyright {
+    font-size: 13px;
+  }
 }
