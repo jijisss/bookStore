@@ -488,14 +488,8 @@
   font-size: 0;
   vertical-align: top;
 }
-.prod-detail-footer .right-area {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-}
 .prod-detail-footer .footer-contents-inner .right-area {
-  margin-left: auto;
+  width: 100%;
 }
 .prod-detail-footer .btn-wrap {
   display: inline-block;
@@ -518,23 +512,22 @@
   font-family: "Gowun Batang";
   font-weight: bold;
 }
-.btn-wrap [class^="btn-"] + [class^="btn-"] {
-  margin-left: 6px;
-}
 .prod-detail-footer .btn-wrap {
   margin-left: 6px;
   display: inline-block;
 }
 .btn-lg {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border: none;
   border: 1px solid #444;
   background: none;
   font-family: "Gowun Batang";
   font-weight: bold;
+  margin-right: 10px;
 }
-.btn-primary {
+.right-area .btn-primary {
+  border-radius: 0;
   transition: 0.4s;
 }
 .btn-primary:hover {

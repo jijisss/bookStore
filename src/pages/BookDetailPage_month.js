@@ -1225,10 +1225,6 @@ function BookOfMonth() {
                 </div>
                 <div className="right-area">
                   <div id="prodBtnWrap" className="btn-wrap multi">
-                    <button type="button" className="btn-wish size-lg">
-                      <span className="ico-wish"></span>
-                      <span className="hidden">찜하기</span>
-                    </button>
                     <button
                       id="basket"
                       type="button"
@@ -1236,17 +1232,14 @@ function BookOfMonth() {
                     >
                       <span className="text">장바구니</span>
                     </button>
-
-                    <div id="prodBuyWrap" className="btn-wrap overlap single">
-                      <Link
-                        to=""
-                        id="buy"
-                        type="button"
-                        className="btn-lg btn-primary"
-                      >
-                        <span className="text">구매하기</span>
-                      </Link>
-                    </div>
+                    <Link
+                      to=""
+                      id="buy"
+                      type="button"
+                      className="btn-lg btn-primary"
+                    >
+                      <span className="text">구매하기</span>
+                    </Link>
                   </div>
                 </div>
               </div>
