@@ -474,6 +474,7 @@
   margin: 0 auto;
   align-items: center;
   display: flex;
+  justify-content: space-between;
 }
 .prod-detail-footer .prod-info-title {
   display: inline-block;
@@ -488,8 +489,8 @@
   font-size: 0;
   vertical-align: top;
 }
-.prod-detail-footer .footer-contents-inner .right-area {
-  width: 100%;
+.prod-detail-footer .footer-contents-inner .left-area {
+  width: 40%;
 }
 .prod-detail-footer .btn-wrap {
   display: inline-block;
@@ -525,6 +526,9 @@
   font-family: "Gowun Batang";
   font-weight: bold;
   margin-right: 10px;
+}
+.btn-lg:last-child {
+  margin-right: 0px;
 }
 .right-area .btn-primary {
   border-radius: 0;
