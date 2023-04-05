@@ -468,7 +468,15 @@ img {
   width: 300px;
   height: 350px;
 }
-
+.registation-btn {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border: 1px solid #444;
+}
+.registation-btn:hover {
+  background: #000;
+  color: #fff;
+}
 /* 반응형 */
 @media screen and (max-width: 1023px) {
   .width-setter {

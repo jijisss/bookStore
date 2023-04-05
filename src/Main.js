@@ -28,6 +28,9 @@ import BookDetailPage_againLife from "./pages/BookDetailPage_againLife.js";
 import BookDetailPage_insight from "./pages/BookDetailPage_insight.js";
 import BookDetailPage_convenienceStore from "./pages/BookDetailPage_convenienceStore.js";
 import ScrollToTop from "./index.js";
+import Registation from "./pages/Registation.js";
+import RegistationBook from "./pages/RegistationBook.js";
+import RegistationAuthor from "./pages/RegistationAuthor.js";
 
 function Main() {
   return (
@@ -101,6 +104,9 @@ function Main() {
             path="book-detail-convenienceStore"
             element={<BookDetailPage_convenienceStore />}
           />
+          <Route path="registation" element={<Registation />} />
+          <Route path="registationBook" element={<RegistationBook />} />
+          <Route path="registationAuthor" element={<RegistationAuthor />} />
         </Routes>
       </App>
     </BrowserRouter>

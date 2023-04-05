@@ -1,0 +1,24 @@
+.registation-wrap {
+  width: 980px;
+  margin: 0 auto;
+  padding: 5rem 0rem 15rem;
+  box-sizing: border-box;
+}
+.title {
+  font-size: 2rem;
+}
+.registation-btn-box {
+  width: 55%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.resiBtn {
+  border: 1px solid #444;
+  padding: 2.5rem 4rem;
+  font-size: 1.3rem;
+}
+.resiBtn:hover {
+  background: #000;
+  color: #fff;
+}

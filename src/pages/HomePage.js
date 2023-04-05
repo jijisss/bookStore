@@ -5,6 +5,7 @@ import "../components/BookView.css";
 import "../components/top-btn.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
+// import
 
 // image
 // newArrival
@@ -571,6 +572,15 @@ function Home() {
                         <br></br>그 문구를 LifeBooks에게 공유해주세요.
                       </p>
                     </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="center-content">
+              <div className="registation-content">
+                <div className="registation-btn">
+                  <Link to="/registation">
+                    <p className="registation-text">책/저자 등록하기</p>
                   </Link>
                 </div>
               </div>
