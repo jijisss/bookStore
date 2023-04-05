@@ -105,6 +105,9 @@ function registationBook() {
               />
             </li>
           </ul>
+          <button type="submit" id="formBtn">
+            <p className="formBtn-text">등록하기</p>
+          </button>
         </form>
       </div>
     </>
