@@ -27,10 +27,12 @@ import BookDetailPage_onething from "./pages/BookDetailPage_onething.js";
 import BookDetailPage_againLife from "./pages/BookDetailPage_againLife.js";
 import BookDetailPage_insight from "./pages/BookDetailPage_insight.js";
 import BookDetailPage_convenienceStore from "./pages/BookDetailPage_convenienceStore.js";
+import ScrollToTop from "./index.js";
 
 function Main() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <App>
         <Routes>
           <Route path="/" element={<HomePage />} />

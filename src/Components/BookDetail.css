@@ -325,6 +325,10 @@
   display: flex;
   margin-top: 14px;
 }
+.product-person .writer-info-box.open {
+  height: 350px;
+  overflow: hidden;
+}
 .writer-info-box .writer-profile {
   flex: 0 0 100px;
   height: 100px;
@@ -332,6 +336,12 @@
   overflow: hidden;
   margin-right: 16px;
   text-align: center;
+}
+.btn-more-body .text.open::after {
+  content: "펼치기";
+}
+.btn-more-body .text.close::after {
+  content: "접기";
 }
 .book-contents-item {
   font-size: 15px;

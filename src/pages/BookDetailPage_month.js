@@ -3,6 +3,7 @@ import "../components/top-btn.css";
 import { Link } from "react-router-dom";
 import bookPreviewImage from "../images/bookOfMonth.jpg";
 import bookDetailImg from "../images/i9791190538510.jpg";
+import btnClickHandler from "./CloseOpenBtn";
 
 function BookOfMonth() {
   const scrollToTop = () => {
@@ -11,6 +12,16 @@ function BookOfMonth() {
       behavior: "smooth",
     });
   };
+
+  const bookData = {
+    bookName: "zz",
+    authorName: "김혜남 저자",
+  };
+
+  window.onload = function () {
+    document.getElementById("authorName").innerHTML = bookData.authorName;
+  };
+
   return (
     <>
       <div className="container-wrapper">
@@ -33,8 +44,8 @@ function BookOfMonth() {
                   <div className="col-prod-info">
                     <div className="prod-info-wrap">
                       <div className="prod-author-box">
-                        <div className="author">
-                          <Link to="">김혜남 저자</Link>
+                        <div className="author" id="authorName">
+                          <Link to=""></Link>
                         </div>
                       </div>
                       <div className="prod-info-text publish-date">
@@ -232,7 +243,7 @@ function BookOfMonth() {
                     <iframe
                       src="https://www.youtube.com/embed/deUM3oCJVj0?enablejsapi=1"
                       title="정신과 의사가 말하는 사이 안 좋은 부부 공통점 “이것 안 한다”"
-                      frameborder="0"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       id="youtube-video1"
@@ -252,18 +263,18 @@ function BookOfMonth() {
                   </ul>
                 </div>
                 <div className="prod-detail-area product-person">
-                  <div class="title-wrap title-size-md">
-                    <h2 class="title-heading">작가정보</h2>
+                  <div className="title-wrap title-size-md">
+                    <h2 className="title-heading">작가정보</h2>
                   </div>
                   <div className="gray-box">
-                    <div class="title-wrap title-size-def">
-                      <h3 class="title-heading">
-                        <span class="title-prefix">저자(글)</span>
-                        <span class="text">김혜남</span>
+                    <div className="title-wrap title-size-def">
+                      <h3 className="title-heading">
+                        <span className="title-prefix">저자(글)</span>
+                        <span className="text">김혜남</span>
                       </h3>
                     </div>
-                    <div class="writer-info-box">
-                      <div class="writer-profile">
+                    <div className="writer-info-box open">
+                      <div className="writer-profile">
                         <img
                           data-kbbfn="s3-image"
                           loading="lazy"
@@ -273,10 +284,10 @@ function BookOfMonth() {
                         />
                       </div>
 
-                      <div class="auto-overflow-wrap overflow">
-                        <div class="auto-overflow-contents">
-                          <div class="auto-overflow-inner">
-                            <p class="info-text">
+                      <div className="auto-overflow-wrap overflow">
+                        <div className="auto-overflow-contents">
+                          <div className="auto-overflow-inner">
+                            <p className="info-text">
                               정신분석 전문의
                               <br></br>
                               1959년 서울에서 태어나 고려대학교 의과대학을
@@ -353,17 +364,22 @@ function BookOfMonth() {
                             </p>
                           </div>
                         </div>
-                        <div class="auto-overflow-footer">
-                          <button
-                            type="button"
-                            class="btn-more-body"
-                            data-btn-toggle=""
-                          >
-                            <span class="text">펼치기</span>
-                            <span class="ico-arw"></span>
-                          </button>
-                        </div>
                       </div>
+                    </div>
+                    <div className="auto-overflow-footer">
+                      <button
+                        onClick={(e) => {
+                          btnClickHandler(e, "writer-info-box");
+                        }}
+                        type="button"
+                        className="btn-more-body"
+                      >
+                        <span
+                          className="text open"
+                          data-btn-toggle="open"
+                        ></span>
+                        <span className="ico-arw"></span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -592,11 +608,11 @@ function BookOfMonth() {
                     <div className="auto-overflow-footer">
                       <button
                         type="button"
-                        class="btn-more-body active"
+                        className="btn-more-body active"
                         data-btn-toggle=""
                       >
-                        <span class="text">접기</span>
-                        <span class="ico-arw"></span>
+                        <span className="text">접기</span>
+                        <span className="ico-arw"></span>
                       </button>
                     </div>
                   </div>
@@ -784,15 +800,15 @@ function BookOfMonth() {
                         className="btn-more-body active"
                         data-btn-toggle
                       >
-                        <span class="text">접기</span>
-                        <span class="ico-arw"></span>
+                        <span className="text">접기</span>
+                        <span className="ico-arw"></span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="prod-detail-area book-publish-review">
-                  <div class="title-wrap title-size-md">
-                    <h2 class="title-heading">출판사 서평</h2>
+                  <div className="title-wrap title-size-md">
+                    <h2 className="title-heading">출판사 서평</h2>
                   </div>
                   <div className="auto-overflow-wrap type-text overflow active">
                     <div className="auto-overflow-contents">
@@ -1042,21 +1058,21 @@ function BookOfMonth() {
                         </p>
                       </div>
                     </div>
-                    <div class="auto-overflow-footer">
+                    <div className="auto-overflow-footer">
                       <button
                         type="button"
-                        class="btn-more-body active"
+                        className="btn-more-body active"
                         data-btn-toggle=""
                       >
-                        <span class="text">접기</span>
-                        <span class="ico-arw"></span>
+                        <span className="text">접기</span>
+                        <span className="ico-arw"></span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="prod-detail-area basic-info">
-                  <div class="title-wrap title-size-md">
-                    <h2 class="title-heading">기본정보</h2>
+                  <div className="title-wrap title-size-md">
+                    <h2 className="title-heading">기본정보</h2>
                   </div>
                   <div className="tbl-row-wrap">
                     <div className="wrap-inner">
@@ -1096,8 +1112,8 @@ function BookOfMonth() {
                   </div>
                 </div>
                 <div className="product-detail-area claim-info-wrap">
-                  <div class="title-wrap title-size-md">
-                    <h2 class="title-heading">교환/반품/품절 안내</h2>
+                  <div className="title-wrap title-size-md">
+                    <h2 className="title-heading">교환/반품/품절 안내</h2>
                   </div>
                   <div className="claim-info">
                     <ul className="claim-info-list">
@@ -1111,22 +1127,22 @@ function BookOfMonth() {
                         <br></br>* 오픈마켓, 해외배송 주문, 기프트 주문시 [1:1
                         상담>반품/교환/환불] 또는 고객센터 (1544-1900)
                       </li>
-                      <li class="claim-info-item">
-                        <div class="title-wrap title-size-sm">
-                          <p class="title-heading">반품/교환가능 기간</p>
+                      <li className="claim-info-item">
+                        <div className="title-wrap title-size-sm">
+                          <p className="title-heading">반품/교환가능 기간</p>
                         </div>
                         변심반품의 경우 수령 후 7일 이내,<br></br>상품의 결함 및
                         계약내용과 다를 경우 문제점 발견 후 30일 이내
                       </li>
-                      <li class="claim-info-item">
-                        <div class="title-wrap title-size-sm">
-                          <p class="title-heading">반품/교환비용</p>
+                      <li className="claim-info-item">
+                        <div className="title-wrap title-size-sm">
+                          <p className="title-heading">반품/교환비용</p>
                         </div>
                         변심 혹은 구매착오로 인한 반품/교환은 반송료 고객 부담
                       </li>
-                      <li class="claim-info-item">
-                        <div class="title-wrap title-size-sm">
-                          <p class="title-heading">반품/교환 불가 사유</p>
+                      <li className="claim-info-item">
+                        <div className="title-wrap title-size-sm">
+                          <p className="title-heading">반품/교환 불가 사유</p>
                         </div>
                         1) 소비자의 책임 있는 사유로 상품 등이 손실 또는 훼손된
                         경우<br></br> (단지 확인을 위한 포장 훼손은 제외)
@@ -1143,17 +1159,17 @@ function BookOfMonth() {
                         관한 법률이 정하는 소비자 청약철회 제한 내용에 해당되는
                         경우
                       </li>
-                      <li class="claim-info-item">
-                        <div class="title-wrap title-size-sm">
-                          <p class="title-heading">상품 품절</p>
+                      <li className="claim-info-item">
+                        <div className="title-wrap title-size-sm">
+                          <p className="title-heading">상품 품절</p>
                         </div>
                         공급사(출판사) 재고 사정에 의해 품절/지연될 수 있으며,
                         품절 시 관련 사항에 대해서는 이메일과 문자로
                         안내드리겠습니다.
                       </li>
-                      <li class="claim-info-item">
-                        <div class="title-wrap title-size-sm">
-                          <p class="title-heading">
+                      <li className="claim-info-item">
+                        <div className="title-wrap title-size-sm">
+                          <p className="title-heading">
                             소비자 피해보상 환불 지연에 따른 배상
                           </p>
                         </div>
@@ -1165,8 +1181,8 @@ function BookOfMonth() {
                         처리함
                       </li>
                     </ul>
-                    <div class="info-text-box size-lg">
-                      <p class="bul-item-dot font-size-xxs">
+                    <div className="info-text-box size-lg">
+                      <p className="bul-item-dot font-size-xxs">
                         상품 설명에 반품/교환 관련한 안내가 있는 경우 그 내용을
                         우선으로 합니다. (업체 사정에 따라 달라질 수 있습니다.)
                       </p>
@@ -1181,34 +1197,34 @@ function BookOfMonth() {
             <div className="prod-purchase-info-wrap">
               <div className="footer-contents-inner">
                 <div className="left-area">
-                  <span class="prod-info-title">총 상품 금액</span>
-                  <span class="prod-info-price">
-                    <span class="val">15,480</span>
-                    <span class="unit">원</span>
+                  <span className="prod-info-title">총 상품 금액</span>
+                  <span className="prod-info-price">
+                    <span className="val">15,480</span>
+                    <span className="unit">원</span>
                   </span>
                 </div>
                 <div className="right-area">
-                  <div id="prodBtnWrap" class="btn-wrap multi">
-                    <button type="button" class="btn-wish size-lg">
-                      <span class="ico-wish"></span>
-                      <span class="hidden">찜하기</span>
+                  <div id="prodBtnWrap" className="btn-wrap multi">
+                    <button type="button" className="btn-wish size-lg">
+                      <span className="ico-wish"></span>
+                      <span className="hidden">찜하기</span>
                     </button>
                     <button
                       id="basket"
                       type="button"
-                      class="btn-lg btn-light-gray"
+                      className="btn-lg btn-light-gray"
                     >
-                      <span class="text">장바구니</span>
+                      <span className="text">장바구니</span>
                     </button>
 
-                    <div id="prodBuyWrap" class="btn-wrap overlap single">
+                    <div id="prodBuyWrap" className="btn-wrap overlap single">
                       <Link
                         to=""
                         id="buy"
                         type="button"
-                        class="btn-lg btn-primary"
+                        className="btn-lg btn-primary"
                       >
-                        <span class="text">구매하기</span>
+                        <span className="text">구매하기</span>
                       </Link>
                     </div>
                   </div>
