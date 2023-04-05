@@ -390,7 +390,7 @@ function BookOfMonth() {
                   <div className="auto-overflow-wrap overflow">
                     <div className="auto-overflow-contents">
                       <div className="auto-overflow-inner">
-                        <ul className="book-contents-list">
+                        <ul className="book-contents-list open">
                           <li className="book-contents-item">
                             10만 부 기념 스페셜 에디션을 펴내며
                             <br></br>
@@ -497,11 +497,16 @@ function BookOfMonth() {
                     </div>
                     <div className="auto-overflow-footer">
                       <button
+                        onClick={(e) => {
+                          btnClickHandler(e, "book-contents-list");
+                        }}
                         type="button"
                         className="btn-more-body"
-                        data-btn-toggle
                       >
-                        <span className="text">펼치기</span>
+                        <span
+                          className="text open"
+                          data-btn-toggle="open"
+                        ></span>
                         <span className="ico-arw"></span>
                       </button>
                     </div>
@@ -514,7 +519,7 @@ function BookOfMonth() {
                   <div className="auto-overflow-wrap type-text overflow">
                     <div className="auto-overflow-contents">
                       <div className="auto-overflow-inner">
-                        <ul className="recommend-list">
+                        <ul className="recommend-list open">
                           <li className="recommend-item">
                             <div className="title-wrap title-size-sm">
                               <p className="title-heading ">조선일보</p>
@@ -607,11 +612,16 @@ function BookOfMonth() {
                     </div>
                     <div className="auto-overflow-footer">
                       <button
+                        onClick={(e) => {
+                          btnClickHandler(e, "recommend-list");
+                        }}
                         type="button"
-                        className="btn-more-body active"
-                        data-btn-toggle=""
+                        className="btn-more-body"
                       >
-                        <span className="text">접기</span>
+                        <span
+                          className="text open"
+                          data-btn-toggle="open"
+                        ></span>
                         <span className="ico-arw"></span>
                       </button>
                     </div>
@@ -622,7 +632,7 @@ function BookOfMonth() {
                     <h2 className="title-heading">책 속으로</h2>
                   </div>
                   <div className="auto-overflow-wrap type-text overflow active">
-                    <div className="auto-overflow-contents">
+                    <div className="auto-overflow-contents open">
                       <div className="auto-overflow-inner">
                         <p className="info-text">
                           책을 정리하면서 정신분석의 선구자인 프로이트가 말한
@@ -796,11 +806,16 @@ function BookOfMonth() {
                     </div>
                     <div className="auto-overflow-footer">
                       <button
+                        onClick={(e) => {
+                          btnClickHandler(e, "auto-overflow-contents");
+                        }}
                         type="button"
-                        className="btn-more-body active"
-                        data-btn-toggle
+                        className="btn-more-body"
                       >
-                        <span className="text">접기</span>
+                        <span
+                          className="text open"
+                          data-btn-toggle="open"
+                        ></span>
                         <span className="ico-arw"></span>
                       </button>
                     </div>
@@ -811,7 +826,7 @@ function BookOfMonth() {
                     <h2 className="title-heading">출판사 서평</h2>
                   </div>
                   <div className="auto-overflow-wrap type-text overflow active">
-                    <div className="auto-overflow-contents">
+                    <div className="auto-overflow-contents open">
                       <div className="auto-overflow-inner">
                         <p className="info-text">
                           ★ 한국출판산업진흥원 이달의 읽을 만한 책 선정
@@ -1060,11 +1075,16 @@ function BookOfMonth() {
                     </div>
                     <div className="auto-overflow-footer">
                       <button
+                        onClick={(e) => {
+                          btnClickHandler(e, "auto-overflow-contents");
+                        }}
                         type="button"
-                        className="btn-more-body active"
-                        data-btn-toggle=""
+                        className="btn-more-body"
                       >
-                        <span className="text">접기</span>
+                        <span
+                          className="text open"
+                          data-btn-toggle="open"
+                        ></span>
                         <span className="ico-arw"></span>
                       </button>
                     </div>

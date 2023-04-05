@@ -343,6 +343,14 @@
 .btn-more-body .text.close::after {
   content: "접기";
 }
+.auto-overflow-contents {
+  height: 300px;
+  overflow: hidden;
+}
+.book-contents-list.open {
+  height: 300px;
+  overflow: hidden;
+}
 .book-contents-item {
   font-size: 15px;
   line-height: 22px;
@@ -356,6 +364,10 @@
 .book-recommend {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 70px;
+}
+.recommend-list.open {
+  height: 300px;
+  overflow: hidden;
 }
 .book-recommend .recommend-item .title-heading {
   color: rgb(64, 50, 145);
@@ -378,6 +390,10 @@
   font-size: 15px;
   line-height: 23px;
   letter-spacing: -0.01em;
+}
+.info-text.open {
+  height: 300px;
+  overflow: hidden;
 }
 .book-publish-review {
   border-bottom: 1px solid #eaeaea;

@@ -105,7 +105,11 @@ function registationBook() {
               />
             </li>
           </ul>
-          <button type="submit" id="formBtn">
+          <button
+            type="submit"
+            id="formBtn"
+            style={{ fontFamily: "Gowun Batang" }}
+          >
             <p className="formBtn-text">등록하기</p>
           </button>
         </form>

@@ -1,9 +1,13 @@
 import "../components/default.css";
+import "../components/registationAuthor.css";
 
 function RegistationAuthor() {
   return (
     <>
-      <h1>lol</h1>
+      <div className="registationAuthor-wrap">
+        <h1 className="title">저자 등록하기</h1>
+        <form id="registationBook-form" action="submit"></form>
+      </div>
     </>
   );
 }

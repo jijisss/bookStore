@@ -21,19 +21,23 @@
   height: 25px;
 }
 .bookInfo-item textarea {
+  width: 400px;
+  height: 300px;
   border: 1px solid #c6c6c6;
   border-radius: 8px;
+  font-size: 17px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 #formBtn {
   margin-top: 4rem;
   background: #fff;
-  border: 1px solid #444;
+  border: 1px solid #c6c6c6;
   border-radius: 8px;
   padding: 1rem;
   font-size: 1rem;
   cursor: pointer;
 }
 #formBtn:hover {
-  color: #fff;
-  background: #000;
+  background: #c6c6c6;
 }
