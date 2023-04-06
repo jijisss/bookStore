@@ -1,5 +1,5 @@
 import "../components/default.css";
-import "../components/registationBook.css";
+import "../components/registationForm.css";
 
 function registationBook() {
   return (
@@ -9,16 +9,24 @@ function registationBook() {
         <form id="registationBook-form" action="submit">
           <ul className="bookInfo-list">
             <li className="bookInfo-item">
-              <label htmlFor="bookName">책 이름</label>
+              <label htmlFor="bookName">책 제목</label>
               <input type="text" id="bookName" name="bookName" />
+            </li>
+            <li className="bookInfo-item">
+              <label htmlFor="bookThumbnail">책 표지 이미지</label>
+              <input type="text" id="bookThumbnail" name="bookThumbnail" />
+            </li>
+            <li className="bookInfo-item">
+              <label htmlFor="detailImg">상세 이미지</label>
+              <input type="text" id="detailImg" name="detailImg" />
+            </li>
+            <li className="bookInfo-item">
+              <label htmlFor="trailer">트레일러</label>
+              <input type="text" id="trailer" name="trailer" />
             </li>
             <li className="bookInfo-item">
               <label htmlFor="authorName">저자</label>
               <input type="text" id="authorName" name="authorName" />
-            </li>
-            <li className="bookInfo-item">
-              <label htmlFor="translator">번역가</label>
-              <input type="text" id="translator" name="translator" />
             </li>
             <li className="bookInfo-item">
               <label htmlFor="translator">번역가</label>
@@ -33,8 +41,16 @@ function registationBook() {
               <input type="text" id="publicationDate" name="publicationDate" />
             </li>
             <li className="bookInfo-item">
-              <label htmlFor="price">가격</label>
-              <input type="text" id="price" name="price" />
+              <label htmlFor="val">가격</label>
+              <input type="text" id="val" name="val" />
+            </li>
+            <li className="bookInfo-item">
+              <label htmlFor="valOrigin">원가</label>
+              <input type="text" id="valOrigin" name="valOrigin" />
+            </li>
+            <li className="bookInfo-item">
+              <label htmlFor="percent">할인률</label>
+              <input type="text" id="percent" name="percent" />
             </li>
             <li className="bookInfo-item">
               <label htmlFor="point">적립포인트</label>

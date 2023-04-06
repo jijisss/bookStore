@@ -679,12 +679,6 @@ function BookOfMonth() {
                       <div className="prod-info-text publish-date">
                         <Link to="" className="btn-publish-link"></Link>
                       </div>
-                      <div className="prod-best-box">
-                        주간베스트
-                        <span className="best-ranking">
-                          국내도서 19위 · 인문 2위
-                        </span>
-                      </div>
                       <div className="prod-info-text">
                         가장 최근에 출시된 개정판입니다.
                         <Link to="" className="btn-xxs">

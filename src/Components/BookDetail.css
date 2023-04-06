@@ -555,3 +555,543 @@
   background: #000;
   transition: 0.4s;
 }
+
+/* 반응형 */
+@media screen and (max-width: 400px) {
+  .contents-wrap {
+    padding-top: 3rem;
+  }
+  .header-contents-inner {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .prod-detail-contents-inner {
+    width: 300px;
+  }
+  .prod-detail-title-wrap {
+    margin-bottom: 1rem;
+  }
+  .prod-desc-area {
+    font-size: 13px;
+  }
+  .prod-detail-view-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .portrait-img-box {
+    width: 170px;
+  }
+  .prod-info-wrap {
+    padding-top: 2rem;
+    box-sizing: border-box;
+  }
+  .prod-info-text {
+    font-size: 13px;
+  }
+  .prod-author-box .author {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(55, 55, 55);
+    margin-bottom: 5px;
+  }
+  .publish-date {
+    color: #7b7b7b;
+    margin-bottom: 20px;
+  }
+  .prod-best-box {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .btn-publish-link {
+    position: relative;
+    margin-right: 10px;
+  }
+  .btn-xxs {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
+  }
+  .col-prod-info.thumb {
+    margin-top: 1rem;
+  }
+  .col-prod-info {
+    width: 100%;
+    font-size: 12px;
+  }
+  .prod-guide-box {
+    padding-left: 0rem;
+  }
+  .prod-guide-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .tab-list-wrap {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 3rem;
+  }
+  .list-inner {
+    width: 300px;
+  }
+  .tabs {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab-item {
+    color: #444;
+    font-size: 12px;
+    transition: 0.4s;
+  }
+  .prod-detail-contents-inner {
+    width: 300px;
+  }
+  .prod-detail-area {
+    margin-top: 2rem;
+  }
+  .title-wrap.title-size-md {
+    padding-bottom: 10px;
+  }
+  .title-size-md .title-heading {
+    font-size: 1rem;
+  }
+  .title-wrap.title-size-sm .title-heading {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    margin-top: 0.7rem;
+  }
+  .intro-award {
+    display: none;
+  }
+  .bul-item-dot.font-size-xxs {
+    font-size: 10px;
+  }
+  .gray-box {
+    padding: 26px 20px 15px;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+  }
+  .product-person .writer-info-box.open {
+    height: 200px;
+  }
+  .title-size-def {
+    padding-bottom: 10px;
+  }
+  .info-text {
+    font-size: 12px;
+  }
+  .basic-info-list {
+    font-size: 12px;
+  }
+  .product-detail-area.claim-info-wrap
+    .claim-info
+    .claim-info-list
+    .claim-info-item {
+    font-size: 10px;
+    padding: 15px 0;
+  }
+  .prod-detail-footer {
+    min-width: 300px;
+  }
+  .prod-detail-footer .prod-purchase-info-wrap {
+    height: 70px;
+  }
+  .prod-detail-footer .footer-contents-inner {
+    width: 300px;
+  }
+  .prod-info-price .val {
+    font-size: 18px;
+  }
+  .btn-lg {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 630px) {
+  .contents-wrap {
+    padding-top: 6.5rem;
+  }
+  .header-contents-inner {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .prod-detail-title-wrap {
+    margin-bottom: 1rem;
+  }
+  .prod-desc-area {
+    font-size: 14px;
+  }
+  .prod-detail-view-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .portrait-img-box {
+    width: 200px;
+  }
+  .prod-info-wrap {
+    padding-top: 2rem;
+    box-sizing: border-box;
+  }
+  .prod-info-text {
+    font-size: 14px;
+  }
+  .prod-author-box .author {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(55, 55, 55);
+    margin-bottom: 5px;
+  }
+  .publish-date {
+    color: #7b7b7b;
+    margin-bottom: 20px;
+  }
+  .prod-best-box {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .btn-publish-link {
+    position: relative;
+    margin-right: 10px;
+  }
+  .btn-xxs {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
+  }
+  .col-prod-info.thumb {
+    margin-top: 1rem;
+  }
+  .col-prod-info {
+    width: 100%;
+    font-size: 12px;
+  }
+  .prod-guide-box {
+    padding-left: 0rem;
+  }
+  .prod-guide-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .tab-list-wrap {
+    margin-top: 1rem;
+    height: 50px;
+    line-height: 50px;
+  }
+  .tabs {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab-item {
+    color: #444;
+    font-size: 14px;
+    transition: 0.4s;
+  }
+  .prod-detail-contents-inner {
+    width: 350px;
+  }
+  .list-inner {
+    width: 350px;
+  }
+  .prod-detail-contents-inner {
+    width: 350px;
+  }
+  .product-person .writer-info-box.open {
+    height: 250px;
+  }
+  .title-size-md .title-heading {
+    font-size: 17px;
+  }
+  .title-size-def {
+    padding-bottom: 15px;
+  }
+  .text-award-item {
+    font-size: 13px;
+  }
+  .gray-box {
+    padding: 26px 20px 15px;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+    font-size: 13px;
+  }
+  .info-text {
+    font-size: 13px;
+  }
+  .basic-info-item {
+    font-size: 13px;
+  }
+  .product-detail-area.claim-info-wrap
+    .claim-info
+    .claim-info-list
+    .claim-info-item {
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  .prod-detail-footer {
+    min-width: 350px;
+  }
+  .prod-detail-footer .prod-purchase-info-wrap {
+    height: 80px;
+  }
+  .prod-detail-footer .footer-contents-inner {
+    width: 350px;
+  }
+  .prod-info-price .val {
+    font-size: 20px;
+  }
+  .btn-lg {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 631px) and (max-width: 850px) {
+  .contents-wrap {
+    padding-top: 7rem;
+  }
+  .header-contents-inner {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .prod-detail-title-wrap {
+    margin-bottom: 1rem;
+  }
+  .prod-desc-area {
+    font-size: 14px;
+  }
+  .portrait-img-box {
+    width: 200px;
+  }
+  .prod-info-wrap {
+    padding-top: 2rem;
+    box-sizing: border-box;
+  }
+  .prod-info-text {
+    font-size: 14px;
+  }
+  .prod-author-box .author {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(55, 55, 55);
+    margin-bottom: 5px;
+  }
+  .publish-date {
+    color: #7b7b7b;
+    margin-bottom: 20px;
+  }
+  .prod-best-box {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .btn-publish-link {
+    position: relative;
+    margin-right: 10px;
+  }
+  .btn-xxs {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
+  }
+  .col-prod-info.thumb {
+    margin-top: 1rem;
+  }
+  .col-prod-info {
+    width: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .prod-guide-box {
+    padding-left: 0rem;
+  }
+  .prod-guide-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .tab-list-wrap {
+    margin-top: 5rem;
+    height: 65px;
+    line-height: 65px;
+  }
+  .tabs {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab-item {
+    color: #444;
+    font-size: 14px;
+    transition: 0.4s;
+  }
+  .prod-detail-contents-inner {
+    width: 600px;
+  }
+  .list-inner {
+    width: 600px;
+  }
+  .prod-detail-contents-inner {
+    width: 600px;
+  }
+  .product-person .writer-info-box.open {
+    height: 250px;
+  }
+  .title-size-md .title-heading {
+    font-size: 17px;
+  }
+  .title-size-def {
+    padding-bottom: 15px;
+  }
+  .text-award-item {
+    font-size: 13px;
+  }
+  .gray-box {
+    padding: 26px 20px 15px;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+    font-size: 13px;
+  }
+  .info-text {
+    font-size: 13px;
+  }
+  .basic-info-item {
+    font-size: 13px;
+  }
+  .product-detail-area.claim-info-wrap
+    .claim-info
+    .claim-info-list
+    .claim-info-item {
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  .prod-detail-footer {
+    min-width: 600px;
+  }
+  .prod-detail-footer .prod-purchase-info-wrap {
+    height: 80px;
+  }
+  .prod-detail-footer .footer-contents-inner {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1023px) {
+  .contents-wrap {
+    padding-top: 9rem;
+  }
+  .header-contents-inner {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .prod-detail-title-wrap {
+    margin-bottom: 2rem;
+  }
+  .prod-desc-area {
+    font-size: 16px;
+  }
+  .portrait-img-box {
+    width: 200px;
+  }
+  .prod-info-wrap {
+    padding-top: 2rem;
+    box-sizing: border-box;
+  }
+  .prod-info-text {
+    font-size: 14px;
+  }
+  .prod-author-box .author {
+    font-size: 14px;
+  }
+  .publish-date {
+    color: #7b7b7b;
+    margin-bottom: 20px;
+  }
+  .prod-best-box {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .btn-publish-link {
+    position: relative;
+    margin-right: 10px;
+  }
+  .btn-xxs {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
+  }
+  .col-prod-info.thumb {
+    margin-top: 1rem;
+  }
+  .col-prod-info {
+    width: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .prod-guide-box {
+    padding-left: 0rem;
+  }
+  .prod-guide-row {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  .tab-list-wrap {
+    margin-top: 5rem;
+    height: 65px;
+    line-height: 65px;
+  }
+  .tabs {
+    width: 45%;
+  }
+  .tab-item {
+    font-size: 16px;
+  }
+  .prod-detail-contents-inner {
+    width: 800px;
+  }
+  .list-inner {
+    width: 800px;
+  }
+  .prod-detail-contents-inner {
+    width: 800px;
+  }
+  .product-person .writer-info-box.open {
+    height: 300px;
+  }
+  .title-size-md .title-heading {
+    font-size: 23px;
+  }
+  .title-size-def {
+    padding-bottom: 15px;
+  }
+  .text-award-item {
+    font-size: 16px;
+  }
+  .gray-box {
+    padding: 26px 20px 15px;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+    font-size: 13px;
+  }
+  .info-text {
+    font-size: 16px;
+  }
+  .basic-info-item {
+    font-size: 16px;
+  }
+  .product-detail-area.claim-info-wrap
+    .claim-info
+    .claim-info-list
+    .claim-info-item {
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  .prod-detail-footer {
+    min-width: 600px;
+  }
+  .prod-detail-footer .prod-purchase-info-wrap {
+    height: 80px;
+  }
+  .prod-detail-footer .footer-contents-inner {
+    width: 800px;
+  }
+}
