@@ -337,15 +337,31 @@
   margin-right: 16px;
   text-align: center;
 }
+.book-inside-list.open {
+  height: 350px;
+  overflow: hidden;
+}
+.book-publish-review-list.open {
+  height: 350px;
+  overflow: hidden;
+}
+.btn-more-body {
+  border: 1px solid #c7c7c7;
+  border-radius: 12px;
+  background: #f6f6f6;
+  padding: 5px 8px;
+  color: #828282;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-more-body:hover {
+  background: #e2e2e2;
+}
 .btn-more-body .text.open::after {
   content: "펼치기";
 }
 .btn-more-body .text.close::after {
   content: "접기";
-}
-.auto-overflow-contents {
-  height: 300px;
-  overflow: hidden;
 }
 .book-contents-list.open {
   height: 300px;
