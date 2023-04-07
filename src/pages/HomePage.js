@@ -5,45 +5,28 @@ import "../components/BookView.css";
 import "../components/top-btn.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
-// import
+import { useNavigate } from "react-router-dom";
 
 // image
 // newArrival
-import newArrivalBook1_t from "../images/newArrivalBook1_t.jpg";
-import newArrivalBook2_t from "../images/newArrivalBook2_t.jpg";
-import newArrivalBook3_t from "../images/newArrivalBook3_t.jpg";
-import newArrivalBook4_t from "../images/newArrivalBook4_t.jpg";
-import newArrivalBook5_t from "../images/newArrivalBook5_t.jpg";
+import newArrivalBook1_t from "../images/bookImage_myBeautifulDays_t.jpg";
+import newArrivalBook2_t from "../images/bookImage_weatherAndFace_t.jpg";
+import newArrivalBook3_t from "../images/bookImage_leavingHomeJoyful_t.jpg";
+import newArrivalBook4_t from "../images/bookImage_daidaiBookstore_t.jpg";
+import newArrivalBook5_t from "../images/bookImage_ropeOfHope_t.jpg";
 // bookOfMonth
-import bookOfMonthImage from "../images/bookOfMonth.jpg";
-import bookOfWeekImage1 from "../images/bookOfWeek1.jpg";
-import bookOfWeekImage2 from "../images/bookOfWeek2.jpg";
-import bookOfWeekImage3 from "../images/bookOfWeek3.jpg";
-import bookOfWeekImage4 from "../images/bookOfWeek4.jpg";
-import bookOfWeekImage5 from "../images/bookOfWeek5.jpg";
+import bookOfMonthImage from "../images/bookImage_ifIaginLife.jpg";
+import bookOfWeekImage1 from "../images/bookImage_saynoTeaching.jpg";
+import bookOfWeekImage2 from "../images/bookImage_swanAndBat.jpg";
+import bookOfWeekImage3 from "../images/bookImage_lastIsland.jpg";
+import bookOfWeekImage4 from "../images/bookImage_bangju.jpg";
+import bookOfWeekImage5 from "../images/bookImage_theDeep.jpg";
 // popularity
-import popularBookImage1 from "../images/popularBook1.jpg";
-import popularBookImage2 from "../images/popularBook2.jpg";
-import popularBookImage3 from "../images/popularBook3.jpg";
-import popularBookImage4 from "../images/popularBook4.jpg";
-import popularBookImage5 from "../images/popularBook5.jpg";
-// import popularBookImage6 from "../images/popularBook6.jpg";
-// import popularBookImage7 from "../images/popularBook7.jpg";
-// import popularBookImage8 from "../images/popularBook8.jpg";
-// import popularBookImage9 from "../images/popularBook9.jpg";
-// import popularBookImage10 from "../images/popularBook10.jpg";
-// bestSeller
-import bestSellerBookImage1 from "../images/bestSellerBook1.jpg";
-import bestSellerBookImage2 from "../images/bestSellerBook2.jpg";
-import bestSellerBookImage3 from "../images/bestSellerBook3.jpg";
-import bestSellerBookImage4 from "../images/bestSellerBook4.jpg";
-import bestSellerBookImage5 from "../images/bestSellerBook5.jpg";
-import bestSellerBookImage6 from "../images/bestSellerBook6.jpg";
-import bestSellerBookImage7 from "../images/bestSellerBook7.jpg";
-import bestSellerBookImage8 from "../images/bestSellerBook8.jpg";
-import bestSellerBookImage9 from "../images/bestSellerBook9.jpg";
-import bestSellerBookImage10 from "../images/bestSellerBook10.jpg";
-import React from "react";
+import popularBookImage1 from "../images/bookImage_manglegom.jpg";
+import popularBookImage2 from "../images/bookImage_weAreJoguman.jpg";
+import popularBookImage3 from "../images/bookImage_ripen.jpg";
+import popularBookImage4 from "../images/bookImage_markUpYourLanguage.jpg";
+import popularBookImage5 from "../images/bookImage_starBeyondStarlight.jpg";
 
 let loaderElem;
 let observerElems;
@@ -134,6 +117,12 @@ function Home() {
     });
   });
 
+  const navigate = useNavigate();
+
+  function onClickHandler() {
+    navigate("/bookDetailPage", { state: { title: "내가 만약 " } });
+  }
+
   return (
     <>
       <div className="before-load">
@@ -150,10 +139,9 @@ function Home() {
             </h2>
             <p className="header-description observer-ready">
               <span className="pc-description">
-                <span className="en">LifeBooks</span> 온라인 북스토어에 오신것을
-                환영합니다. 여러분에게 읽기 좋은 책을 추천해드릴게요.
+                <span className="en">LifeBooks</span> 중고거래 서점에 오신것을
+                환영합니다.
               </span>
-              <p className="mb-description">온라인 서점 라이프 북스입니다.</p>
             </p>
           </div>
           {/* shelf */}
@@ -300,9 +288,10 @@ function Home() {
               </h2>
               <div className="header-media">
                 <div className="content-image observer-ready">
-                  <Link to="/book-of-month">
+                  <button onClick={onClickHandler}></button>
+                  {/* <Link to="/bookDetailPage">
                     <img src={bookOfMonthImage} alt="book-image" />
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="content-para observer-ready">
                   30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된
@@ -338,7 +327,10 @@ function Home() {
                 <div className="book-of-week-content">
                   <ul className="book-of-week-content-list">
                     <li className="book-of-week-content-item">
-                      <Link to="/book-detail-sayno">
+                      <Link
+                        to="/book-detail-sayno"
+                        state={{ bookName: "세이노의 가르침" }}
+                      >
                         <img src={bookOfWeekImage1} />
                         <p className="book-title">세이노의 가르침</p>
                         <p className="author">세이노</p>
@@ -461,100 +453,8 @@ function Home() {
             </div>
             <div className="center-content">
               <div className="content-para observer-ready">
-                <h2>베스트 셀러</h2>
-                <div className="bestSeller-book-content">
-                  <ul className="bestSeller-book-content-list">
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-40class">
-                        <img src={bestSellerBookImage1} />
-                        <p className="bestSeller-ranking en">1</p>
-                        <p className="book-title">김미경의 마흔 수업</p>
-                        <p className="author">김미경</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-ruleOfRich">
-                        <img src={bestSellerBookImage2} />
-                        <p className="bestSeller-ranking en">2</p>
-                        <p className="book-title">1퍼센트 부자의 법칙</p>
-                        <p className="author">사이토 히토리</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-sayno">
-                        <img src={bestSellerBookImage3} />
-                        <p className="bestSeller-ranking en">3</p>
-                        <p className="book-title">세이노의 가르침</p>
-                        <p className="author">세이노</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-stocksecret">
-                        <img src={bestSellerBookImage4} />
-                        <p className="bestSeller-ranking en">4</p>
-                        <p className="book-title">주식 시세의 비밀</p>
-                        <p className="author">정재호</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-slamdunk">
-                        <img src={bestSellerBookImage5} />
-                        <p className="bestSeller-ranking en">5</p>
-                        <p className="book-title">
-                          슬램덩크 리소스(THE FIRST SLAM DUNK re:SOURCE)
-                        </p>
-                        <p className="author">이노우에 타케히코</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-battery">
-                        <img src={bestSellerBookImage6} />
-                        <p className="bestSeller-ranking en">6</p>
-                        <p className="book-title">K 배터리 레볼루션</p>
-                        <p className="author">박순혁</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-onething">
-                        <img src={bestSellerBookImage7} />
-                        <p className="bestSeller-ranking en">7</p>
-                        <p className="book-title">
-                          원씽(The One Thing)(리커버 특별판)
-                        </p>
-                        <p className="author">게리 켈러 , 제이 파파산</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-againLife">
-                        <img src={bestSellerBookImage8} />
-                        <p className="bestSeller-ranking en">8</p>
-                        <p className="book-title">
-                          만일 내가 인생을 다시 산다면(10만 부 돌파기념 스페셜
-                          에디션)
-                        </p>
-                        <p className="author">김혜남</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-insight">
-                        <img src={bestSellerBookImage9} />
-                        <p className="bestSeller-ranking en">9</p>
-                        <p className="book-title">정세현의 통찰</p>
-                        <p className="author">정세현</p>
-                      </Link>
-                    </li>
-                    <li className="bestSeller-book-content-item">
-                      <Link to="/book-detail-convenienceStore">
-                        <img src={bestSellerBookImage10} />
-                        <p className="bestSeller-ranking en">10</p>
-                        <p className="book-title">
-                          불편한 편의점(40만부 기념 벚꽃 에디션)
-                        </p>
-                        <p className="author">김호연</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <h2>리뷰</h2>
+                <div className="review-content"></div>
               </div>
             </div>
             <div className="center-content">

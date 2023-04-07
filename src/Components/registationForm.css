@@ -1,33 +1,27 @@
-.registationBook-wrap,
-.registationAuthor-wrap {
+.registationBook-wrap {
   width: 980px;
   margin: 0 auto;
   padding-top: 3rem;
   box-sizing: border-box;
 }
-#registationBook-form,
-#registationAuthor-form {
+#registationBook-form {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid #eee;
 }
-.bookInfo-item,
-.authorInfo-item {
+.bookInfo-item {
   margin-top: 1rem;
   display: flex;
 }
-.bookInfo-item label,
-.authorInfo-item label {
+.bookInfo-item label {
   width: 100px;
   margin-right: 10px;
 }
-.bookInfo-item input,
-.authorInfo-item input {
+.bookInfo-item input {
   height: 25px;
 }
-.bookInfo-item textarea,
-.authorInfo-item textarea {
-  width: 600px;
+.bookInfo-item textarea {
+  width: 100%;
   height: 350px;
   border: 1px solid #c6c6c6;
   border-radius: 8px;

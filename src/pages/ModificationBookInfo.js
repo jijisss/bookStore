@@ -1,11 +1,11 @@
 import "../components/default.css";
-import "../components/registationForm.css";
+import "../components/modificationBookInfo.css";
 
-function registationBook() {
+function ModificationBookInfo() {
   return (
     <>
-      <div className="registationBook-wrap">
-        <h1 className="title">책 등록하기</h1>
+      <div className="modificationBookInfo-wrap">
+        <h1>책 정보 수정하기</h1>
         <form id="registationBook-form" action="submit">
           <ul className="bookInfo-list">
             <li className="bookInfo-item">
@@ -126,7 +126,7 @@ function registationBook() {
             id="formBtn"
             style={{ fontFamily: "Gowun Batang" }}
           >
-            <p className="formBtn-text">등록하기</p>
+            <p className="formBtn-text">수정하기</p>
           </button>
         </form>
       </div>
@@ -134,4 +134,4 @@ function registationBook() {
   );
 }
 
-export default registationBook;
+export default ModificationBookInfo;

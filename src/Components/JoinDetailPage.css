@@ -15,6 +15,7 @@
   margin-top: 2rem;
 }
 .enter-info-item {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -29,6 +30,22 @@
   margin-top: 10px;
   margin-bottom: 1.5rem;
   font-size: 15px;
+}
+#enter-profileImage-input {
+  width: 91px;
+  height: 100px;
+  border-radius: 100%;
+  border: none;
+  background-image: url(../images/img_no_profile@2x.png);
+  background-size: contain;
+  cursor: pointer;
+}
+.profile-setting-ic {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 75px;
+  right: 370px;
 }
 .mobile-info-item .input-name {
   width: 20%;
@@ -128,4 +145,19 @@
 }
 .temrs-agree2 span {
   border-bottom: 1px solid #444;
+}
+#memberJoinBtn {
+  margin-top: 3rem;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  padding: 1rem 1.3rem;
+}
+.memberJoinBtn-txt {
+  font-size: 1.4rem;
+}
+#memberJoinBtn:hover {
+  color: #fff;
+  background: #000;
 }

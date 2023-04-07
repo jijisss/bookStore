@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import "../components/JoinDetailPage.css";
 import Address from "../components/Address.js";
+import profileSettingImage from "../images/btn_profile_setting@2x.png";
 
 function JoinDetailPage({}) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,11 +21,36 @@ function JoinDetailPage({}) {
           <div className="essential-info">
             <ul className="enter-info-list">
               <li className="enter-info-item">
-                <p className="input-name">아이디</p>
+                <p className="input-name">프로필 사진</p>
+                <input
+                  id="enter-profileImage-input"
+                  className="user-id-input info-form-input"
+                  name="profile"
+                  type="text"
+                  maxLength={8}
+                  required
+                />
+                <span className="profile-setting-ic">
+                  <img src={profileSettingImage} />
+                </span>
+              </li>
+              <li className="enter-info-item">
+                <p className="input-name">닉네임</p>
                 <input
                   id="enter-id-input"
+                  className="user-nickName-input info-form-input"
+                  name="nickName"
+                  type="text"
+                  maxLength={8}
+                  required
+                />
+              </li>
+              <li className="enter-info-item">
+                <p className="input-name">아이디</p>
+                <input
+                  id="enterIdInput"
                   className="user-id-input info-form-input"
-                  name="id-input"
+                  name="id"
                   type="text"
                   maxLength={8}
                   required
@@ -33,9 +59,9 @@ function JoinDetailPage({}) {
               <li className="enter-info-item">
                 <p className="input-name">비밀번호</p>
                 <input
-                  id="enter-password-input"
+                  id="enterPasswordInput"
                   className="user-password-input info-form-input"
-                  name="password-input"
+                  name="password"
                   type="password"
                   required
                 />
@@ -43,9 +69,9 @@ function JoinDetailPage({}) {
               <li className="enter-info-item">
                 <p className="input-name">비밀번호 확인</p>
                 <input
-                  id="enter-password-confirm-input"
+                  id="enterPasswordConfirmInput"
                   className="user-password-confirm-input info-form-input"
-                  name="password-confirm-input"
+                  name="passwordConfirm"
                   type="password"
                   required
                 />
@@ -53,9 +79,9 @@ function JoinDetailPage({}) {
               <li className="enter-info-item">
                 <p className="input-name">이름</p>
                 <input
-                  id="enter-name-input"
+                  id="enterNameInput"
                   className="user-name-input info-form-input"
-                  name="name-input"
+                  name="name"
                   type="text"
                 />
               </li>
@@ -63,7 +89,7 @@ function JoinDetailPage({}) {
                 <p className="input-name">휴대전화</p>
                 <select
                   className="info-form-input first-num-input"
-                  name="mobile-input"
+                  name="mobileNumber"
                 >
                   <option>010</option>
                   <option>011</option>
@@ -72,8 +98,8 @@ function JoinDetailPage({}) {
                   <option>018</option>
                   <option>019</option>
                 </select>
-                <input className="info-form-input" name="mobile-input" />
-                <input className="info-form-input" name="mobile-input" />
+                <input className="info-form-input" name="mobileNumber" />
+                <input className="info-form-input" name="mobileNumber" />
               </li>
               {/* 주소 입력창 */}
               <li className="address-input">
@@ -144,7 +170,7 @@ function JoinDetailPage({}) {
                 <p className="input-name">이메일</p>
                 <input
                   className="user-email-input info-form-input"
-                  name="email-input"
+                  name="email"
                   type="text"
                 />
               </li>
@@ -156,16 +182,8 @@ function JoinDetailPage({}) {
                 <p>생년월일</p>
               </li>
               <li className="additory-info-item">
-                <input type="checkbox" name="birth-check"></input>
-                <label name="birth-check" className="birth-check">
-                  양력
-                </label>
-                <input type="checkbox" name="birth-check"></input>
-                <label name="birth-check" className="birth-check">
-                  음력
-                </label>
                 <select className="year-check birth-check-sel">
-                  <option>1950년</option>
+                  <option value="1950년">1950년</option>
                   <option>1951년</option>
                   <option>1952년</option>
                   <option>1953년</option>
@@ -334,6 +352,13 @@ function JoinDetailPage({}) {
               </ul>
             </div>
           </div>
+          <button
+            type="submit"
+            id="memberJoinBtn"
+            style={{ fontFamily: "Gowun Batang" }}
+          >
+            <span className="memberJoinBtn-txt">동의하고 가입하기</span>
+          </button>
         </form>
       </div>
     </div>
