@@ -59,6 +59,15 @@ function Header() {
             <div className="menu Header_menu">
               <ul className="menu_list">
                 <Link
+                  to="/"
+                  className="myMenu_list_item menu_list_item"
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  리뷰
+                </Link>
+                <Link
                   to="/CartPage"
                   className="myMenu_list_item menu_list_item"
                   style={{

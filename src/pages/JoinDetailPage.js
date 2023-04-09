@@ -85,6 +85,30 @@ function JoinDetailPage({}) {
                   type="text"
                 />
               </li>
+              <li className="enter-info-item" id="gender-info-item">
+                <p className="input-name">성별</p>
+                <fieldset>
+                  <label id="genderLabel">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="genderBtn"
+                      value="WOMAN"
+                      checked
+                    />
+                    <span>남성</span>
+                  </label>
+                  <label id="genderLabel">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="genderBtn"
+                      value="MAN"
+                    />
+                    <span>여성</span>
+                  </label>
+                </fieldset>
+              </li>
               <li className="enter-info-item mobile-info-item">
                 <p className="input-name">휴대전화</p>
                 <select

@@ -28,6 +28,20 @@ function Registation() {
             <li className="bookInfo-item">
               <label htmlFor="authorName">저자</label>
               <input type="text" id="authorName" name="authorName" />
+              <button
+                className="authorName-btn authorName-pick-btn"
+                id="authorName-pick-btn"
+                style={{ fontFamily: "Gowun Batang" }}
+              >
+                선택
+              </button>
+              <button
+                className="authorName-btn authorName-registration-btn"
+                id="authorName-registration-btn"
+                style={{ fontFamily: "Gowun Batang" }}
+              >
+                저자 등록
+              </button>
             </li>
             <li className="bookInfo-item">
               <label htmlFor="translator">번역가</label>

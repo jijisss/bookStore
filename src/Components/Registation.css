@@ -7,6 +7,10 @@
 .title {
   font-size: 2rem;
 }
+.bookInfo-item {
+  position: relative;
+  display: inline-block;
+}
 .registation-btn-box {
   width: 100%;
   margin-top: 2rem;
@@ -21,4 +25,22 @@
 .resiBtn:hover {
   background: #000;
   color: #fff;
+}
+.authorName-btn {
+  padding: 0.25rem;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  cursor: pointer;
+}
+.authorName-btn:hover {
+  background: #f1f1f1;
+}
+#authorName {
+  position: relative;
+}
+#authorName-pick-btn {
+  position: absolute;
+  top: 0;
+  left: 260px;
 }

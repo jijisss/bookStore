@@ -6,7 +6,6 @@ import "../components/top-btn.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
 import { useNavigate } from "react-router-dom";
-
 // image
 // newArrival
 import newArrivalBook1_t from "../images/bookImage_myBeautifulDays_t.jpg";
