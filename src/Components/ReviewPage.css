@@ -1,0 +1,74 @@
+.review-contents-wrap {
+  width: 980px;
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+  box-sizing: border-box;
+}
+.review-contents-tit {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.review-registration-btn {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+#registration-btn {
+  background: none;
+  border: 1px solid #e9e9e9;
+  padding: 0.4rem 0.8rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+#registration-btn:hover {
+  background: #000;
+  color: #fff;
+}
+.review-box {
+  width: 100%;
+  border: 1px solid #e9e9e9;
+}
+.review-item {
+  padding: 0.5rem 0;
+  display: flex;
+  border-bottom: 1px solid #e9e9e9;
+}
+.review-content-item-left-box {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+}
+.review-content-item-left-box .seller-profileImg {
+  width: 30px;
+  height: 30px;
+}
+.review-content-item-right-box {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.review-text-preview {
+  width: 80%;
+}
+.buyer-info {
+  width: 20%;
+}
+.review-pageNumber-index-box {
+  width: 50%;
+  margin-top: 2rem;
+  margin: 1rem auto 0;
+}
+.review-pageNumber-index-list {
+  display: flex;
+  width: 30%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#review-pageNumber-index-btn {
+  background: none;
+  border: 1px solid #e9e9e9;
+  padding: 5px 8px;
+  font-weight: bold;
+  cursor: pointer;
+}

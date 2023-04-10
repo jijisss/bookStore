@@ -1,0 +1,44 @@
+.reviewWrite-contents-wrap {
+  width: 980px;
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+}
+.reviewWrite-contents-tit {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.review-book-info {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #e9e9e9;
+  margin-bottom: 1rem;
+}
+.review-book-img {
+  width: 60px;
+}
+.review-book-img img {
+  width: 100%;
+}
+.review-bookName-box {
+  margin-left: 1rem;
+}
+.review-book-rating {
+  margin-left: 2rem;
+}
+#reviewWrite-form {
+  position: relative;
+  width: 100%;
+}
+#reviewWrite-form-textarea {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#reviewWrite-form-btn {
+  background: none;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e9e9e9;
+  margin-top: 1rem;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ import "../components/default.css";
 import "../components/registation.css";
 import "../components/registationForm.css";
 
-function Registation() {
+function RegistationPage() {
   return (
     <>
       <div className="registation-wrap">
@@ -149,4 +149,4 @@ function Registation() {
   );
 }
 
-export default Registation;
+export default RegistationPage;

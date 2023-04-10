@@ -6,6 +6,7 @@ import "../components/top-btn.css";
 import { cm } from "../components/cm.js";
 import { BookView } from "../components/BookView.js";
 import { useNavigate } from "react-router-dom";
+// import Accordion from "../components/Accordion";
 // image
 // newArrival
 import newArrivalBook1_t from "../images/bookImage_myBeautifulDays_t.jpg";
@@ -26,6 +27,8 @@ import popularBookImage2 from "../images/bookImage_weAreJoguman.jpg";
 import popularBookImage3 from "../images/bookImage_ripen.jpg";
 import popularBookImage4 from "../images/bookImage_markUpYourLanguage.jpg";
 import popularBookImage5 from "../images/bookImage_starBeyondStarlight.jpg";
+
+import userProfileImg from "../images/img_no_profile@2x.png";
 
 let loaderElem;
 let observerElems;
@@ -452,14 +455,170 @@ function Home() {
             </div>
             <div className="center-content">
               <div className="content-para observer-ready">
-                <h2>리뷰</h2>
-                <div className="review-content"></div>
+                <h2>거래 리뷰</h2>
+                <div className="review-content-wrap">
+                  <ul className="review-content-list">
+                    <li className="review-content-item">
+                      <div className="review-content-item-box">
+                        <div className="review-photo-box">
+                          <div className="review-photo">
+                            <p className="review-photo-img">
+                              <img src={newArrivalBook1_t} />
+                            </p>
+                          </div>
+                        </div>
+                        <div className="review-txt-box">
+                          <div className="review-info-box-top">
+                            <div className="review-seller-info">
+                              <div className="seller-profile">
+                                <p className="seller-profileImg">
+                                  <img src={userProfileImg} />
+                                </p>
+                                <span className="seller-nickName">
+                                  햄스터쳇바퀴 님
+                                </span>
+                                <div className="seller-rating">별점</div>
+                              </div>
+                            </div>
+                            <div className="review-book-info">
+                              도서 제목:
+                              <p className="review-bookName">망그러진 곰</p>
+                            </div>
+                          </div>
+                          <div className="review-info-box-bot">
+                            <div className="review-buyer-info">
+                              <span className="buyer-nickName">
+                                대나무헬리콥터 님
+                              </span>
+                            </div>
+                            <div className="review-text-box">
+                              <p className="review-text">
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing
+                                software like Aldus PageMaker including versions
+                                of Lorem Ipsum.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="review-content-item review-content-item-fold">
+                      <div className="review-content-item-left-box">
+                        <p className="seller-profileImg">
+                          <img src={userProfileImg} />
+                        </p>
+                        <span className="seller-nickName">해씨냠냠 님</span>
+                      </div>
+                      <div className="review-content-item-right-box">
+                        <div className="review-text-preview">
+                          <p className="preview-txt">
+                            "책 상태가 너무 좋아요! 판매자분이 너무
+                            친절하셨습니다..!"
+                          </p>
+                        </div>
+                        <div className="buyer-info">
+                          <p className="buyer-nickName">하하하 님</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="review-content-item review-content-item-fold">
+                      <div className="review-content-item-left-box">
+                        <p className="seller-profileImg">
+                          <img src={userProfileImg} />
+                        </p>
+                        <span className="seller-nickName">해씨얌얌 님</span>
+                      </div>
+                      <div className="review-content-item-right-box">
+                        <div className="review-text-preview">
+                          <p className="preview-txt">
+                            "책 상태가 너무 좋아요! 판매자분이 너무
+                            친절하셨습니다..!"
+                          </p>
+                        </div>
+                        <div className="buyer-info">
+                          <p className="buyer-nickName">호호호 님</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="review-content-item review-content-item-fold">
+                      <div className="review-content-item-left-box">
+                        <p className="seller-profileImg">
+                          <img src={userProfileImg} />
+                        </p>
+                        <span className="seller-nickName">해씨뇸뇸 님</span>
+                      </div>
+                      <div className="review-content-item-right-box">
+                        <div className="review-text-preview">
+                          <p className="preview-txt">
+                            "책 상태가 너무 좋아요! 판매자분이 너무
+                            친절하셨습니다..!"
+                          </p>
+                        </div>
+                        <div className="buyer-info">
+                          <p className="buyer-nickName">히히히 님</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="review-content-item review-content-item-fold">
+                      <div className="review-content-item-left-box">
+                        <p className="seller-profileImg">
+                          <img src={userProfileImg} />
+                        </p>
+                        <span className="seller-nickName">해씨념념 님</span>
+                      </div>
+                      <div className="review-content-item-right-box">
+                        <div className="review-text-preview">
+                          <p className="preview-txt">
+                            "책 상태가 너무 좋아요! 판매자분이 너무
+                            친절하셨습니다..!"
+                          </p>
+                        </div>
+                        <div className="buyer-info">
+                          <p className="buyer-nickName">후후후 님</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="review-content-viewAll-btn">
+                  <button
+                    id="viewAll-btn"
+                    style={{ fontFamily: "Gowun Batang" }}
+                  >
+                    <Link to="/review">리뷰 전체보기</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="center-content">
+              <div className="registation-content">
+                <h2 className="registation-content-tit">
+                  거래할 도서 등록하기
+                </h2>
+                <span className="registation-content-txt">
+                  책을 등록하고 거래하시겠어요?
+                </span>
+                <div className="registation-btn">
+                  <Link to="/registation">
+                    <p className="registation-text">거래 도서 등록하기</p>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="center-content">
               <div className="content-para observer-ready">
                 <h2>이벤트</h2>
-                <div className="event-content">
+                <div className="event-content-wrap">
                   <Link to="">
                     <div className="event-banner">
                       <p className="event-title">
@@ -471,15 +630,6 @@ function Home() {
                         <br></br>그 문구를 LifeBooks에게 공유해주세요.
                       </p>
                     </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="center-content">
-              <div className="registation-content">
-                <div className="registation-btn">
-                  <Link to="/registation">
-                    <p className="registation-text">책/저자 등록하기</p>
                   </Link>
                 </div>
               </div>
