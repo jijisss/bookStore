@@ -1,8 +1,12 @@
 import "../components/default.css";
 import "../components/registation.css";
 import "../components/registationForm.css";
+import Modal from 'react-modal';
+import React, { useState } from "react";
 
 function RegistationPage() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
     <>
       <div className="registation-wrap">
@@ -28,13 +32,17 @@ function RegistationPage() {
             <li className="bookInfo-item">
               <label htmlFor="authorName">저자</label>
               <input type="text" id="authorName" name="authorName" />
+              
+              <Modal isOpen={true}>
               <button
                 className="authorName-btn authorName-pick-btn"
                 id="authorName-pick-btn"
                 style={{ fontFamily: "Gowun Batang" }}
+                onClick={()=> setModalIsOpen}
               >
                 선택
               </button>
+              </Modal>
               <button
                 className="authorName-btn authorName-registration-btn"
                 id="authorName-registration-btn"
@@ -42,6 +50,7 @@ function RegistationPage() {
               >
                 저자 등록
               </button>
+
             </li>
             <li className="bookInfo-item">
               <label htmlFor="translator">번역가</label>

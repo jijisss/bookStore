@@ -7,8 +7,8 @@ function ReviewWritePage() {
     <>
       <div className="reviewWrite-contents-wrap">
         <h1 className="reviewWrite-contents-tit">리뷰 작성</h1>
-        <div className="review-book-info">
-          <p className="review-book-img">
+        <div className="reviewWrite-book-info">
+          <p className="reviewWrite-book-img">
             <img src={bookImg} />
           </p>
           <div className="review-bookName-box">
