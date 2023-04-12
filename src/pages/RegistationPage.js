@@ -1,11 +1,19 @@
 import "../components/default.css";
 import "../components/registation.css";
 import "../components/registationForm.css";
-import Modal from 'react-modal';
 import React, { useState } from "react";
+import Modal from "../components/Modal.js";
 
-function RegistationPage() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+function RegistationPage({}) {
+  // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <>
@@ -32,17 +40,13 @@ function RegistationPage() {
             <li className="bookInfo-item">
               <label htmlFor="authorName">저자</label>
               <input type="text" id="authorName" name="authorName" />
-              
-              <Modal isOpen={true}>
               <button
                 className="authorName-btn authorName-pick-btn"
                 id="authorName-pick-btn"
                 style={{ fontFamily: "Gowun Batang" }}
-                onClick={()=> setModalIsOpen}
               >
                 선택
               </button>
-              </Modal>
               <button
                 className="authorName-btn authorName-registration-btn"
                 id="authorName-registration-btn"
@@ -50,7 +54,12 @@ function RegistationPage() {
               >
                 저자 등록
               </button>
-
+              <button onClick={openModal}>모달팝업</button>
+              //header 부분에 텍스트를 입력한다.
+              <Modal open={modalOpen} close={closeModal} header="Modal heading">
+                리액트 함수형 모달 팝업창입니다. 쉽게 만들 수 있어요. 같이
+                만들어봐요!
+              </Modal>
             </li>
             <li className="bookInfo-item">
               <label htmlFor="translator">번역가</label>

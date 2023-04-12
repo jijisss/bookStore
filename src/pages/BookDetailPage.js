@@ -514,21 +514,6 @@ function BookDetailPage() {
     `,
     totalPage: "280쪽",
   };
-
-  window.onload = () => {
-    bookData.bookIntro = bookData.bookIntro.replaceAll("\n", "<br />");
-    for (var key in bookData) {
-      changeData(key, bookData[key]);
-    }
-  };
-
-  const changeData = function (name, data) {
-    let selectId = document.getElementById(name);
-    if (selectId === null) return;
-    selectId.innerHTML = data;
-    selectId.src = data;
-  };
-
   // const bookname = ;
 
   // fetch("http://localhost:8080/book/getDetail?bookName="+bookname, {
@@ -560,6 +545,7 @@ function BookDetailPage() {
                         <div className="author">
                           <Link to="" id="authorName">
                             {/* 작가 이름 들어갈 자리 */}
+                            {bookData.authorName}
                           </Link>
                         </div>
                       </div>
@@ -571,9 +557,6 @@ function BookDetailPage() {
                       </div>
                       <div className="prod-info-text">
                         가장 최근에 출시된 개정판입니다.
-                        <Link to="" className="btn-xxs">
-                          구판보기
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -645,7 +628,7 @@ function BookDetailPage() {
               <div className="prod-detail-contents-inner">
                 <div className="prod-detail-area detail-img">
                   <div className="inner">
-                    <img src={bookDetailImg} />
+                    <img src={bookData.detailImg} />
                   </div>
                 </div>
                 <div className="prod-detail-area book-intro">
@@ -668,7 +651,8 @@ function BookDetailPage() {
                       <br></br>
                       그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!" */}
                     </div>
-                    <div className="info-text" id="bookIntro">
+                    <div className="info-text">
+                      {bookData.bookIntro}
                       {/* 30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이
                       된 당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏
                       살면서 한 가지 후회하는 게 있다면 스스로를 너무 닦달하며
@@ -857,6 +841,7 @@ function BookDetailPage() {
                         <ul className="book-contents-list open">
                           <li className="book-contents-item">
                             {/* 목차 들어갈 자리 */}
+                            {bookData.book}
                           </li>
                         </ul>
                       </div>
