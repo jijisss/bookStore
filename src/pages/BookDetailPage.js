@@ -646,7 +646,9 @@ function BookDetailPage() {
                       </p>
                     </div>
                     <ul className="intro-category-list">
-                      <li className="category-list-item" id="bookGenre"></li>
+                      <li className="category-list-item" id="bookGenre">
+                        {bookData.bookGenre}
+                      </li>
                     </ul>
                   </div>
                   <div className="intro-bottom">
