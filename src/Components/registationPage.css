@@ -44,3 +44,41 @@
   top: 0;
   left: 26.6%;
 }
+.registerAuthor-item {
+  margin: 10px 0;
+}
+.registerAuthor-item label {
+  font-size: 15px;
+  display: inline-block;
+}
+.registerAuthor-item textarea {
+  margin-top: 10px;
+}
+#registerAuthorBirth {
+  padding: 4px 10px;
+  border-radius: 7px;
+}
+#authorRegisterBtn {
+  border: 1px solid #e7e7e7;
+  background: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#authorRegisterBtn:hover {
+  background: rgb(240, 240, 240);
+}
+#authorSearchInput {
+  padding: 15px 10px;
+  margin-right: 10px;
+}
+#authorSearchBtn {
+  padding: 5px 15px;
+  border-radius: 7px;
+  background: none;
+  border: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+#authorSearchBtn:hover {
+  background: rgb(240, 240, 240);
+}

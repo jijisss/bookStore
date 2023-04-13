@@ -1,5 +1,5 @@
 import "../components/default.css";
-import "../components/registation.css";
+import "../components/registationPage.css";
 import "../components/registationForm.css";
 import React, { useState } from "react";
 import Modal from "../components/Modal.js";
@@ -24,6 +24,7 @@ function RegistationPage({}) {
   const closeModal2 = () => {
     setModalOpen2(false);
   };
+
   return (
     <>
       <div className="registation-wrap">
@@ -58,7 +59,21 @@ function RegistationPage({}) {
                 선택
               </button>
               <Modal open={modalOpen} close={closeModal} header="저자 선택하기">
-                저자 선택 모달창
+                <form action="submit" id="authorSelectForm">
+                  <input
+                    type="search"
+                    id="authorSearchInput"
+                    name="authorNameSearch"
+                    placeholder="작가 이름 검색"
+                  ></input>
+                  <button
+                    name="authorNameSearch"
+                    id="authorSearchBtn"
+                    style={{ fontFamily: "Gowun Batang" }}
+                  >
+                    검색
+                  </button>
+                </form>
               </Modal>
               <button
                 onClick={openModal2}
@@ -72,10 +87,35 @@ function RegistationPage({}) {
                 close={closeModal2}
                 header="저자 등록하기"
               >
-                <form action="submit">
-                  <label htmlFor="registerAuthorName">작가 이름</label>
-                  <input type="text" id="author" name="registerAuthorName" />
-                  <button id="authorRegisterBtn" type="submit">
+                <form action="submit" id="authorRegisterForm">
+                  <ul className="registerAuthor-list">
+                    <li className="registerAuthor-item">
+                      <label htmlFor="registerAuthorName">작가 이름</label>
+                      <input
+                        type="text"
+                        id="author"
+                        name="registerAuthorName"
+                      />
+                    </li>
+                    <li className="registerAuthor-item">
+                      <label htmlFor="registerAuthorBirth">작가 출생년도</label>
+                      <select
+                        name="registerAuthorBirth"
+                        id="registerAuthorBirth"
+                      >
+                        <option>년</option>
+                      </select>
+                    </li>
+                    <li className="registerAuthor-item">
+                      <label htmlFor="registerAuthorInfo">작가 정보</label>
+                      <textarea name="registerAuthorInfo"></textarea>
+                    </li>
+                  </ul>
+                  <button
+                    id="authorRegisterBtn"
+                    type="submit"
+                    style={{ fontFamily: "Gowun Batang" }}
+                  >
                     등록하기
                   </button>
                 </form>

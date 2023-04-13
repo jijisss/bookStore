@@ -30,7 +30,8 @@ function BookDetailPage() {
     earnPoints: "360p",
     deliveryFee: "무료배송",
     bookGenre: "국내도서 > 인문 > 심리학 > 교양심리",
-    bookIntro: `"하나의 문이 닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!" 30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된 당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏 살면서 한 가지 후회하는 게 있다면 스스로를 너무 닦달하며 인생을 숙제처럼 산 것이라고 말한다. 의사로, 엄마로, 아내로, 며느리로, 딸로 살면서 늘 의무와 책임감에 치여 어떻게든 그 모든 역할을 잘해 내려 애썼고 그러다 보니 정작 누려야 할 삶의 즐거움들을 놓쳐 버렸다는 것이다. 그러다 22년 전 마흔세 살에 파킨슨병 진단을 받으며 비로소 알게 되었다. 자신이 없으면 집안도 병원도 제대로 안 굴러갈 것 같았는데 세상은 너무나 멀쩡히 잘 굴러갔다. 그제야 그녀는 자신의 곁을 지켜 주는 사람들을 다시 보게 되었고, 놓쳐서는안 될 인생의 소중한 것들이 무엇인지를 돌아보게 되었다. 그래서 벌써 마흔이 되어 버린, 후회 없는 인생을 살고 싶은 사람들에게 말해 주고 싶은 것도 딱 한가지다. “하나의 문이 닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!”이 책은 2015년 ‘오늘 내가 사는 게 재미있는 이유’라는 제목으로 출간, 독자들의 사랑을 받으며 10만 부 돌파 베스트셀러가 된 것을 기념해 펴낸 스페셜 에디션으로 저자가 30년간 정신분석 전문의로 일하며 깨달은 인생의 비밀과 22년간 파킨슨병을 앓으면서도 유쾌하게 살 수 있는 이유를 전한다. 또한 ‘완벽한 때는 결코 오지 않는 법이다’,‘때론 버티는 것이 답이다’, ‘제발 모든 것을 상처라고 말하지 말 것’, ‘가까운 사람일수록 해서는 안 될 것들이 있다’ 등 환자들에게 미처 하지 못했던 그러나 꼭 해 주고 싶은 이야기들을 담고 있다.'`,
+    bookIntroBold: `"하나의 문이 닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!"`,
+    bookIntro: `30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된 당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏 살면서 한 가지 후회하는 게 있다면 스스로를 너무 닦달하며 인생을 숙제처럼 산 것이라고 말한다. 의사로, 엄마로, 아내로, 며느리로, 딸로 살면서 늘 의무와 책임감에 치여 어떻게든 그 모든 역할을 잘해 내려 애썼고 그러다 보니 정작 누려야 할 삶의 즐거움들을 놓쳐 버렸다는 것이다. 그러다 22년 전 마흔세 살에 파킨슨병 진단을 받으며 비로소 알게 되었다. 자신이 없으면 집안도 병원도 제대로 안 굴러갈 것 같았는데 세상은 너무나 멀쩡히 잘 굴러갔다. 그제야 그녀는 자신의 곁을 지켜 주는 사람들을 다시 보게 되었고, 놓쳐서는안 될 인생의 소중한 것들이 무엇인지를 돌아보게 되었다. 그래서 벌써 마흔이 되어 버린, 후회 없는 인생을 살고 싶은 사람들에게 말해 주고 싶은 것도 딱 한가지다. “하나의 문이 닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!”이 책은 2015년 ‘오늘 내가 사는 게 재미있는 이유’라는 제목으로 출간, 독자들의 사랑을 받으며 10만 부 돌파 베스트셀러가 된 것을 기념해 펴낸 스페셜 에디션으로 저자가 30년간 정신분석 전문의로 일하며 깨달은 인생의 비밀과 22년간 파킨슨병을 앓으면서도 유쾌하게 살 수 있는 이유를 전한다. 또한 ‘완벽한 때는 결코 오지 않는 법이다’,‘때론 버티는 것이 답이다’, ‘제발 모든 것을 상처라고 말하지 말 것’, ‘가까운 사람일수록 해서는 안 될 것들이 있다’ 등 환자들에게 미처 하지 못했던 그러나 꼭 해 주고 싶은 이야기들을 담고 있다.'`,
     index: `10만 부 기념 스페셜 에디션을 펴내며
             프롤로그- 파킨슨병이 내게 가르쳐 준 것들
             Chapter 1. 30년 동안 정신분석 전문의로 일하며 깨달은 인생의 비밀
@@ -514,7 +515,6 @@ function BookDetailPage() {
     `,
     totalPage: "280쪽",
   };
-  // const bookname = ;
 
   // fetch("http://localhost:8080/book/getDetail?bookName="+bookname, {
   //   body: JSON.stringify({
@@ -531,7 +531,7 @@ function BookDetailPage() {
             <div className="header-contents-inner">
               <div className="prod-detail-title-wrap">
                 <div className="prod-title-area">
-                  <div className="prod-title-box"></div>
+                  <div className="prod-title-box">{bookData.bookName}</div>
                   <div className="prod-desc-area">
                     <p>벌써 마흔이 된 당신에게 해 주고 싶은 말들 42</p>
                   </div>
@@ -552,8 +552,10 @@ function BookDetailPage() {
                       <div className="prod-info-text publish-date">
                         <Link to="" className="btn-publish-link">
                           {/* 출판사 들어갈 자리 */}
+                          {bookData.publisher}
                         </Link>
                         {/* 출판일 들어갈 자리 */}
+                        {bookData.publicationDate}
                       </div>
                       <div className="prod-info-text">
                         가장 최근에 출시된 개정판입니다.
@@ -562,15 +564,15 @@ function BookDetailPage() {
                   </div>
                   <div className="col-prod-info thumb">
                     <div className="portrait-img-box">
-                      <img id="bookThumbnail" src="" />
+                      <img id="bookThumbnail" src={bookData.bookThumbnail} />
                     </div>
                   </div>
                   <div className="col-prod-info">
                     <div className="prod-price-wrap">
                       <div className="prod-price">
-                        <span className="percent"></span>
-                        <span className="val"></span>
-                        <s className="val-origin"></s>
+                        <span className="percent">{bookData.salePercent}</span>
+                        <span className="val">{bookData.price}</span>
+                        <s className="val-origin">{bookData.originPrice}</s>
                       </div>
                     </div>
                     <div className="prod-guide-wrap">
@@ -578,7 +580,9 @@ function BookDetailPage() {
                         <div className="prod-guide-row">
                           <div className="prod-guide-title">적립/혜택</div>
                           <div className="prod-guide-cont">
-                            <div className="point-text"></div>
+                            <div className="point-text">
+                              {bookData.earnPoints}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -647,40 +651,9 @@ function BookDetailPage() {
                   </div>
                   <div className="intro-bottom">
                     <div className="info-text fw-bold">
-                      {/* "하나의 문이 닫히면 또 하나의 문이 열린다.
-                      <br></br>
-                      그러니 더 이상 고민하지 말고 그냥 재미있게 살아라!" */}
+                      {bookData.bookIntroBold}
                     </div>
-                    <div className="info-text">
-                      {bookData.bookIntro}
-                      {/* 30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이
-                      된 당신에게 해 주고 싶은 말들을 담은 책이다. 그녀는 지금껏
-                      살면서 한 가지 후회하는 게 있다면 스스로를 너무 닦달하며
-                      인생을 숙제처럼 산 것이라고 말한다. 의사로, 엄마로,
-                      아내로, 며느리로, 딸로 살면서 늘 의무와 책임감에 치여
-                      어떻게든 그 모든 역할을 잘해 내려 애썼고 그러다 보니 정작
-                      누려야 할 삶의 즐거움들을 놓쳐 버렸다는 것이다. 그러다
-                      22년 전 마흔세 살에 파킨슨병 진단을 받으며 비로소 알게
-                      되었다. 자신이 없으면 집안도 병원도 제대로 안 굴러갈 것
-                      같았는데 세상은 너무나 멀쩡히 잘 굴러갔다. 그제야 그녀는
-                      자신의 곁을 지켜 주는 사람들을 다시 보게 되었고, 놓쳐서는
-                      안 될 인생의 소중한 것들이 무엇인지를 돌아보게 되었다.
-                      그래서 벌써 마흔이 되어 버린, 후회 없는 인생을 살고 싶은
-                      사람들에게 말해 주고 싶은 것도 딱 한가지다. “하나의 문이
-                      닫히면 또 하나의 문이 열린다. 그러니 더 이상 고민하지 말고
-                      그냥 재미있게 살아라!”
-                      <br></br>
-                      <br></br>이 책은 2015년 ‘오늘 내가 사는 게 재미있는
-                      이유’라는 제목으로 출간, 독자들의 사랑을 받으며 10만 부
-                      돌파 베스트셀러가 된 것을 기념해 펴낸 스페셜 에디션으로
-                      저자가 30년간 정신분석 전문의로 일하며 깨달은 인생의
-                      비밀과 22년간 파킨슨병을 앓으면서도 유쾌하게 살 수 있는
-                      이유를 전한다. 또한 ‘완벽한 때는 결코 오지 않는 법이다’,
-                      ‘때론 버티는 것이 답이다’, ‘제발 모든 것을 상처라고 말하지
-                      말 것’, ‘가까운 사람일수록 해서는 안 될 것들이 있다’ 등
-                      환자들에게 미처 하지 못했던 그러나 꼭 해 주고 싶은
-                      이야기들을 담고 있다. */}
-                    </div>
+                    <div className="info-text">{bookData.bookIntro}</div>
                   </div>
                 </div>
                 <div className="prod-detail-area product-trailer">
@@ -688,15 +661,16 @@ function BookDetailPage() {
                     <h2 className="title-heading">북 트레일러</h2>
                   </div>
                   <div className="video-wrap" id="detail-video1">
-                    {/* <iframe
-                      src="https://www.youtube.com/embed/deUM3oCJVj0?enablejsapi=1"
+                    {/* 트레일러 들어갈 자리 */}
+                    <iframe
+                      src={bookData.trailer}
                       title="정신과 의사가 말하는 사이 안 좋은 부부 공통점 “이것 안 한다”"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       id="youtube-video1"
                       data-gtm-yt-inspected-19="true"
-                    ></iframe> */}
+                    ></iframe>
                   </div>
                   <ul className="bul-list">
                     <li className="bul-item-dot font-size-xxs">
@@ -718,11 +692,14 @@ function BookDetailPage() {
                     <div className="title-wrap title-size-def">
                       <h3 className="title-heading">
                         <span className="title-prefix">저자(글)</span>
-                        <span className="text">김혜남</span>
+                        <span className="text">
+                          {/* 작가 이름 들어갈 자리 */}
+                        </span>
                       </h3>
                     </div>
                     <div className="writer-info-box open">
                       <div className="writer-profile">
+                        {/* 작가 사진 들어갈 자리 */}
                         <img
                           data-kbbfn="s3-image"
                           loading="lazy"
@@ -731,12 +708,12 @@ function BookDetailPage() {
                           data-src="https://contents.kyobobook.co.kr/dtl/author/1000129201.jpg"
                         />
                       </div>
-
                       <div className="auto-overflow-wrap overflow">
                         <div className="auto-overflow-contents">
                           <div className="auto-overflow-inner">
                             <p className="info-text">
-                              정신분석 전문의
+                              {/* 작가 정보 들어갈 자리 */}
+                              {/* 정신분석 전문의
                               <br></br>
                               1959년 서울에서 태어나 고려대학교 의과대학을
                               졸업하고 국립 정신병원(현 국립정신건강센터)에서
@@ -808,7 +785,7 @@ function BookDetailPage() {
                               주고 싶은 이야기도 딱 하나뿐이다.
                               <br></br>
                               “하나의 문이 닫히면 또 다른 문이 열린다. 그러니 더
-                              이상 고민하지 말고 그냥 재미있게 살았으면 좋겠다.”
+                              이상 고민하지 말고 그냥 재미있게 살았으면 좋겠다.” */}
                             </p>
                           </div>
                         </div>
@@ -841,7 +818,7 @@ function BookDetailPage() {
                         <ul className="book-contents-list open">
                           <li className="book-contents-item">
                             {/* 목차 들어갈 자리 */}
-                            {bookData.book}
+                            {bookData.index}
                           </li>
                         </ul>
                       </div>
@@ -989,6 +966,7 @@ function BookDetailPage() {
                           <li className="book-inside-item">
                             <p className="info-text">
                               {/* 책 속으로 들어갈 자리 */}
+                              {bookData.bookPreview}
                             </p>
                           </li>
                         </ul>
@@ -1022,6 +1000,7 @@ function BookDetailPage() {
                           <li className="book-publish-review-item">
                             <p className="info-text">
                               {/* 출판사 서평 들어갈 자리 */}
+                              {bookData.publisherReview}
                             </p>
                           </li>
                         </ul>
@@ -1052,24 +1031,8 @@ function BookDetailPage() {
                     <div className="wrap-inner">
                       <ul className="basic-info-list">
                         <li className="basic-info-item">
-                          <p className="info-item-title en">ISBN</p>
-                          <p className="info-item-text"></p>
-                        </li>
-                        <li className="basic-info-item">
-                          <p className="info-item-title">발행(출시)일자</p>
-                          <p className="info-item-text"></p>
-                        </li>
-                        <li className="basic-info-item">
                           <p className="info-item-title">쪽수</p>
-                          <p className="info-item-text"></p>
-                        </li>
-                        <li className="basic-info-item">
-                          <p className="info-item-title">크기</p>
-                          <p className="info-item-text"></p>
-                        </li>
-                        <li className="basic-info-item">
-                          <p className="info-item-title">총권수</p>
-                          <p className="info-item-text"></p>
+                          <p className="info-item-text">{bookData.totalPage}</p>
                         </li>
                         <li className="basic-info-item">
                           <p className="info-item-title">이 책의 개정정보</p>
