@@ -544,17 +544,14 @@ function BookDetailPage() {
                       <div className="prod-author-box">
                         <div className="author">
                           <Link to="" id="authorName">
-                            {/* 작가 이름 들어갈 자리 */}
                             {bookData.authorName}
                           </Link>
                         </div>
                       </div>
                       <div className="prod-info-text publish-date">
                         <Link to="" className="btn-publish-link">
-                          {/* 출판사 들어갈 자리 */}
                           {bookData.publisher}
                         </Link>
-                        {/* 출판일 들어갈 자리 */}
                         {bookData.publicationDate}
                       </div>
                       <div className="prod-info-text">
@@ -663,7 +660,6 @@ function BookDetailPage() {
                     <h2 className="title-heading">북 트레일러</h2>
                   </div>
                   <div className="video-wrap" id="detail-video1">
-                    {/* 트레일러 들어갈 자리 */}
                     <iframe
                       src={bookData.trailer}
                       title="정신과 의사가 말하는 사이 안 좋은 부부 공통점 “이것 안 한다”"
@@ -819,7 +815,6 @@ function BookDetailPage() {
                       <div className="auto-overflow-inner">
                         <ul className="book-contents-list open">
                           <li className="book-contents-item">
-                            {/* 목차 들어갈 자리 */}
                             {bookData.index}
                           </li>
                         </ul>
@@ -851,10 +846,7 @@ function BookDetailPage() {
                       <div className="auto-overflow-inner">
                         <ul className="book-inside-list open">
                           <li className="book-inside-item">
-                            <p className="info-text">
-                              {/* 책 속으로 들어갈 자리 */}
-                              {bookData.bookPreview}
-                            </p>
+                            <p className="info-text">{bookData.bookPreview}</p>
                           </li>
                         </ul>
                       </div>
