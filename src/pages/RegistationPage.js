@@ -7,14 +7,23 @@ import Modal from "../components/Modal.js";
 function RegistationPage({}) {
   // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen2, setModalOpen2] = useState(false);
 
-  const openModal = () => {
+  const openModal = (e) => {
+    e.preventDefault();
     setModalOpen(true);
   };
   const closeModal = () => {
     setModalOpen(false);
   };
 
+  const openModal2 = (e) => {
+    e.preventDefault();
+    setModalOpen2(true);
+  };
+  const closeModal2 = () => {
+    setModalOpen2(false);
+  };
   return (
     <>
       <div className="registation-wrap">
@@ -41,24 +50,35 @@ function RegistationPage({}) {
               <label htmlFor="authorName">저자</label>
               <input type="text" id="authorName" name="authorName" />
               <button
+                onClick={openModal}
                 className="authorName-btn authorName-pick-btn"
                 id="authorName-pick-btn"
                 style={{ fontFamily: "Gowun Batang" }}
               >
                 선택
               </button>
+              <Modal open={modalOpen} close={closeModal} header="저자 선택하기">
+                저자 선택 모달창
+              </Modal>
               <button
-                className="authorName-btn authorName-registration-btn"
-                id="authorName-registration-btn"
+                onClick={openModal2}
+                className="authorName-btn authorName-Register-btn"
                 style={{ fontFamily: "Gowun Batang" }}
               >
-                저자 등록
+                저자등록
               </button>
-              <button onClick={openModal}>모달팝업</button>
-              //header 부분에 텍스트를 입력한다.
-              <Modal open={modalOpen} close={closeModal} header="Modal heading">
-                리액트 함수형 모달 팝업창입니다. 쉽게 만들 수 있어요. 같이
-                만들어봐요!
+              <Modal
+                open={modalOpen2}
+                close={closeModal2}
+                header="저자 등록하기"
+              >
+                <form action="submit">
+                  <label htmlFor="registerAuthorName">작가 이름</label>
+                  <input type="text" id="author" name="registerAuthorName" />
+                  <button id="authorRegisterBtn" type="submit">
+                    등록하기
+                  </button>
+                </form>
               </Modal>
             </li>
             <li className="bookInfo-item">
