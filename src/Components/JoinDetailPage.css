@@ -16,19 +16,28 @@
 }
 .enter-info-item {
   position: relative;
+  margin-bottom: 0.3rem;
+}
+#profile-info-item,
+.mobile-info-item,
+#gender-info-item {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.input-box {
   display: flex;
   align-items: center;
 }
 .input-name {
-  width: 120px;
-  margin-bottom: 15px;
+  width: 20%;
+  margin-bottom: -10px;
 }
 .info-form-input {
   width: 30%;
-  height: 35px;
+  height: 30px;
   padding-left: 10px;
   margin-top: 10px;
-  margin-bottom: 1.5rem;
   font-size: 15px;
 }
 #enter-profileImage-input {
@@ -47,6 +56,13 @@
   top: 75px;
   right: 370px;
 }
+.message {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 123px;
+  margin-top: 5px;
+  color: #5a5a5a;
+}
 .mobile-info-item .input-name {
   width: 20%;
 }
@@ -55,7 +71,7 @@
   width: 40px;
 }
 .info-form-input.first-num-input {
-  height: 41px;
+  height: 34px;
   width: 60px;
 }
 #genderLabel {
@@ -64,6 +80,13 @@
 }
 #genderBtn {
   margin-top: -3px;
+}
+#genderFieldset {
+  margin-top: 10px;
+}
+#genderLabel {
+  display: flex;
+  align-items: center;
 }
 [type="radio"] {
   vertical-align: middle;
@@ -100,7 +123,6 @@
   opacity: 0.7;
   cursor: not-allowed;
 }
-
 fieldset {
   display: flex;
   justify-content: center;
@@ -114,6 +136,17 @@ fieldset {
   font-size: 1.4rem;
   color: #c2c2c2;
   float: right;
+}
+.address-input-box {
+  display: flex;
+  margin: 1rem 0;
+}
+.addressTit {
+  display: inline-block;
+  width: 20%;
+}
+.address-input {
+  margin-bottom: 13px;
 }
 .user-address-input {
   height: 20px;
@@ -159,6 +192,9 @@ fieldset {
 .additory-info ul li:first-child {
   width: 20%;
 }
+.year-select-box {
+  margin-top: 10px;
+}
 .birth-check {
   margin-right: 10px;
 }
@@ -167,33 +203,8 @@ fieldset {
   width: 80px;
   margin-right: 10px;
 }
-.temrs {
-  width: 100%;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #dcdcdc;
-}
-.temrs label {
-  margin-left: 3px;
-}
-.temrs-list-box {
-  margin-top: 1rem;
-}
-.tems-list-item {
-  margin-top: 10px;
-}
-.tems-list-item:nth-child(1) span:hover,
-.tems-list-item:nth-child(2) span:hover {
-  font-weight: bold;
-}
-.all-agree {
-  font-size: 1.1rem;
-}
-.temrs-agree1 span {
-  border-bottom: 1px solid #444;
-}
-.temrs-agree2 span {
-  border-bottom: 1px solid #444;
+.terms {
+  margin-top: 2.5rem;
 }
 #memberJoinBtn {
   margin-top: 3rem;

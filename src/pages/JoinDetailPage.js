@@ -1,11 +1,152 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import "../components/JoinDetailPage.css";
 import Address from "../components/Address.js";
 import profileSettingImage from "../images/btn_profile_setting@2x.png";
+import Checkbox from "../components/CheckBox";
+import Register from "../components/Register";
 
 function JoinDetailPage({}) {
+  // 초기값 세팅 - 아이디, 닉네임, 비밀번호, 비밀번호확인, 이메일, 전화번호, 생년월일
+  const [id, setId] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [nickName, setNickName] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [passwordConfirm, setPasswordConfirm] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  // const [birth, setBirth] = React.useState("");
+
+  // 오류메세지 상태 저장
+  const [idMessage, setIdMessage] = React.useState("");
+  const [nameMessage, setNameMessage] = React.useState("");
+  const [nickNameMessage, setNickNameMessage] = React.useState("");
+  const [passwordMessage, setPasswordMessage] = React.useState("");
+  const [passwordConfirmMessage, setPasswordConfirmMessage] =
+    React.useState("");
+  const [emailMessage, setEmailMessage] = React.useState("");
+  const [phoneMessage, setPhoneMessage] = React.useState("");
+  // const [birthMessage, setBirthMessage] = React.useState("");
+
+  // 유효성 검사
+  const [isId, setIsId] = React.useState(false);
+  const [isname, setIsName] = React.useState(false);
+  const [isNickName, setIsNickName] = React.useState(false);
+  const [isPassword, setIsPassword] = React.useState(false);
+  const [isPasswordConfirm, setIsPasswordConfirm] = React.useState(false);
+  const [isEmail, setIsEmail] = React.useState(false);
+  const [isPhone, setIsPhone] = React.useState(false);
+  // const [isBirth, setIsBirth] = React.useState(false);
+
+  const onChangeId = (e) => {
+    const currentId = e.target.value;
+    setId(currentId);
+    const idRegExp = /^[a-zA-z0-9]{4,12}$/;
+
+    if (!idRegExp.test(currentId)) {
+      setIdMessage("4~12 글자 사이 영문 대소문자 또는 숫자만 입력해 주세요.");
+      setIsId(false);
+    } else {
+      setIdMessage("사용가능한 아이디입니다.");
+      setIsId(true);
+    }
+  };
+
+  const onChangeName = (e) => {
+    const currentName = e.target.value;
+    setName(currentName);
+
+    if (currentName.length < 2 || currentName.length > 5) {
+      setNameMessage("");
+      setIsName(false);
+    } else {
+      setNameMessage("");
+      setIsName(true);
+    }
+  };
+
+  const onChangeNickName = (e) => {
+    const currentName = e.target.value;
+    setNickName(currentName);
+
+    if (currentName.length < 2 || currentName.length > 5) {
+      setNickNameMessage("닉네임은 2글자 이상 5글자 이하로 입력해주세요.");
+      setIsName(false);
+    } else {
+      setNickNameMessage("사용가능한 닉네임입니다.");
+      setIsNickName(true);
+    }
+  };
+
+  const onChangePassword = (e) => {
+    const currentPassword = e.target.value;
+    setPassword(currentPassword);
+    const passwordRegExp =
+      /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+    if (!passwordRegExp.test(currentPassword)) {
+      setPasswordMessage(
+        "숫자,영문자,특수문자 조합으로 8자리 이상 입력해주세요."
+      );
+      setIsPassword(false);
+    } else {
+      setPasswordMessage("안전한 비밀번호입니다.");
+      setIsPassword(true);
+    }
+  };
+
+  const onChangePasswordConfirm = (e) => {
+    const currentPasswordConfirm = e.target.value;
+    setPasswordConfirm(currentPasswordConfirm);
+    if (password !== currentPasswordConfirm) {
+      setPasswordConfirmMessage("비밀번호가 일치하지 않습니다.");
+      setIsPasswordConfirm(false);
+    } else {
+      setPasswordConfirmMessage("비밀번호가 일치합니다.");
+      setIsPasswordConfirm(true);
+    }
+  };
+
+  const onChangeEmail = (e) => {
+    const currentEmail = e.target.value;
+    setEmail(currentEmail);
+    const emailRegExp =
+      /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
+
+    if (!emailRegExp.test(currentEmail)) {
+      setEmailMessage("이메일의 형식이 올바르지 않습니다!");
+      setIsEmail(false);
+    } else {
+      setEmailMessage("사용 가능한 이메일 입니다.");
+      setIsEmail(true);
+    }
+  };
+
+  const onChangePhone = (getNumber) => {
+    const currentPhone = getNumber;
+    setPhone(currentPhone);
+    const phoneRegExp = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+
+    if (!phoneRegExp.test(currentPhone)) {
+      setPhoneMessage("올바른 형식이 아닙니다.");
+      setIsPhone(false);
+    } else {
+      setPhoneMessage("사용 가능한 번호입니다.");
+      setIsPhone(true);
+    }
+  };
+
+  const addHyphen = (e) => {
+    const currentNumber = e.target.value;
+    setPhone(currentNumber);
+    if (currentNumber.length == 3 || currentNumber.length == 8) {
+      setPhone(currentNumber + "-");
+      onChangePhone(currentNumber + "-");
+    } else {
+      onChangePhone(currentNumber);
+    }
+  };
+
+  // 모달 useState
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [addressData, setAddressData] = useState({});
 
@@ -17,115 +158,153 @@ function JoinDetailPage({}) {
     <div id="JoinDetail">
       <div className="JoinDetailWrap">
         <h1 className="join">회원가입</h1>
-        <form id="user-info-form" action="">
-          <div className="essential-info">
-            <ul className="enter-info-list">
-              <li className="enter-info-item">
-                <p className="input-name">프로필 사진</p>
+        <Register />
+        <form id="user-info-form" action="submit">
+          <ul className="enter-info-list">
+            <li className="enter-info-item" id="profile-info-item">
+              <label className="input-name" htmlFor="profilePhoto">
+                프로필 사진
+              </label>
+              <input
+                id="enter-profileImage-input"
+                className="user-id-input info-form-input"
+                name="profilePhoto"
+                type="text"
+                maxLength={8}
+                required
+              />
+              <span className="profile-setting-ic">
+                <img src={profileSettingImage} />
+              </span>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="name">
+                  이름
+                </label>
                 <input
-                  id="enter-profileImage-input"
-                  className="user-id-input info-form-input"
-                  name="profile"
+                  id="enterNameInput"
+                  className="user-name-input info-form-input"
+                  name="name"
+                  value={name}
+                  onChange={onChangeName}
                   type="text"
-                  maxLength={8}
                   required
                 />
-                <span className="profile-setting-ic">
-                  <img src={profileSettingImage} />
-                </span>
-              </li>
-              <li className="enter-info-item">
-                <p className="input-name">닉네임</p>
+              </div>
+              <p className="message"></p>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="nickName">
+                  닉네임
+                </label>
                 <input
                   id="enter-id-input"
                   className="user-nickName-input info-form-input"
                   name="nickName"
                   type="text"
+                  value={nickName}
+                  onChange={onChangeNickName}
                   maxLength={8}
                   required
                 />
-              </li>
-              <li className="enter-info-item">
-                <p className="input-name">아이디</p>
+              </div>
+              <p className="message">{nickNameMessage}</p>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="id">
+                  아이디
+                </label>
                 <input
                   id="enterIdInput"
                   className="user-id-input info-form-input"
                   name="id"
                   type="text"
+                  value={id}
+                  onChange={onChangeId}
                   maxLength={8}
                   required
                 />
-              </li>
-              <li className="enter-info-item">
-                <p className="input-name">비밀번호</p>
+              </div>
+              <p className="message"> {idMessage} </p>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="password">
+                  비밀번호
+                </label>
                 <input
                   id="enterPasswordInput"
                   className="user-password-input info-form-input"
                   name="password"
+                  value={password}
+                  onChange={onChangePassword}
                   type="password"
                   required
                 />
-              </li>
-              <li className="enter-info-item">
-                <p className="input-name">비밀번호 확인</p>
+              </div>
+              <p className="message">{passwordMessage}</p>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="passwordConfirm">
+                  비밀번호 확인
+                </label>
                 <input
                   id="enterPasswordConfirmInput"
                   className="user-password-confirm-input info-form-input"
                   name="passwordConfirm"
+                  value={passwordConfirm}
+                  onChange={onChangePasswordConfirm}
                   type="password"
                   required
                 />
-              </li>
-              <li className="enter-info-item">
-                <p className="input-name">이름</p>
+              </div>
+              <p className="message">{passwordConfirmMessage}</p>
+            </li>
+            <li className="enter-info-item" id="gender-info-item">
+              <p className="input-name">성별</p>
+              <fieldset id="genderFieldset">
+                <label id="genderLabel">
+                  <input
+                    type="radio"
+                    name="gender"
+                    className="genderBtn"
+                    value="WOMAN"
+                  />
+                  <span>남성</span>
+                </label>
+                <label id="genderLabel">
+                  <input
+                    type="radio"
+                    name="gender"
+                    className="genderBtn"
+                    value="MAN"
+                  />
+                  <span>여성</span>
+                </label>
+              </fieldset>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <label className="input-name" htmlFor="phone">
+                  휴대전화
+                </label>
                 <input
-                  id="enterNameInput"
-                  className="user-name-input info-form-input"
-                  name="name"
-                  type="text"
+                  id="phone"
+                  name="phone"
+                  className="user-phone-input info-form-input"
+                  value={phone}
+                  onChange={addHyphen}
                 />
-              </li>
-              <li className="enter-info-item" id="gender-info-item">
-                <p className="input-name">성별</p>
-                <fieldset>
-                  <label id="genderLabel">
-                    <input
-                      type="radio"
-                      name="gender"
-                      id="genderBtn"
-                      value="WOMAN"
-                      checked
-                    />
-                    <span>남성</span>
-                  </label>
-                  <label id="genderLabel">
-                    <input
-                      type="radio"
-                      name="gender"
-                      id="genderBtn"
-                      value="MAN"
-                    />
-                    <span>여성</span>
-                  </label>
-                </fieldset>
-              </li>
-              <li className="enter-info-item mobile-info-item">
-                <p className="input-name">휴대전화</p>
-                <select
-                  className="info-form-input first-num-input"
-                  name="mobileNumber"
-                >
-                  <option>010</option>
-                  <option>011</option>
-                  <option>016</option>
-                  <option>017</option>
-                  <option>018</option>
-                  <option>019</option>
-                </select>
-                <input className="info-form-input" name="mobileNumber" />
-                <input className="info-form-input" name="mobileNumber" />
-              </li>
-              {/* 주소 입력창 */}
+              </div>
+              <p className="message">{phoneMessage}</p>
+            </li>
+            {/* 주소 입력창 */}
+            <div className="address-input-box">
+              <p className="input-name">주소</p>
               <li className="address-input">
                 <input
                   type="text"
@@ -166,13 +345,6 @@ function JoinDetailPage({}) {
                   className="user-address-input info-form-input"
                   placeholder="상세주소"
                 />
-                <input
-                  type="text"
-                  id="sample4_extraAddress"
-                  name="reference"
-                  className="user-address-input info-form-input"
-                  placeholder="참고항목"
-                />
                 <Modal
                   isOpen={modalIsOpen}
                   onRequestClose={() => setModalIsOpen(false)}
@@ -190,191 +362,141 @@ function JoinDetailPage({}) {
                   />
                 </Modal>
               </li>
-              <li className="enter-info-item">
+            </div>
+            <li className="enter-info-item">
+              <div className="input-box">
                 <p className="input-name">이메일</p>
                 <input
                   className="user-email-input info-form-input"
                   name="email"
+                  value={email}
+                  onChange={onChangeEmail}
                   type="text"
+                  required
                 />
-              </li>
-            </ul>
-          </div>
-          <div className="additory-info">
-            <ul className="additory-info-list">
-              <li className="additory-info-item">
-                <p>생년월일</p>
-              </li>
-              <li className="additory-info-item">
-                <select className="year-check birth-check-sel">
-                  <option value="1950년">1950년</option>
-                  <option>1951년</option>
-                  <option>1952년</option>
-                  <option>1953년</option>
-                  <option>1954년</option>
-                  <option>1955년</option>
-                  <option>1956년</option>
-                  <option>1957년</option>
-                  <option>1958년</option>
-                  <option>1959년</option>
-                  <option>1960년</option>
-                  <option>1961년</option>
-                  <option>1962년</option>
-                  <option>1963년</option>
-                  <option>1964년</option>
-                  <option>1965년</option>
-                  <option>1966년</option>
-                  <option>1967년</option>
-                  <option>1968년</option>
-                  <option>1969년</option>
-                  <option>1970년</option>
-                  <option>1971년</option>
-                  <option>1972년</option>
-                  <option>1973년</option>
-                  <option>1974년</option>
-                  <option>1975년</option>
-                  <option>1976년</option>
-                  <option>1977년</option>
-                  <option>1978년</option>
-                  <option>1979년</option>
-                  <option>1980년</option>
-                  <option>1981년</option>
-                  <option>1982년</option>
-                  <option>1983년</option>
-                  <option>1984년</option>
-                  <option>1985년</option>
-                  <option>1986년</option>
-                  <option>1987년</option>
-                  <option>1988년</option>
-                  <option>1989년</option>
-                  <option>1990년</option>
-                  <option>1991년</option>
-                  <option>1992년</option>
-                  <option>1993년</option>
-                  <option>1994년</option>
-                  <option>1995년</option>
-                  <option>1996년</option>
-                  <option>1997년</option>
-                  <option>1998년</option>
-                  <option>1999년</option>
-                  <option>2000년</option>
-                  <option>2001년</option>
-                  <option>2002년</option>
-                  <option>2003년</option>
-                  <option>2004년</option>
-                  <option>2005년</option>
-                  <option>2006년</option>
-                  <option>2007년</option>
-                  <option>2008년</option>
-                  <option>2009년</option>
-                  <option>2010년</option>
-                </select>
-                <select className="month-check birth-check-sel">
-                  <option>1월</option>
-                  <option>2월</option>
-                  <option>3월</option>
-                  <option>4월</option>
-                  <option>5월</option>
-                  <option>6월</option>
-                  <option>7월</option>
-                  <option>8월</option>
-                  <option>9월</option>
-                  <option>10월</option>
-                  <option>11월</option>
-                  <option>12월</option>
-                </select>
-                <select className="day-check birth-check-sel">
-                  <option>1일</option>
-                  <option>2일</option>
-                  <option>3일</option>
-                  <option>4일</option>
-                  <option>5일</option>
-                  <option>6일</option>
-                  <option>7일</option>
-                  <option>8일</option>
-                  <option>9일</option>
-                  <option>10일</option>
-                  <option>11일</option>
-                  <option>12일</option>
-                  <option>13일</option>
-                  <option>14일</option>
-                  <option>15일</option>
-                  <option>16일</option>
-                  <option>17일</option>
-                  <option>18일</option>
-                  <option>19일</option>
-                  <option>20일</option>
-                  <option>21일</option>
-                  <option>22일</option>
-                  <option>23일</option>
-                  <option>24일</option>
-                  <option>25일</option>
-                  <option>26일</option>
-                  <option>27일</option>
-                  <option>28일</option>
-                  <option>29일</option>
-                  <option>30일</option>
-                  <option>31일</option>
-                </select>
-              </li>
-            </ul>
-          </div>
-          <div className="temrs">
-            <input type="checkbox" name="all-agree"></input>
-            <label className="all-agree" name="all-agree">
-              전체 동의
-            </label>
-            <div className="temrs-list-box">
-              <ul className="temrs-list">
-                <li className="tems-list-item">
-                  <input
-                    type="checkbox"
-                    name="temrs-agree1"
-                    className="temrs-agree1"
-                  ></input>
-                  <label name="temrs-agree1" className="temrs-agree1">
-                    <Link to="">
-                      <span className="useTerms terms-chk">이용약관</span> 동의
-                    </Link>
-                  </label>
-                </li>
-                <li className="tems-list-item">
-                  <input
-                    type="checkbox"
-                    name="terms-agree2"
-                    className="terms-agree2"
-                  ></input>
-                  <label name="terms-agree2" className="temrs-agree2">
-                    <Link to="">
-                      <span className="infoTerms terms-chk">
-                        개인 정보 수집 및 이용{" "}
-                      </span>
-                      동의
-                    </Link>
-                  </label>
-                </li>
-                <li className="tems-list-item">
-                  <input
-                    type="checkbox"
-                    name="terms-agree3"
-                    className="terms-agree3"
-                  ></input>
-                  <label name="terms-agree3">
-                    <Link to="">[선택] 만 14세 이상입니다.</Link>
-                  </label>
-                </li>
-                <li className="tems-list-item">
-                  <input
-                    type="checkbox"
-                    name="terms-agree4"
-                    className="terms-agree4"
-                  ></input>
-                  <label name="terms-agree4">
-                    <Link to="">[선택] 마케팅 활용 동의 및 광고 수신 동의</Link>
-                  </label>
-                </li>
-              </ul>
-            </div>
+              </div>
+              <p className="message">{emailMessage}</p>
+            </li>
+            <li className="enter-info-item">
+              <div className="input-box">
+                <p className="input-name">생년월일</p>
+                <div className="year-select-box">
+                  <select className="year-check birth-check-sel" name="year">
+                    <option>1950년</option>
+                    <option>1951년</option>
+                    <option>1952년</option>
+                    <option>1953년</option>
+                    <option>1954년</option>
+                    <option>1955년</option>
+                    <option>1956년</option>
+                    <option>1957년</option>
+                    <option>1958년</option>
+                    <option>1959년</option>
+                    <option>1960년</option>
+                    <option>1961년</option>
+                    <option>1962년</option>
+                    <option>1963년</option>
+                    <option>1964년</option>
+                    <option>1965년</option>
+                    <option>1966년</option>
+                    <option>1967년</option>
+                    <option>1968년</option>
+                    <option>1969년</option>
+                    <option>1970년</option>
+                    <option>1971년</option>
+                    <option>1972년</option>
+                    <option>1973년</option>
+                    <option>1974년</option>
+                    <option>1975년</option>
+                    <option>1976년</option>
+                    <option>1977년</option>
+                    <option>1978년</option>
+                    <option>1979년</option>
+                    <option>1980년</option>
+                    <option>1981년</option>
+                    <option>1982년</option>
+                    <option>1983년</option>
+                    <option>1984년</option>
+                    <option>1985년</option>
+                    <option>1986년</option>
+                    <option>1987년</option>
+                    <option>1988년</option>
+                    <option>1989년</option>
+                    <option>1990년</option>
+                    <option>1991년</option>
+                    <option>1992년</option>
+                    <option>1993년</option>
+                    <option>1994년</option>
+                    <option>1995년</option>
+                    <option>1996년</option>
+                    <option>1997년</option>
+                    <option>1998년</option>
+                    <option>1999년</option>
+                    <option>2000년</option>
+                    <option>2001년</option>
+                    <option>2002년</option>
+                    <option>2003년</option>
+                    <option>2004년</option>
+                    <option>2005년</option>
+                    <option>2006년</option>
+                    <option>2007년</option>
+                    <option>2008년</option>
+                    <option>2009년</option>
+                    <option>2010년</option>
+                  </select>
+                  <select className="month-check birth-check-sel" name="month">
+                    <option>1월</option>
+                    <option>2월</option>
+                    <option>3월</option>
+                    <option>4월</option>
+                    <option>5월</option>
+                    <option>6월</option>
+                    <option>7월</option>
+                    <option>8월</option>
+                    <option>9월</option>
+                    <option>10월</option>
+                    <option>11월</option>
+                    <option>12월</option>
+                  </select>
+                  <select className="day-check birth-check-sel" name="day">
+                    <option>1일</option>
+                    <option>2일</option>
+                    <option>3일</option>
+                    <option>4일</option>
+                    <option>5일</option>
+                    <option>6일</option>
+                    <option>7일</option>
+                    <option>8일</option>
+                    <option>9일</option>
+                    <option>10일</option>
+                    <option>11일</option>
+                    <option>12일</option>
+                    <option>13일</option>
+                    <option>14일</option>
+                    <option>15일</option>
+                    <option>16일</option>
+                    <option>17일</option>
+                    <option>18일</option>
+                    <option>19일</option>
+                    <option>20일</option>
+                    <option>21일</option>
+                    <option>22일</option>
+                    <option>23일</option>
+                    <option>24일</option>
+                    <option>25일</option>
+                    <option>26일</option>
+                    <option>27일</option>
+                    <option>28일</option>
+                    <option>29일</option>
+                    <option>30일</option>
+                    <option>31일</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div className="terms">
+            <Checkbox />
           </div>
           <button
             type="submit"
