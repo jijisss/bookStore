@@ -3,13 +3,11 @@ import styled from "styled-components";
 
 export default function Checkbox() {
   const data = [
-    { id: 0, title: "이용약관", name: "use" },
-    { id: 1, title: "개인 정보 수집 및 이용", name: "infoUse" },
-    { id: 2, title: "[선택] 만 14세 이상입니다.", name: "age" },
     {
-      id: 3,
-      title: "[선택] 마케팅 활용 동의 및 광고 수신 동의",
-      name: "marketing",
+      id: 0,
+      title: "이용약관 및 개인 정보 수집 및 이용 동의",
+      name: "use",
+      onclick: ccc,
     },
   ];
 
@@ -40,9 +38,13 @@ export default function Checkbox() {
     }
   };
 
+  function ccc() {
+    console.log("느낌이 오자나~");
+  }
+
   return (
     <StyledTable>
-      <thead>
+      {/* <thead>
         <tr>
           <th>
             <input
@@ -55,7 +57,7 @@ export default function Checkbox() {
           </th>
           <th className="second-row">전체 동의</th>
         </tr>
-      </thead>
+      </thead> */}
       <tbody>
         {data?.map((data, key) => (
           <tr key={key}>
@@ -64,6 +66,7 @@ export default function Checkbox() {
                 type="checkbox"
                 name={`select-${data.id}`}
                 onChange={(e) => handleSingleCheck(e.target.checked, data.id)}
+                onClick={data.onclick}
                 // 체크된 아이템 배열에 해당 아이템이 있을 경우 선택 활성화, 아닐 시 해제
                 checked={checkItems.includes(data.id) ? true : false}
               />

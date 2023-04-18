@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import "../components/JoinDetailPage.css";
 import Address from "../components/Address.js";
 import profileSettingImage from "../images/btn_profile_setting@2x.png";
 import Checkbox from "../components/CheckBox";
 import Register from "../components/Register";
+import { data } from "jquery";
 
 function JoinDetailPage({}) {
   // 초기값 세팅 - 아이디, 닉네임, 비밀번호, 비밀번호확인, 이메일, 전화번호, 생년월일
@@ -154,11 +155,116 @@ function JoinDetailPage({}) {
     setAddressData(text);
   };
 
+  useEffect(() => {
+    const birthYearEl = document.querySelector("#birth-year");
+    // option 목록 생성 여부 확인
+    let isYearOptionExisted = false;
+    birthYearEl.addEventListener("focus", function () {
+      // year 목록 생성되지 않았을 때 (최초 클릭 시)
+      if (!isYearOptionExisted) {
+        isYearOptionExisted = true;
+        let year = new Date().getFullYear();
+        for (var i = 1940; i <= year; i++) {
+          // option element 생성
+          const yearOption = document.createElement("option");
+          yearOption.setAttribute("value", i);
+          yearOption.innerText = i;
+          // birthYearEl의 자식 요소로 추가
+          this.appendChild(yearOption);
+        }
+      }
+    });
+
+    const birthMonthEl = document.querySelector("#birth-month");
+    // option 목록 생성 여부 확인
+    let isMonthOptionExisted = false;
+    birthMonthEl.addEventListener("focus", function () {
+      // year 목록 생성되지 않았을 때 (최초 클릭 시)
+      if (!isMonthOptionExisted) {
+        isMonthOptionExisted = true;
+        for (var i = 1; i <= 12; i++) {
+          let result = "";
+          if (i < 10) {
+            result = "0" + i;
+          } else {
+            result = i;
+          }
+          // option element 생성
+          const monthOption = document.createElement("option");
+          monthOption.setAttribute("value", result);
+          monthOption.innerText = result;
+          // birthYearEl의 자식 요소로 추가
+          this.appendChild(monthOption);
+        }
+      }
+    });
+
+    const birthDayEl = document.querySelector("#birth-day");
+    // option 목록 생성 여부 확인
+    let isDayOptionExisted = false;
+    birthDayEl.addEventListener("focus", function () {
+      // year 목록 생성되지 않았을 때 (최초 클릭 시)
+      if (!isDayOptionExisted) {
+        isDayOptionExisted = true;
+        for (var i = 1; i <= 31; i++) {
+          let result = "";
+          if (i < 10) {
+            result = "0" + i;
+          } else {
+            result = i;
+          }
+          // option element 생성
+          const dayOption = document.createElement("option");
+          dayOption.setAttribute("value", result);
+          dayOption.innerText = result;
+          // birthYearEl의 자식 요소로 추가
+          this.appendChild(dayOption);
+        }
+      }
+    });
+  }, []);
+
+  function handleSubmit(e) {
+    console.log(e);
+    // 데이터 등록하기
+    let data = {};
+    data.memberId = id;
+    data.memberName = name;
+    data.nickName = nickName;
+    data.email = email;
+    data.contact = phone;
+    data.password = password;
+    let radioGender = document.getElementsByName("gender");
+    radioGender.forEach((node) => {
+      if (node.checked) data.eGender = node.value;
+    });
+    data.address = document.getElementById("newAddress").value;
+    data.addressDetail = document.getElementById("detailAddress").value;
+    data.postcode = document.getElementById("postcode").value;
+    data.birth = Number(
+      document.getElementById("birth-year").value +
+        document.getElementById("birth-month").value +
+        document.getElementById("birth-day").value
+    );
+    data.eLoginPlatform = "NONE";
+    data.homeAddressYn = "Y";
+    console.log(data);
+
+    // fetch 보내기
+    fetch("http://localhost:8080/member/memberRegister", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify(data),
+    }).then((response) => console.log(response));
+  }
+
   return (
     <div id="JoinDetail">
       <div className="JoinDetailWrap">
         <h1 className="join">회원가입</h1>
-        <Register />
         <form id="user-info-form" action="submit">
           <ul className="enter-info-list">
             <li className="enter-info-item" id="profile-info-item">
@@ -272,7 +378,7 @@ function JoinDetailPage({}) {
                     type="radio"
                     name="gender"
                     className="genderBtn"
-                    value="WOMAN"
+                    value="MAN"
                   />
                   <span>남성</span>
                 </label>
@@ -281,7 +387,7 @@ function JoinDetailPage({}) {
                     type="radio"
                     name="gender"
                     className="genderBtn"
-                    value="MAN"
+                    value="WOMAN"
                   />
                   <span>여성</span>
                 </label>
@@ -308,8 +414,8 @@ function JoinDetailPage({}) {
               <li className="address-input">
                 <input
                   type="text"
-                  id="sample4_postcode"
-                  name="zipCode"
+                  id="postcode"
+                  name="postcode"
                   className="user-address-input info-form-input"
                   defaultValue={addressData.zipCode}
                   placeholder="우편번호"
@@ -326,7 +432,7 @@ function JoinDetailPage({}) {
                 <br></br>
                 <input
                   type="text"
-                  id="sample4_roadAddress"
+                  id="newAddress"
                   name="newAddress"
                   className="user-address-input info-form-input"
                   defaultValue={addressData.newAddress}
@@ -340,7 +446,7 @@ function JoinDetailPage({}) {
                 ></span>
                 <input
                   type="text"
-                  id="sample4_detailAddress"
+                  id="detailAddress"
                   name="detailAddress"
                   className="user-address-input info-form-input"
                   placeholder="상세주소"
@@ -381,115 +487,20 @@ function JoinDetailPage({}) {
               <div className="input-box">
                 <p className="input-name">생년월일</p>
                 <div className="year-select-box">
-                  <select className="year-check birth-check-sel" name="year">
-                    <option>1950년</option>
-                    <option>1951년</option>
-                    <option>1952년</option>
-                    <option>1953년</option>
-                    <option>1954년</option>
-                    <option>1955년</option>
-                    <option>1956년</option>
-                    <option>1957년</option>
-                    <option>1958년</option>
-                    <option>1959년</option>
-                    <option>1960년</option>
-                    <option>1961년</option>
-                    <option>1962년</option>
-                    <option>1963년</option>
-                    <option>1964년</option>
-                    <option>1965년</option>
-                    <option>1966년</option>
-                    <option>1967년</option>
-                    <option>1968년</option>
-                    <option>1969년</option>
-                    <option>1970년</option>
-                    <option>1971년</option>
-                    <option>1972년</option>
-                    <option>1973년</option>
-                    <option>1974년</option>
-                    <option>1975년</option>
-                    <option>1976년</option>
-                    <option>1977년</option>
-                    <option>1978년</option>
-                    <option>1979년</option>
-                    <option>1980년</option>
-                    <option>1981년</option>
-                    <option>1982년</option>
-                    <option>1983년</option>
-                    <option>1984년</option>
-                    <option>1985년</option>
-                    <option>1986년</option>
-                    <option>1987년</option>
-                    <option>1988년</option>
-                    <option>1989년</option>
-                    <option>1990년</option>
-                    <option>1991년</option>
-                    <option>1992년</option>
-                    <option>1993년</option>
-                    <option>1994년</option>
-                    <option>1995년</option>
-                    <option>1996년</option>
-                    <option>1997년</option>
-                    <option>1998년</option>
-                    <option>1999년</option>
-                    <option>2000년</option>
-                    <option>2001년</option>
-                    <option>2002년</option>
-                    <option>2003년</option>
-                    <option>2004년</option>
-                    <option>2005년</option>
-                    <option>2006년</option>
-                    <option>2007년</option>
-                    <option>2008년</option>
-                    <option>2009년</option>
-                    <option>2010년</option>
+                  <select className="box" id="birth-year" defaultValue={0}>
+                    <option disabled value={0}>
+                      출생 연도
+                    </option>
                   </select>
-                  <select className="month-check birth-check-sel" name="month">
-                    <option>1월</option>
-                    <option>2월</option>
-                    <option>3월</option>
-                    <option>4월</option>
-                    <option>5월</option>
-                    <option>6월</option>
-                    <option>7월</option>
-                    <option>8월</option>
-                    <option>9월</option>
-                    <option>10월</option>
-                    <option>11월</option>
-                    <option>12월</option>
+                  <select className="box" id="birth-month" defaultValue={0}>
+                    <option disabled value={0}>
+                      월
+                    </option>
                   </select>
-                  <select className="day-check birth-check-sel" name="day">
-                    <option>1일</option>
-                    <option>2일</option>
-                    <option>3일</option>
-                    <option>4일</option>
-                    <option>5일</option>
-                    <option>6일</option>
-                    <option>7일</option>
-                    <option>8일</option>
-                    <option>9일</option>
-                    <option>10일</option>
-                    <option>11일</option>
-                    <option>12일</option>
-                    <option>13일</option>
-                    <option>14일</option>
-                    <option>15일</option>
-                    <option>16일</option>
-                    <option>17일</option>
-                    <option>18일</option>
-                    <option>19일</option>
-                    <option>20일</option>
-                    <option>21일</option>
-                    <option>22일</option>
-                    <option>23일</option>
-                    <option>24일</option>
-                    <option>25일</option>
-                    <option>26일</option>
-                    <option>27일</option>
-                    <option>28일</option>
-                    <option>29일</option>
-                    <option>30일</option>
-                    <option>31일</option>
+                  <select className="box" id="birth-day" defaultValue={0}>
+                    <option disabled value={0}>
+                      일
+                    </option>
                   </select>
                 </div>
               </div>
@@ -502,6 +513,7 @@ function JoinDetailPage({}) {
             type="submit"
             id="memberJoinBtn"
             style={{ fontFamily: "Gowun Batang" }}
+            onClick={handleSubmit}
           >
             <span className="memberJoinBtn-txt">동의하고 가입하기</span>
           </button>

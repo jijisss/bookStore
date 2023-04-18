@@ -6,11 +6,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>
-);
+root.render(<Main />);
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();

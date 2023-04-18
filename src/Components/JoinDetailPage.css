@@ -150,6 +150,7 @@ fieldset {
 }
 .user-address-input {
   height: 20px;
+  width: 270px;
   margin: 0.3em 10px 0 0.3em;
   font-size: 1em;
   padding: 0.5em;
@@ -161,6 +162,9 @@ fieldset {
   line-height: 1.25em;
   outline: 0;
   font-size: 0.8rem;
+}
+.user-address-input:first-child {
+  width: 60px;
 }
 .ads-btn {
   width: 100px;
