@@ -129,6 +129,14 @@ fieldset {
   border: none;
   margin: 0;
 }
+.year-select-box select {
+  height: 35px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+.year-select-box select:first-child {
+  margin-left: 0;
+}
 #popup-close-btn {
   padding: 0.2rem 0.55rem;
   border: 1px solid #c2c2c2;
@@ -147,6 +155,7 @@ fieldset {
 }
 .address-input {
   margin-bottom: 13px;
+  margin-left: 1rem;
 }
 .user-address-input {
   height: 20px;
@@ -209,6 +218,11 @@ fieldset {
 }
 .terms {
   margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e7e7e7;
+}
+.terms input {
+  margin-right: 10px;
 }
 #memberJoinBtn {
   margin-top: 3rem;

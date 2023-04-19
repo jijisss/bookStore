@@ -3,8 +3,6 @@ import Modal from "react-modal";
 import "../components/JoinDetailPage.css";
 import Address from "../components/Address.js";
 import profileSettingImage from "../images/btn_profile_setting@2x.png";
-import Checkbox from "../components/CheckBox";
-import Register from "../components/Register";
 import { data } from "jquery";
 
 function JoinDetailPage({}) {
@@ -16,7 +14,7 @@ function JoinDetailPage({}) {
   const [passwordConfirm, setPasswordConfirm] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
-  // const [birth, setBirth] = React.useState("");
+  const [checkBoxActive, setCheckboxActive] = useState(true);
 
   // 오류메세지 상태 저장
   const [idMessage, setIdMessage] = React.useState("");
@@ -31,13 +29,12 @@ function JoinDetailPage({}) {
 
   // 유효성 검사
   const [isId, setIsId] = React.useState(false);
-  const [isname, setIsName] = React.useState(false);
+  const [isName, setIsName] = React.useState(false);
   const [isNickName, setIsNickName] = React.useState(false);
   const [isPassword, setIsPassword] = React.useState(false);
   const [isPasswordConfirm, setIsPasswordConfirm] = React.useState(false);
   const [isEmail, setIsEmail] = React.useState(false);
   const [isPhone, setIsPhone] = React.useState(false);
-  // const [isBirth, setIsBirth] = React.useState(false);
 
   const onChangeId = (e) => {
     const currentId = e.target.value;
@@ -58,10 +55,10 @@ function JoinDetailPage({}) {
     setName(currentName);
 
     if (currentName.length < 2 || currentName.length > 5) {
-      setNameMessage("");
+      setNameMessage("2글자 이상 5글자 미만으로 입력해주세요.");
       setIsName(false);
     } else {
-      setNameMessage("");
+      setNameMessage("올바른 이름 형식입니다.");
       setIsName(true);
     }
   };
@@ -224,8 +221,15 @@ function JoinDetailPage({}) {
     });
   }, []);
 
+  // 체크박스 유효성 검사
+  const isCheckBoxClicked = () => {
+    setCheckboxActive(!checkBoxActive);
+    console.log(checkBoxActive);
+  };
+
   function handleSubmit(e) {
     console.log(e);
+
     // 데이터 등록하기
     let data = {};
     data.memberId = id;
@@ -275,9 +279,6 @@ function JoinDetailPage({}) {
                 id="enter-profileImage-input"
                 className="user-id-input info-form-input"
                 name="profilePhoto"
-                type="text"
-                maxLength={8}
-                required
               />
               <span className="profile-setting-ic">
                 <img src={profileSettingImage} />
@@ -294,11 +295,12 @@ function JoinDetailPage({}) {
                   name="name"
                   value={name}
                   onChange={onChangeName}
+                  maxLength={5}
                   type="text"
                   required
                 />
               </div>
-              <p className="message"></p>
+              <p className="message">{nameMessage}</p>
             </li>
             <li className="enter-info-item">
               <div className="input-box">
@@ -404,6 +406,7 @@ function JoinDetailPage({}) {
                   className="user-phone-input info-form-input"
                   value={phone}
                   onChange={addHyphen}
+                  required
                 />
               </div>
               <p className="message">{phoneMessage}</p>
@@ -420,6 +423,7 @@ function JoinDetailPage({}) {
                   defaultValue={addressData.zipCode}
                   placeholder="우편번호"
                   onClick={() => setModalIsOpen(true)}
+                  required
                 />
                 <input
                   type="button"
@@ -438,6 +442,7 @@ function JoinDetailPage({}) {
                   defaultValue={addressData.newAddress}
                   placeholder="주소"
                   onClick={() => setModalIsOpen(true)}
+                  required
                 />
                 <span
                   id="guide"
@@ -450,6 +455,7 @@ function JoinDetailPage({}) {
                   name="detailAddress"
                   className="user-address-input info-form-input"
                   placeholder="상세주소"
+                  required
                 />
                 <Modal
                   isOpen={modalIsOpen}
@@ -507,13 +513,32 @@ function JoinDetailPage({}) {
             </li>
           </ul>
           <div className="terms">
-            <Checkbox />
+            <input
+              type="checkbox"
+              className="terms-checkbox"
+              onClick={isCheckBoxClicked}
+              name="checkbox"
+            />
+            <label htmlFor="checkbox">
+              이용약관 및 개인 정보 수집 및 이용 동의
+            </label>
           </div>
           <button
             type="submit"
             id="memberJoinBtn"
             style={{ fontFamily: "Gowun Batang" }}
             onClick={handleSubmit}
+            // disabled={
+            //   !(
+            //     isId &&
+            //     isName &&
+            //     isNickName &&
+            //     isPassword &&
+            //     isPasswordConfirm &&
+            //     isPhone &&
+            //     isEmail
+            //   )
+            // }
           >
             <span className="memberJoinBtn-txt">동의하고 가입하기</span>
           </button>
