@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bookStore/static/css/main.9ef7d556.css",
-    "main.js": "/bookStore/static/js/main.c3538f93.js",
+    "main.js": "/bookStore/static/js/main.226297a1.js",
     "static/media/bookPhoto.jpg": "/bookStore/static/media/bookPhoto.77d2e46575d45e7cecf9.jpg",
     "static/media/GowunBatang-Regular.woff": "/bookStore/static/media/GowunBatang-Regular.e62975be76c47c2623ac.woff",
     "static/media/GowunBatang-Bold.woff": "/bookStore/static/media/GowunBatang-Bold.ec2a1660338bad86e6a7.woff",
@@ -30,10 +30,10 @@
     "static/media/bookImage_weAreJoguman.jpg": "/bookStore/static/media/bookImage_weAreJoguman.2a936547b3535363d46e.jpg",
     "index.html": "/bookStore/index.html",
     "main.9ef7d556.css.map": "/bookStore/static/css/main.9ef7d556.css.map",
-    "main.c3538f93.js.map": "/bookStore/static/js/main.c3538f93.js.map"
+    "main.226297a1.js.map": "/bookStore/static/js/main.226297a1.js.map"
   },
   "entrypoints": [
     "static/css/main.9ef7d556.css",
-    "static/js/main.c3538f93.js"
+    "static/js/main.226297a1.js"
   ]
 }
