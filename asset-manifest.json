@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/bookStore/static/css/main.9ef7d556.css",
+    "main.js": "/bookStore/static/js/main.c3538f93.js",
+    "static/media/bookPhoto.jpg": "/bookStore/static/media/bookPhoto.77d2e46575d45e7cecf9.jpg",
+    "static/media/GowunBatang-Regular.woff": "/bookStore/static/media/GowunBatang-Regular.e62975be76c47c2623ac.woff",
+    "static/media/GowunBatang-Bold.woff": "/bookStore/static/media/GowunBatang-Bold.ec2a1660338bad86e6a7.woff",
+    "static/media/i9791190538510.jpg": "/bookStore/static/media/i9791190538510.ed7f6afd0728dd3cd710.jpg",
+    "static/media/event-banner-bg.jpg": "/bookStore/static/media/event-banner-bg.e42337b0af772cf16ea7.jpg",
+    "static/media/insta_logo.png": "/bookStore/static/media/insta_logo.a2b1e18ab55779bb7a65.png",
+    "static/media/PlayfairDisplay-SemiBold.woff": "/bookStore/static/media/PlayfairDisplay-SemiBold.586ab66a1966221aefe9.woff",
+    "static/media/bookImage_starBeyondStarlight.jpg": "/bookStore/static/media/bookImage_starBeyondStarlight.80e89c500ea6d216fe64.jpg",
+    "static/media/PlayfairDisplay-Regular.woff": "/bookStore/static/media/PlayfairDisplay-Regular.1c6c5f0971cd04137b30.woff",
+    "static/media/bookImage_bangju.jpg": "/bookStore/static/media/bookImage_bangju.ba88f42c304969e94f2f.jpg",
+    "static/media/bookImage_weatherAndFace_t.jpg": "/bookStore/static/media/bookImage_weatherAndFace_t.7d609ea6ccae3b6b7896.jpg",
+    "static/media/bookImage_manglegom.jpg": "/bookStore/static/media/bookImage_manglegom.7ad2e7798139465ed73f.jpg",
+    "static/media/bookImage_swanAndBat.jpg": "/bookStore/static/media/bookImage_swanAndBat.54ac62acd4388dcfc4c8.jpg",
+    "static/media/bookImage_ripen.jpg": "/bookStore/static/media/bookImage_ripen.0d721692d586932cc61e.jpg",
+    "static/media/google_logo.png": "/bookStore/static/media/google_logo.6034aa34e2d4aa4ceec4.png",
+    "static/media/bookImage_daidaiBookstore_t.jpg": "/bookStore/static/media/bookImage_daidaiBookstore_t.b238fb39a72259992427.jpg",
+    "static/media/bookImage_myBeautifulDays_t.jpg": "/bookStore/static/media/bookImage_myBeautifulDays_t.fa3634c9b44bbec1faeb.jpg",
+    "static/media/bookImage_ifIaginLife.jpg": "/bookStore/static/media/bookImage_ifIaginLife.ed3767b6df50a873347f.jpg",
+    "static/media/bookImage_ropeOfHope_t.jpg": "/bookStore/static/media/bookImage_ropeOfHope_t.a3ab6584e4bf2c55bf66.jpg",
+    "static/media/bookImage_lastIsland.jpg": "/bookStore/static/media/bookImage_lastIsland.c9cd666c55fb77b915fa.jpg",
+    "static/media/bookImage_saynoTeaching.jpg": "/bookStore/static/media/bookImage_saynoTeaching.0755ea430a64499a277c.jpg",
+    "static/media/bookImage_markUpYourLanguage.jpg": "/bookStore/static/media/bookImage_markUpYourLanguage.59423c8f2f1f5f15415d.jpg",
+    "static/media/facebook_logo.png": "/bookStore/static/media/facebook_logo.5c32a98f905e5ca3db0d.png",
+    "static/media/bookImage_theDeep.jpg": "/bookStore/static/media/bookImage_theDeep.928b4b2bc52bfd0a2ab4.jpg",
+    "static/media/bookImage_leavingHomeJoyful_t.jpg": "/bookStore/static/media/bookImage_leavingHomeJoyful_t.3bf4a671df0a890e9645.jpg",
+    "static/media/bookImage_weAreJoguman.jpg": "/bookStore/static/media/bookImage_weAreJoguman.2a936547b3535363d46e.jpg",
+    "index.html": "/bookStore/index.html",
+    "main.9ef7d556.css.map": "/bookStore/static/css/main.9ef7d556.css.map",
+    "main.c3538f93.js.map": "/bookStore/static/js/main.c3538f93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ef7d556.css",
+    "static/js/main.c3538f93.js"
+  ]
+}
