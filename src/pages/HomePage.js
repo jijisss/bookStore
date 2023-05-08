@@ -290,10 +290,9 @@ function Home() {
               </h2>
               <div className="header-media">
                 <div className="content-image observer-ready">
-                  <button onClick={onClickHandler}></button>
-                  {/* <Link to="/bookDetailPage">
+                  <button onClick={onClickHandler}>
                     <img src={bookOfMonthImage} alt="book-image" />
-                  </Link> */}
+                  </button>
                 </div>
                 <div className="content-para observer-ready">
                   30년 동안 정신분석 전문의로 일해 온 김혜남이 벌써 마흔이 된
