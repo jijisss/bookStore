@@ -16,7 +16,7 @@ import ReviewWritePage from "./pages/ReviewWritePage.js";
 
 function Main() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bookStore/">
       <ScrollToTop />
       <App>
         <Routes>

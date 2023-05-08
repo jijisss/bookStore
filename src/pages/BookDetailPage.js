@@ -17,8 +17,8 @@ function BookDetailPage() {
 
   const bookData = {
     bookName: "만일 내가 인생을 다시 산다면",
-    bookThumbnail: "../images/bookImage_ifIaginLife.jpg",
-    detailImg: "../images/i9791190538510.jpg",
+    bookThumbnail: "./images/bookImage_ifIaginLife.jpg",
+    detailImg: "./images/i9791190538510.jpg",
     trailer: "https://www.youtube.com/embed/deUM3oCJVj0?enablejsapi=1",
     authorName: "김혜남 저자",
     translator: "",
